@@ -1,3 +1,2 @@
-[submodule "LIGMA-sotware"]
-	path = LIGMA-sotware
-	url = git@github.com:Victor-Lopes/LIGMA-Software.git
+[submodule "LIGMA"]
+	path = LIGMA	url = git@github.com:Victor-Lopes/LIGMA-Software.git
