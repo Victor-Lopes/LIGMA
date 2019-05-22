@@ -1,0 +1,11 @@
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\bin\Debug\LIGMA.exe.config
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\bin\Debug\LIGMA.exe
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\bin\Debug\LIGMA.pdb
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.csprojAssemblyReference.cache
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.Properties.Resources.resources
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.csproj.GenerateResource.cache
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.csproj.CoreCompileInputs.cache
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.exe
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.pdb
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.frmLogin.resources
+T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.Aluno.resources
