@@ -24,7 +24,7 @@ CREATE TABLE tbEndereco (
 GO
 
 CREATE TABLE tbLogin (
-	CodLogin smallint,
+	CodLogin smallint identity(1,1),
 	CONSTRAINT PK_Login PRIMARY KEY(CodLogin),
 	Senha varchar(20) not null,
 	Email varchar(20) not null,
@@ -33,7 +33,7 @@ CREATE TABLE tbLogin (
 GO
 
 CREATE TABLE tbFuncionario (
-	CodFunc smallint,
+	CodFunc smallint identity(1,1),
 	CONSTRAINT PK_Func PRIMARY KEY(CodFunc),
 	RG char(10) not null,
 	TelFixo decimal(8),
@@ -52,7 +52,7 @@ CREATE TABLE tbFuncionario (
 GO
 
 CREATE TABLE tbProfessor (
-	CodProf smallint,
+	CodProf smallint identity(1,1),
 	CONSTRAINT PK_Prof PRIMARY KEY(CodProf),
 	Idioma varchar(15) not null,
 	CodFunc smallint not null
@@ -60,35 +60,35 @@ CREATE TABLE tbProfessor (
 );
 GO
 
+CREATE TABLE tbTurma(
+	CodTurma smallint identity(1,1),
+	CONSTRAINT PK_Turma PRIMARY KEY(CodTurma),
+	CodCurso smallint not null
+	CONSTRAINT FK_Turma_Curso FOREIGN KEY(CodCurso) REFERENCES tbCurso(CodCurso),
+	Estagio varchar(15) not null --Retirei código aula
+);
+GO
+
 CREATE TABLE tbAula(
-	CodAula smallint,
+	CodAula smallint identity(1,1)
 	CONSTRAINT PK_Aula PRIMARY KEY(CodAula),
 	Sala smallint not null,
 	Data_Hora datetime not null,
 	CodProf smallint not null
-	CONSTRAINT FK_Aula_Prof FOREIGN KEY REFERENCES tbProfessor(codProf)
+	CONSTRAINT FK_Aula_Prof FOREIGN KEY REFERENCES tbProfessor(codProf),
+	CodTurma smallint not null,
+	CONSTRAINT FK_Aula_Turma FOREIGN KEY(CodTurma) REFERENCES tbTurma(CodTurma) --Adicionei código turma
 );
 
 CREATE TABLE tbCurso(
-	CodCurso smallint,
+	CodCurso smallint identity(1,1),
 	CONSTRAINT PK_Curso PRIMARY KEY(CodCurso),
 	Idioma varchar(15) not null
 );
 GO
 
-CREATE TABLE tbTurma(
-	CodTurma smallint not null
-	CONSTRAINT PK_Turma PRIMARY KEY(CodTurma),
-	CodCurso smallint not null
-	CONSTRAINT FK_Turma_Curso FOREIGN KEY(CodCurso) REFERENCES tbCurso(CodCurso),
-	CodAula smallint not null
-	CONSTRAINT FK_Turma_Aula FOREIGN KEY(CodAula) REFERENCES tbAula(CodAula),
-	Estagio varchar(15) not null
-);
-GO
-
 CREATE TABLE tbAluno(
-	CodAluno smallint identity(1,1) not null	
+	CodAluno smallint identity(1,1),	
 	CONSTRAINT PK_Aluno PRIMARY KEY(CodAluno),
 	DataNasc date not null,
 	Nome varchar(150) not null,
@@ -117,9 +117,23 @@ CREATE TABLE tbAulaAluno(
 	Presenca bit --1 presente, 0 ausente
 );
 GO
---rollback tran
-/*
 
+
+/* COISAS ADICIONAR
+
+Notas
+	cod aluno
+	nota
+	avaliação
+
+Avaliação
+	nome
+	professor
+	requisitos
+*/
+
+
+/*
 CREATE TABLE tbAluno (
 CodAluno smallint PRIMARY KEY,
 Nome varchar(75),
@@ -136,12 +150,10 @@ Numero smallint,
 CodLogin smallint,
 FOREIGN KEY(Numero,,) REFERENCES tbEndereco (CEP,Numero)
 )
-
 CREATE TABLE tbTurma (
 CodTurma smallint PRIMARY KEY,
 CodCurso smallint
 )
-
 CREATE TABLE tbAula_Aluno (
 CodAula smallint,
 CodAluno smallint,
@@ -149,7 +161,6 @@ Presenca bit,
 PRIMARY KEY(CodAula,CodAluno),
 FOREIGN KEY(CodAluno) REFERENCES tbAluno (CodAluno)
 )
-
 CREATE TABLE tbAula (
 CodAula smallint PRIMARY KEY,
 Sala smallint,
@@ -160,23 +171,16 @@ CodAluno smallint,
 FOREIGN KEY(CodTurma) REFERENCES tbTurma (CodTurma),
 FOREIGN KEY(CodAluno) REFERENCES tbTurma (CodTurma)
 )
-
-
-
 CREATE TABLE tbCurso (
 CodCurso smallint PRIMARY KEY,
 Idioma varchar(15)
 )
-
 CREATE TABLE tbProfessor (
 CodProf smallint PRIMARY KEY,
 Idioma varchar(15),
 CodFunc smallint,
 FOREIGN KEY(CodFunc) REFERENCES tbFuncionario (CodFunc)
 )
-
-
-
 ALTER TABLE tbAluno ADD FOREIGN KEY(CodTurma) REFERENCES tbTurma (CodTurma)
 ALTER TABLE tbAluno ADD FOREIGN KEY(CodAluno) REFERENCES tbTurma (CodTurma)
 ALTER TABLE tbAluno ADD FOREIGN KEY(CodLogin) REFERENCES tbLogin (CodLogin)
@@ -185,6 +189,3 @@ ALTER TABLE tbAula_Aluno ADD FOREIGN KEY(CodAula) REFERENCES tbAula (CodAula)
 ALTER TABLE tbAula ADD FOREIGN KEY(CodProf) REFERENCES tbProfessor (CodProf)
 ALTER TABLE tbFuncionario ADD FOREIGN KEY(CodLogin) REFERENCES tbLogin (CodLogin)
 */
-
-
-
