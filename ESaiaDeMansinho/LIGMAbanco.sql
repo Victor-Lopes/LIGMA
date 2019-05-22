@@ -48,35 +48,6 @@ CREATE TABLE tbProfessor (
 
 GO
 
-CREATE TABLE tbAula(
-	codAula smallint not null
-	CONSTRAINT PK_codAula PRIMARY KEY,
-	sala smallint not null,
-	data_hora datetime not null,
-	codProf smallint not null
-	CONSTRAINT FK_codProf FOREIGN KEY REFERENCES tbProfessor(codProf)
-	situacaoAluno char(1) not null,
-	data date notnull
-);
-
-CREATE TABLE tbCurso(
-	codCurso smallint not null 
-	CONSTRAINT PK_codCurso PRIMARY KEY,
-	idioma varchar(15) not null
-);
-GO
-
-CREATE TABLE tbTurma(
-	codTurma smallint not null
-	CONSTRAINT PK_codTurma PRIMARY KEY,
-	codCurso smallint not null
-	CONSTRAINT FK_codCurso FOREIGN KEY REFERENCES tbCurso(codCurso),
-	codAula smallint not null
-	CONSTRAINT FK_codAula FOREIGN KEY REFERENCES tbAula(codAula),
-	estagio varchar(15) not null
-);
-GO
-
 CREATE TABLE tbAluno(
 	codAluno smallint identity(1,1) not null	
 	CONSTRAINT PK_idAluno PRIMARY KEY,
