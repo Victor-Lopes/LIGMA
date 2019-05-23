@@ -122,11 +122,26 @@ CREATE TABLE tbAvaliacao(
 	CodAvaliacao smallint identity(1,1)
 	CONSTRAINT PK_Avaliacao PRIMARY KEY,
 	CodProfessor smallint
-	CONSTRAINT FK_Avaliacao_Professor REFERENCES tbProfessor(codProfessor) 
+	CONSTRAINT FK_Avaliacao_Professor FOREIGN KEY REFERENCES tbProfessor(codProfessor),
+	DataAvalicao date not null,
+	CodTurma smallint not null
+	CONSTRAINT FK_Avaliacao_Turma FOREIGN KEY REFERENCES tbTurma(codTurma),
+	Descricao varchar(75) 
 );
 GO
 
-/* COISAS ADICIONAR
+CREATE TABLE tbNota(
+	CodAluno smallint identity(1,1)
+	CONSTRAINT FK_Nota_Aluno FOREIGN KEY REFERENCES tbAluno(codAluno),
+	CodAvaliacao smallint
+	CONSTRAINT FK_Nota_Avaliacao FOREIGN KEY REFERENCES tbAvaliacao(codAvaliacao),
+	Nota double not null,
+	CONSTRAINT PK_Nota PRIMARY KEY CLUSTERED(CodAluno, CodAvaliacao) 
+);
+GO
+
+/* 
+						-----------------------COISAS ADICIONAR-----------------------
 
 Notas
 	cod aluno
