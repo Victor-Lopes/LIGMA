@@ -113,11 +113,18 @@ CREATE TABLE tbAulaAluno(
 	CONSTRAINT FK_AulaAluno_Aula FOREIGN KEY(CodAula) REFERENCES tbAula(codAula),
 	CodAluno smallint,
 	CONSTRAINT FK_AulaAluno_Aluno FOREIGN KEY(CodAluno) REFERENCES tbAluno(codAluno),
-	CONSTRAINT PK_Aula_Aluno PRIMARY KEY CLUSTERED(codAula, codAluno),
+	CONSTRAINT PK_AulaAluno PRIMARY KEY CLUSTERED(codAula, codAluno),
 	Presenca bit --1 presente, 0 ausente
 );
 GO
 
+CREATE TABLE tbAvaliacao(
+	CodAvaliacao smallint identity(1,1)
+	CONSTRAINT PK_Avaliacao PRIMARY KEY,
+	CodProfessor smallint
+	CONSTRAINT FK_Avaliacao_Professor REFERENCES tbProfessor(codProfessor) 
+);
+GO
 
 /* COISAS ADICIONAR
 
