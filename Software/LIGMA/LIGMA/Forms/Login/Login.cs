@@ -70,8 +70,8 @@ namespace LIGMA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (cmbUsuario.SelectedText == "Aluno") aluno.Show();
-            else if (cmbUsuario.SelectedText == "Professor") prof.Show();
+            if (cmbUsuario.SelectedItem.ToString() == "Aluno") aluno.Show();
+            else if (cmbUsuario.SelectedItem.ToString() == "Professor") prof.Show();
             else admin.Show();
             this.Close();
 
@@ -85,16 +85,6 @@ namespace LIGMA
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnMinimizar_Hover(object sender, EventArgs e)
-        {
-            btnMinimizar.BackColor = Color.Red;
-        }
-
-        private void btnFechar_Hover(object sender, EventArgs e)
-        {
-            btnFechar.BackColor = Color.Red;
         }
     }
 }

@@ -72,7 +72,7 @@
             // btnLogin
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(17)))), ((int)(((byte)(147)))));
+            this.btnLogin.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(13)))), ((int)(((byte)(136)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
@@ -94,9 +94,10 @@
             this.lnkEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(13)))), ((int)(((byte)(136)))));
             this.lnkEsqueceuSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnkEsqueceuSenha.AutoSize = true;
-            this.lnkEsqueceuSenha.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(147)))));
+            this.lnkEsqueceuSenha.DisabledLinkColor = System.Drawing.Color.RoyalBlue;
             this.lnkEsqueceuSenha.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(147)))));
+            this.lnkEsqueceuSenha.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lnkEsqueceuSenha.LinkColor = System.Drawing.Color.RoyalBlue;
             this.lnkEsqueceuSenha.Location = new System.Drawing.Point(70, 367);
             this.lnkEsqueceuSenha.Name = "lnkEsqueceuSenha";
             this.lnkEsqueceuSenha.Size = new System.Drawing.Size(106, 14);
@@ -109,8 +110,9 @@
             // 
             this.lblSlogan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSlogan.AutoSize = true;
+            this.lblSlogan.BackColor = System.Drawing.Color.Transparent;
             this.lblSlogan.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSlogan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(17)))), ((int)(((byte)(147)))));
+            this.lblSlogan.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblSlogan.Location = new System.Drawing.Point(51, 106);
             this.lblSlogan.Name = "lblSlogan";
             this.lblSlogan.Size = new System.Drawing.Size(156, 14);
@@ -135,7 +137,7 @@
             this.pnlFormBorder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFormBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(147)))));
+            this.pnlFormBorder.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlFormBorder.Controls.Add(this.lblLIGMA);
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.Controls.Add(this.btnMinimizar);
@@ -190,7 +192,6 @@
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            this.btnMinimizar.MouseHover += new System.EventHandler(this.btnMinimizar_Hover);
             // 
             // btnFechar
             // 
@@ -210,7 +211,7 @@
             // pcbLogo
             // 
             this.pcbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pcbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pcbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pcbLogo.ErrorImage = global::LIGMA.Properties.Resources.logo;
             this.pcbLogo.Image = global::LIGMA.Properties.Resources.logo;

@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Cadastro\CadastroConta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cadastro\CadastroConta.Designer.cs">
-      <DependentUpon>CadastroConta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\TelaPrincipal\Administração.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +105,12 @@
     <Compile Include="Forms\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TelaPrincipal\EditarAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\EditarAdmin.Designer.cs">
+      <DependentUpon>EditarAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TelaPrincipal\EditarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +125,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Cadastro\CadastroAvaliacao.resx">
+      <DependentUpon>CadastroAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\EsqueceuSenha.resx">
       <DependentUpon>EsqueceuSenha.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,11 +143,17 @@
     <EmbeddedResource Include="Forms\Cadastro\CadastroAula.resx">
       <DependentUpon>CadastroAula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TelaPrincipal\Administração.resx">
+      <DependentUpon>Administração.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TelaPrincipal\Aluno.resx">
       <DependentUpon>Aluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TelaPrincipal\EditarAluno.resx">
+      <DependentUpon>EditarAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -17,27 +17,22 @@ namespace Ptcc1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnFechar_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lblMaximizar_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox15_TextChanged(object sender, EventArgs e)
+        private void CadastroAluno_Load(object sender, EventArgs e)
         {
 
         }

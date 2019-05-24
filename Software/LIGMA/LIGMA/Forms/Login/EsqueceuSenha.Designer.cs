@@ -30,21 +30,21 @@
         {
             this.pnlFormBorder = new System.Windows.Forms.Panel();
             this.lblLIGMA = new System.Windows.Forms.Label();
+            this.pcbIcone = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblColqueEmail = new System.Windows.Forms.Label();
             this.lblMensagem = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.pcbIcone = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFormBorder
             // 
-            this.pnlFormBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(147)))));
+            this.pnlFormBorder.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlFormBorder.Controls.Add(this.lblLIGMA);
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.Controls.Add(this.btnMinimizar);
@@ -67,9 +67,57 @@
             this.lblLIGMA.TabIndex = 11;
             this.lblLIGMA.Text = "LIGMA";
             // 
+            // pcbIcone
+            // 
+            this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pcbIcone.BackColor = System.Drawing.Color.Transparent;
+            this.pcbIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbIcone.ErrorImage = global::LIGMA.Properties.Resources.logo;
+            this.pcbIcone.Image = global::LIGMA.Properties.Resources._12133tongue_109560;
+            this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
+            this.pcbIcone.Location = new System.Drawing.Point(3, 4);
+            this.pcbIcone.Name = "pcbIcone";
+            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
+            this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbIcone.TabIndex = 10;
+            this.pcbIcone.TabStop = false;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(205, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
+            this.btnMinimizar.TabIndex = 10;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Location = new System.Drawing.Point(232, 0);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
+            this.btnFechar.TabIndex = 0;
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // btnEnviar
             // 
-            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(17)))), ((int)(((byte)(147)))));
+            this.btnEnviar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(13)))), ((int)(((byte)(136)))));
             this.btnEnviar.FlatAppearance.BorderSize = 0;
@@ -135,58 +183,11 @@
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             this.btnVoltar.MouseHover += new System.EventHandler(this.btnVoltar_MouseHover);
             // 
-            // pcbIcone
-            // 
-            this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pcbIcone.BackColor = System.Drawing.Color.Transparent;
-            this.pcbIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbIcone.ErrorImage = global::LIGMA.Properties.Resources.logo;
-            this.pcbIcone.Image = global::LIGMA.Properties.Resources._12133tongue_109560;
-            this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
-            this.pcbIcone.Location = new System.Drawing.Point(3, 4);
-            this.pcbIcone.Name = "pcbIcone";
-            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
-            this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbIcone.TabIndex = 10;
-            this.pcbIcone.TabStop = false;
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(205, 0);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
-            this.btnMinimizar.TabIndex = 10;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
-            this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(232, 0);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 26);
-            this.btnFechar.TabIndex = 0;
-            this.btnFechar.UseVisualStyleBackColor = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
             // EsqueceuSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(259, 200);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblMensagem);
