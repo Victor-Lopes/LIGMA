@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4718770-BE13-45A2-9FED-1B88DB225F62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LIGMA</RootNamespace>
+    <AssemblyName>LIGMA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\TelaPrincipal\Administração.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Administração.Designer.cs">
+      <DependentUpon>Administração.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbLIGMADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLIGMADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login\EsqueceuSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\EsqueceuSenha.Designer.cs">
+      <DependentUpon>EsqueceuSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAluno.Designer.cs">
+      <DependentUpon>CadastroAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroFuncionário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroFuncionário.Designer.cs">
+      <DependentUpon>CadastroFuncionário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroTurma.Designer.cs">
+      <DependentUpon>CadastroTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAula.Designer.cs">
+      <DependentUpon>CadastroAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAvaliacao.Designer.cs">
+      <DependentUpon>CadastroAvaliacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Aluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Aluno.Designer.cs">
+      <DependentUpon>Aluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\EditarAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\EditarAdmin.Designer.cs">
+      <DependentUpon>EditarAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\EditarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\EditarAluno.Designer.cs">
+      <DependentUpon>EditarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Professor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Professor.Designer.cs">
+      <DependentUpon>Professor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Cadastro\CadastroAvaliacao.resx">
+      <DependentUpon>CadastroAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\EsqueceuSenha.resx">
+      <DependentUpon>EsqueceuSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\CadastroAluno.resx">
+      <DependentUpon>CadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\CadastroFuncionário.resx">
+      <DependentUpon>CadastroFuncionário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\CadastroTurma.resx">
+      <DependentUpon>CadastroTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\CadastroAula.resx">
+      <DependentUpon>CadastroAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TelaPrincipal\Administração.resx">
+      <DependentUpon>Administração.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TelaPrincipal\Aluno.resx">
+      <DependentUpon>Aluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TelaPrincipal\EditarAluno.resx">
+      <DependentUpon>EditarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="dbLIGMADataSet.xsc">
+      <DependentUpon>dbLIGMADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbLIGMADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLIGMADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLIGMADataSet.xss">
+      <DependentUpon>dbLIGMADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Forms\Consulta\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Icon_Dark_icon-icons.com_69143.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12133tongue_109560.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharJanela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizarJanela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaximizarJanela.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
