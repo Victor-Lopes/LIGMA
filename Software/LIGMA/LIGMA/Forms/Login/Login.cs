@@ -13,6 +13,10 @@ namespace LIGMA
 {
     public partial class frmLogin : Form
     {
+        Form aluno = new Aluno();
+        Form prof = new Professor();
+        Form admin = new Administração();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -24,7 +28,8 @@ namespace LIGMA
             txtLogin.ForeColor = Color.Gray;
             txtSenha.Text = "Senha";
             txtSenha.ForeColor = Color.Gray;
-            
+            cmbUsuario.SelectionStart = cmbUsuario.SelectedIndex = 0;
+            btnLogin.Focus();
         }
 
         private void txtLogin_Enter(object sender, EventArgs e)
@@ -65,9 +70,31 @@ namespace LIGMA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (cmbUsuario.SelectedText == "Aluno") aluno.Show();
+            else if (cmbUsuario.SelectedText == "Professor") prof.Show();
+            else admin.Show();
             this.Close();
-            Form aluno = new Aluno();
-            aluno.Show();
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMinimizar_Hover(object sender, EventArgs e)
+        {
+            btnMinimizar.BackColor = Color.Red;
+        }
+
+        private void btnFechar_Hover(object sender, EventArgs e)
+        {
+            btnFechar.BackColor = Color.Red;
         }
     }
 }

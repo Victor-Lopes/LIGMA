@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIGMA", "LIGMA\LIGMA.csproj", "{D4718770-BE13-45A2-9FED-1B88DB225F62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ptcc1", "..\Ptcc1\Ptcc1\Ptcc1.csproj", "{5841A21E-5F61-4117-A65A-E7469FD7C605}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +17,15 @@ Global
 		{D4718770-BE13-45A2-9FED-1B88DB225F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4718770-BE13-45A2-9FED-1B88DB225F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4718770-BE13-45A2-9FED-1B88DB225F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5841A21E-5F61-4117-A65A-E7469FD7C605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5841A21E-5F61-4117-A65A-E7469FD7C605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5841A21E-5F61-4117-A65A-E7469FD7C605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5841A21E-5F61-4117-A65A-E7469FD7C605}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D07E1129-CD9C-4194-996B-C0C4641EE626}
+		SolutionGuid = {70C044BE-D0B9-4365-9442-578C21357530}
 	EndGlobalSection
 EndGlobal

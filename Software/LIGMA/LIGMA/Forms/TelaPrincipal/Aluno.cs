@@ -12,32 +12,30 @@ namespace LIGMA.Forms.TelaPrincipal
 {
     public partial class Aluno : Form
     {
+        Form edit = new EditarAluno();
         public Aluno()
         {
             InitializeComponent();
         }
 
-        private void Aluno_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'dbLIGMADataSet.tbFuncionario' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'dbLIGMADataSet.tbAluno' table. You can move, or remove it, as needed.
-
-        }
-
-        private void tbFuncionarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-
-        }
-
-        private void salarioLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFechar_Click(object sender, EventArgs e)
         {
-           
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void lblMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            edit.Show();
         }
     }
 }

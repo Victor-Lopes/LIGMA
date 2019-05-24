@@ -46,10 +46,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Cadastro\CadastroConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroConta.Designer.cs">
+      <DependentUpon>CadastroConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Administração.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Administração.Designer.cs">
+      <DependentUpon>Administração.cs</DependentUpon>
+    </Compile>
     <Compile Include="dbLIGMADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbLIGMADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login\EsqueceuSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\EsqueceuSenha.Designer.cs">
+      <DependentUpon>EsqueceuSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAluno.Designer.cs">
+      <DependentUpon>CadastroAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroFuncionário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroFuncionário.Designer.cs">
+      <DependentUpon>CadastroFuncionário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroTurma.Designer.cs">
+      <DependentUpon>CadastroTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAula.Designer.cs">
+      <DependentUpon>CadastroAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\CadastroAvaliacao.Designer.cs">
+      <DependentUpon>CadastroAvaliacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TelaPrincipal\Aluno.cs">
       <SubType>Form</SubType>
@@ -57,18 +105,45 @@
     <Compile Include="Forms\TelaPrincipal\Aluno.Designer.cs">
       <DependentUpon>Aluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Forms\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\EditarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\EditarAluno.Designer.cs">
+      <DependentUpon>EditarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Professor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TelaPrincipal\Professor.Designer.cs">
+      <DependentUpon>Professor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Login\EsqueceuSenha.resx">
+      <DependentUpon>EsqueceuSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\CadastroAluno.resx">
+      <DependentUpon>CadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\CadastroFuncionário.resx">
+      <DependentUpon>CadastroFuncionário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\CadastroTurma.resx">
+      <DependentUpon>CadastroTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\CadastroAula.resx">
+      <DependentUpon>CadastroAula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TelaPrincipal\Aluno.resx">
       <DependentUpon>Aluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -110,11 +185,25 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />
-    <Folder Include="Forms\Cadastro\" />
     <Folder Include="Forms\Consulta\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Close_Icon_Dark_icon-icons.com_69143.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12133tongue_109560.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharJanela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizarJanela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaximizarJanela.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
