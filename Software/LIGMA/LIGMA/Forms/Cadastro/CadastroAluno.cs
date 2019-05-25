@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ptcc1
+namespace LIGMA.Forms.Cadastro
 {
     public partial class CadastroAluno : Form
     {
+
         public CadastroAluno()
         {
             InitializeComponent();
@@ -32,9 +33,5 @@ namespace Ptcc1
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void CadastroAluno_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

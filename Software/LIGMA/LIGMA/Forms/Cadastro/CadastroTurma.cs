@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ptcc1
+namespace LIGMA.Forms.Cadastro
 {
-    public partial class Form3 : Form
+    public partial class CadastroTurma : Form
     {
-        public Form3()
+        public CadastroTurma()
         {
             InitializeComponent();
         }

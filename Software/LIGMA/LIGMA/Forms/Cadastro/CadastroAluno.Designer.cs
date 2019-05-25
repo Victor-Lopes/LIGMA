@@ -1,4 +1,4 @@
-﻿namespace Ptcc1
+﻿namespace LIGMA.Forms.Cadastro
 {
     partial class CadastroAluno
     {
@@ -28,347 +28,332 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.lblRG = new System.Windows.Forms.Label();
+            this.lblDataNasc = new System.Windows.Forms.Label();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
+            this.lblPeriodo = new System.Windows.Forms.Label();
+            this.lblCEP = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtDataNasc = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.txtRG = new System.Windows.Forms.TextBox();
+            this.txtCEP = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.cmbPeriodo = new System.Windows.Forms.ComboBox();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.lblComplemento = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.lblUF = new System.Windows.Forms.Label();
             this.pnlFormBorder = new System.Windows.Forms.Panel();
-            this.lblLIGMA = new System.Windows.Forms.Label();
             this.lblMaximizar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.lblLIGMA = new System.Windows.Forms.Label();
             this.pcbIcone = new System.Windows.Forms.PictureBox();
+            this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbUF = new System.Windows.Forms.ComboBox();
+            this.txtFinalContrato = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             this.SuspendLayout();
             // 
-            // contextMenuStrip1
+            // lblTitulo
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(227, 44);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(170, 26);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Cadastro do Aluno";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
+            // lblNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(321, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Cadastro do Aluno";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblNome.Location = new System.Drawing.Point(8, 89);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(107, 19);
+            this.lblNome.TabIndex = 3;
+            this.lblNome.Text = "Nome do aluno";
             // 
-            // label2
+            // lblEndereco
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nome do aluno:";
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndereco.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblEndereco.Location = new System.Drawing.Point(8, 292);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(69, 19);
+            this.lblEndereco.TabIndex = 4;
+            this.lblEndereco.Text = "Endereço";
             // 
-            // label3
+            // lblEmail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(106, 212);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 19);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Endereço:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblEmail.Location = new System.Drawing.Point(8, 224);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(50, 19);
+            this.lblEmail.TabIndex = 5;
+            this.lblEmail.Text = "E-mail";
             // 
-            // label4
+            // lblCPF
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(105, 339);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 19);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "E-mail:";
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblCPF.Location = new System.Drawing.Point(309, 89);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(33, 19);
+            this.lblCPF.TabIndex = 6;
+            this.lblCPF.Text = "CPF";
             // 
-            // label5
+            // lblRG
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(394, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 19);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "CPF:";
+            this.lblRG.AutoSize = true;
+            this.lblRG.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRG.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblRG.Location = new System.Drawing.Point(468, 94);
+            this.lblRG.Name = "lblRG";
+            this.lblRG.Size = new System.Drawing.Size(28, 19);
+            this.lblRG.TabIndex = 7;
+            this.lblRG.Text = "RG";
             // 
-            // label6
+            // lblDataNasc
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(589, 85);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 19);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "RG:";
+            this.lblDataNasc.AutoSize = true;
+            this.lblDataNasc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataNasc.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblDataNasc.Location = new System.Drawing.Point(8, 157);
+            this.lblDataNasc.Name = "lblDataNasc";
+            this.lblDataNasc.Size = new System.Drawing.Size(141, 19);
+            this.lblDataNasc.TabIndex = 14;
+            this.lblDataNasc.Text = "Data de Nascimento";
             // 
-            // label9
+            // lblTelefone
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(106, 150);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 19);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Data de Nascimento:";
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefone.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblTelefone.Location = new System.Drawing.Point(309, 157);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(65, 19);
+            this.lblTelefone.TabIndex = 15;
+            this.lblTelefone.Text = "Telefone";
             // 
-            // label10
+            // lblCelular
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(589, 150);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 19);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Telefone:";
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblCelular.Location = new System.Drawing.Point(195, 157);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(55, 19);
+            this.lblCelular.TabIndex = 16;
+            this.lblCelular.Text = "Celular";
             // 
-            // label11
+            // lblPeriodo
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(394, 150);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 19);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Celular:";
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblPeriodo.Location = new System.Drawing.Point(309, 224);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(58, 19);
+            this.lblPeriodo.TabIndex = 17;
+            this.lblPeriodo.Text = "Período";
             // 
-            // label12
+            // lblCEP
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(589, 279);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 19);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Período:";
+            this.lblCEP.AutoSize = true;
+            this.lblCEP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCEP.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblCEP.Location = new System.Drawing.Point(468, 292);
+            this.lblCEP.Name = "lblCEP";
+            this.lblCEP.Size = new System.Drawing.Size(34, 19);
+            this.lblCEP.TabIndex = 18;
+            this.lblCEP.Text = "CEP";
             // 
-            // label13
+            // txtNome
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(106, 276);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 19);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "CEP:";
+            this.txtNome.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(12, 116);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(278, 27);
+            this.txtNome.TabIndex = 19;
             // 
-            // textBox1
+            // txtDataNasc
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(109, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 27);
-            this.textBox1.TabIndex = 19;
+            this.txtDataNasc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNasc.Location = new System.Drawing.Point(12, 184);
+            this.txtDataNasc.Name = "txtDataNasc";
+            this.txtDataNasc.Size = new System.Drawing.Size(137, 27);
+            this.txtDataNasc.TabIndex = 20;
             // 
-            // textBox2
+            // txtEndereco
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(109, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 27);
-            this.textBox2.TabIndex = 20;
+            this.txtEndereco.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(12, 319);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(278, 27);
+            this.txtEndereco.TabIndex = 21;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(109, 237);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(238, 27);
-            this.textBox3.TabIndex = 21;
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(12, 251);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(278, 27);
+            this.txtEmail.TabIndex = 22;
             // 
-            // textBox4
+            // txtCPF
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(108, 361);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(238, 27);
-            this.textBox4.TabIndex = 22;
+            this.txtCPF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.Location = new System.Drawing.Point(313, 116);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(135, 27);
+            this.txtCPF.TabIndex = 23;
             // 
-            // textBox5
+            // txtRG
             // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(397, 116);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 23;
+            this.txtRG.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(472, 116);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(135, 27);
+            this.txtRG.TabIndex = 24;
             // 
-            // textBox6
+            // txtCEP
             // 
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(592, 116);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 27);
-            this.textBox6.TabIndex = 24;
+            this.txtCEP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCEP.Location = new System.Drawing.Point(472, 319);
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(135, 27);
+            this.txtCEP.TabIndex = 25;
             // 
-            // textBox7
+            // txtCelular
             // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(109, 301);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 27);
-            this.textBox7.TabIndex = 25;
+            this.txtCelular.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(313, 184);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(95, 27);
+            this.txtCelular.TabIndex = 26;
             // 
-            // textBox8
+            // txtTelefone
             // 
-            this.textBox8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(397, 179);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 27);
-            this.textBox8.TabIndex = 26;
+            this.txtTelefone.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(199, 184);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(91, 27);
+            this.txtTelefone.TabIndex = 27;
             // 
-            // textBox9
+            // cmbPeriodo
             // 
-            this.textBox9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(592, 179);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 27);
-            this.textBox9.TabIndex = 27;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbPeriodo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPeriodo.FormattingEnabled = true;
+            this.cmbPeriodo.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.comboBox1.Location = new System.Drawing.Point(593, 301);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 27);
-            this.comboBox1.TabIndex = 34;
+            this.cmbPeriodo.Location = new System.Drawing.Point(313, 251);
+            this.cmbPeriodo.Name = "cmbPeriodo";
+            this.cmbPeriodo.Size = new System.Drawing.Size(135, 27);
+            this.cmbPeriodo.TabIndex = 34;
             // 
-            // button2
+            // btnEnviar
             // 
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(681, 416);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 31);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Enviar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnEnviar.Location = new System.Drawing.Point(540, 431);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(67, 28);
+            this.btnEnviar.TabIndex = 35;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnCancelar
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(546, 416);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 31);
-            this.button3.TabIndex = 66;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnCancelar.Location = new System.Drawing.Point(417, 431);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(77, 28);
+            this.btnCancelar.TabIndex = 66;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // textBox10
+            // txtComplemento
             // 
-            this.textBox10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(396, 237);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(155, 27);
-            this.textBox10.TabIndex = 68;
+            this.txtComplemento.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(313, 319);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(135, 27);
+            this.txtComplemento.TabIndex = 68;
             // 
-            // label14
+            // lblComplemento
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(393, 212);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 19);
-            this.label14.TabIndex = 67;
-            this.label14.Text = "Complemento:";
+            this.lblComplemento.AutoSize = true;
+            this.lblComplemento.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplemento.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblComplemento.Location = new System.Drawing.Point(309, 292);
+            this.lblComplemento.Name = "lblComplemento";
+            this.lblComplemento.Size = new System.Drawing.Size(99, 19);
+            this.lblComplemento.TabIndex = 67;
+            this.lblComplemento.Text = "Complemento";
             // 
-            // textBox12
+            // txtCidade
             // 
-            this.textBox12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(247, 301);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 27);
-            this.textBox12.TabIndex = 70;
+            this.txtCidade.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(134, 388);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(135, 27);
+            this.txtCidade.TabIndex = 70;
             // 
-            // label15
+            // lblCidade
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(243, 279);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 19);
-            this.label15.TabIndex = 69;
-            this.label15.Text = "Cidade:";
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidade.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblCidade.Location = new System.Drawing.Point(130, 361);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(54, 19);
+            this.lblCidade.TabIndex = 69;
+            this.lblCidade.Text = "Cidade";
             // 
-            // textBox14
+            // lblUF
             // 
-            this.textBox14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(398, 300);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 27);
-            this.textBox14.TabIndex = 72;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(394, 279);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 19);
-            this.label16.TabIndex = 71;
-            this.label16.Text = "UF:";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(592, 237);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 27);
-            this.textBox15.TabIndex = 74;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(588, 215);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 19);
-            this.label17.TabIndex = 73;
-            this.label17.Text = "Bairro:";
+            this.lblUF.AutoSize = true;
+            this.lblUF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUF.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblUF.Location = new System.Drawing.Point(29, 361);
+            this.lblUF.Name = "lblUF";
+            this.lblUF.Size = new System.Drawing.Size(26, 19);
+            this.lblUF.TabIndex = 71;
+            this.lblUF.Text = "UF";
             // 
             // pnlFormBorder
             // 
@@ -383,21 +368,8 @@
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.Location = new System.Drawing.Point(0, 0);
             this.pnlFormBorder.Name = "pnlFormBorder";
-            this.pnlFormBorder.Size = new System.Drawing.Size(791, 32);
+            this.pnlFormBorder.Size = new System.Drawing.Size(623, 29);
             this.pnlFormBorder.TabIndex = 75;
-            // 
-            // lblLIGMA
-            // 
-            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblLIGMA.AutoSize = true;
-            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
-            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
-            this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(48, 18);
-            this.lblLIGMA.TabIndex = 11;
-            this.lblLIGMA.Text = "LIGMA";
             // 
             // lblMaximizar
             // 
@@ -407,11 +379,11 @@
             this.lblMaximizar.BackgroundImage = global::LIGMA.Properties.Resources.MaximizarJanela;
             this.lblMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lblMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMaximizar.Location = new System.Drawing.Point(731, 0);
+            this.lblMaximizar.Location = new System.Drawing.Point(548, 0);
             this.lblMaximizar.Margin = new System.Windows.Forms.Padding(5);
             this.lblMaximizar.Name = "lblMaximizar";
             this.lblMaximizar.Padding = new System.Windows.Forms.Padding(3);
-            this.lblMaximizar.Size = new System.Drawing.Size(25, 29);
+            this.lblMaximizar.Size = new System.Drawing.Size(25, 26);
             this.lblMaximizar.TabIndex = 14;
             this.lblMaximizar.UseVisualStyleBackColor = false;
             this.lblMaximizar.Click += new System.EventHandler(this.lblMaximizar_Click);
@@ -424,11 +396,11 @@
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(699, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(510, 0);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 29);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -441,12 +413,25 @@
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(763, 0);
+            this.btnFechar.Location = new System.Drawing.Point(586, 0);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 29);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // lblLIGMA
+            // 
+            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblLIGMA.AutoSize = true;
+            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 12F);
+            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
+            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
+            this.lblLIGMA.Name = "lblLIGMA";
+            this.lblLIGMA.Size = new System.Drawing.Size(52, 19);
+            this.lblLIGMA.TabIndex = 11;
+            this.lblLIGMA.Text = "LIGMA";
             // 
             // pcbIcone
             // 
@@ -459,49 +444,105 @@
             this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
             this.pcbIcone.Location = new System.Drawing.Point(3, 4);
             this.pcbIcone.Name = "pcbIcone";
-            this.pcbIcone.Size = new System.Drawing.Size(21, 25);
+            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
             this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
+            // 
+            // cmbCurso
+            // 
+            this.cmbCurso.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde"});
+            this.cmbCurso.Location = new System.Drawing.Point(472, 184);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(135, 27);
+            this.cmbCurso.TabIndex = 77;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Location = new System.Drawing.Point(468, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 19);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "Curso";
+            // 
+            // cmbUF
+            // 
+            this.cmbUF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUF.FormattingEnabled = true;
+            this.cmbUF.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde"});
+            this.cmbUF.Location = new System.Drawing.Point(33, 388);
+            this.cmbUF.Name = "cmbUF";
+            this.cmbUF.Size = new System.Drawing.Size(51, 27);
+            this.cmbUF.TabIndex = 78;
+            // 
+            // txtFinalContrato
+            // 
+            this.txtFinalContrato.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFinalContrato.Location = new System.Drawing.Point(472, 251);
+            this.txtFinalContrato.Name = "txtFinalContrato";
+            this.txtFinalContrato.Size = new System.Drawing.Size(135, 27);
+            this.txtFinalContrato.TabIndex = 80;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(468, 224);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 19);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "Data Final do Contrato";
             // 
             // CadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(787, 471);
-            this.Controls.Add(this.pnlFormBorder);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(622, 471);
+            this.Controls.Add(this.txtFinalContrato);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmbUF);
+            this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pnlFormBorder);
+            this.Controls.Add(this.lblUF);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.lblCidade);
+            this.Controls.Add(this.txtComplemento);
+            this.Controls.Add(this.lblComplemento);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.cmbPeriodo);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtCEP);
+            this.Controls.Add(this.txtRG);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.txtDataNasc);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.lblCEP);
+            this.Controls.Add(this.lblPeriodo);
+            this.Controls.Add(this.lblCelular);
+            this.Controls.Add(this.lblTelefone);
+            this.Controls.Add(this.lblDataNasc);
+            this.Controls.Add(this.lblRG);
+            this.Controls.Add(this.lblCPF);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblEndereco);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.lblTitulo);
             this.ForeColor = System.Drawing.Color.MidnightBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CadastroAluno";
@@ -509,7 +550,6 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.CadastroAluno_Load);
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).EndInit();
@@ -519,44 +559,45 @@
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblEndereco;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCPF;
+        private System.Windows.Forms.Label lblRG;
+        private System.Windows.Forms.Label lblDataNasc;
+        private System.Windows.Forms.Label lblTelefone;
+        private System.Windows.Forms.Label lblCelular;
+        private System.Windows.Forms.Label lblPeriodo;
+        private System.Windows.Forms.Label lblCEP;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtDataNasc;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.TextBox txtRG;
+        private System.Windows.Forms.TextBox txtCEP;
+        private System.Windows.Forms.TextBox txtCelular;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.ComboBox cmbPeriodo;
+        private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.Label lblComplemento;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.Label lblUF;
         private System.Windows.Forms.Panel pnlFormBorder;
         private System.Windows.Forms.Button lblMaximizar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label lblLIGMA;
         private System.Windows.Forms.PictureBox pcbIcone;
+        private System.Windows.Forms.ComboBox cmbCurso;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbUF;
+        private System.Windows.Forms.TextBox txtFinalContrato;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ptcc1
+namespace LIGMA.Forms.Cadastro
 {
-    public partial class Form5 : Form
+    public partial class CadastroAvaliacao : Form
     {
-        public Form5()
+        public CadastroAvaliacao()
         {
             InitializeComponent();
+        }
+
+        private void pnlFormBorder_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ptcc1
+namespace LIGMA.Forms.Cadastro
 {
-    public partial class Form4 : Form
+    public partial class CadastroAula : Form
     {
-        public Form4()
+        public CadastroAula()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

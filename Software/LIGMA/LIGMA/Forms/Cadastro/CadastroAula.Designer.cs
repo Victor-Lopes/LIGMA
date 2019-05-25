@@ -1,6 +1,6 @@
-﻿namespace Ptcc1
+﻿namespace LIGMA.Forms.Cadastro
 {
-    partial class Form4
+    partial class CadastroAula
     {
         /// <summary>
         /// Required designer variable.
@@ -130,6 +130,7 @@
             this.label1.Size = new System.Drawing.Size(140, 23);
             this.label1.TabIndex = 98;
             this.label1.Text = "Cadastro da Aula";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox4
             // 
@@ -210,7 +211,7 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form4
+            // CadastroAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -233,7 +234,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form4";
+            this.Name = "CadastroAula";
             this.Text = "Form4";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

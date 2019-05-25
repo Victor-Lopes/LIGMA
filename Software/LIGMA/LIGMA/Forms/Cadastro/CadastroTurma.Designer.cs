@@ -1,6 +1,6 @@
-﻿namespace Ptcc1
+﻿namespace LIGMA.Forms.Cadastro
 {
-    partial class Form3
+    partial class CadastroTurma
     {
         /// <summary>
         /// Required designer variable.
@@ -28,125 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblTurma = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pnlFormBorder = new System.Windows.Forms.Panel();
             this.lblMaximizar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblLIGMA = new System.Windows.Forms.Label();
             this.pcbIcone = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.cmbPeriodo = new System.Windows.Forms.ComboBox();
+            this.lblPeriodo = new System.Windows.Forms.Label();
+            this.cmbProfessor = new System.Windows.Forms.ComboBox();
+            this.lblProfessor = new System.Windows.Forms.Label();
+            this.cmbEstagio = new System.Windows.Forms.ComboBox();
+            this.lblEstagio = new System.Windows.Forms.Label();
+            this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.lblCurso = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(52, 144);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 81;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(48, 183);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 19);
-            this.label9.TabIndex = 72;
-            this.label9.Text = "Data de Início:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 111);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 19);
-            this.label5.TabIndex = 70;
-            this.label5.Text = "Curso:";
-            // 
-            // lblTurma
-            // 
-            this.lblTurma.AutoSize = true;
-            this.lblTurma.BackColor = System.Drawing.Color.RoyalBlue;
-            this.lblTurma.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurma.ForeColor = System.Drawing.Color.White;
-            this.lblTurma.Location = new System.Drawing.Point(118, 56);
-            this.lblTurma.Name = "lblTurma";
-            this.lblTurma.Size = new System.Drawing.Size(155, 23);
-            this.lblTurma.TabIndex = 66;
-            this.lblTurma.Text = "Cadastro da Turma";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(241, 183);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 19);
-            this.label6.TabIndex = 94;
-            this.label6.Text = "Data de Término:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(244, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 27);
-            this.textBox3.TabIndex = 97;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(240, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 19);
-            this.label3.TabIndex = 96;
-            this.label3.Text = "Estágio:";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(170, 276);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 31);
-            this.button3.TabIndex = 100;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(277, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 31);
-            this.button2.TabIndex = 99;
-            this.button2.Text = "Enviar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // pnlFormBorder
             // 
-            this.pnlFormBorder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlFormBorder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFormBorder.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlFormBorder.Controls.Add(this.lblMaximizar);
@@ -156,61 +61,61 @@
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.Location = new System.Drawing.Point(0, 0);
             this.pnlFormBorder.Name = "pnlFormBorder";
-            this.pnlFormBorder.Size = new System.Drawing.Size(401, 32);
+            this.pnlFormBorder.Size = new System.Drawing.Size(368, 29);
             this.pnlFormBorder.TabIndex = 101;
             // 
             // lblMaximizar
             // 
-            this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMaximizar.BackColor = System.Drawing.Color.Transparent;
             this.lblMaximizar.BackgroundImage = global::LIGMA.Properties.Resources.MaximizarJanela;
             this.lblMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lblMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMaximizar.Location = new System.Drawing.Point(341, 0);
+            this.lblMaximizar.Location = new System.Drawing.Point(304, 0);
             this.lblMaximizar.Margin = new System.Windows.Forms.Padding(5);
             this.lblMaximizar.Name = "lblMaximizar";
             this.lblMaximizar.Padding = new System.Windows.Forms.Padding(3);
-            this.lblMaximizar.Size = new System.Drawing.Size(25, 29);
+            this.lblMaximizar.Size = new System.Drawing.Size(25, 26);
             this.lblMaximizar.TabIndex = 14;
             this.lblMaximizar.UseVisualStyleBackColor = false;
             this.lblMaximizar.Click += new System.EventHandler(this.lblMaximizar_Click);
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(309, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(272, 0);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 29);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(373, 0);
+            this.btnFechar.Location = new System.Drawing.Point(336, 0);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 29);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // lblLIGMA
             // 
-            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLIGMA.AutoSize = true;
             this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,7 +128,7 @@
             // 
             // pcbIcone
             // 
-            this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pcbIcone.BackColor = System.Drawing.Color.Transparent;
             this.pcbIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -232,45 +137,164 @@
             this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
             this.pcbIcone.Location = new System.Drawing.Point(3, 4);
             this.pcbIcone.Name = "pcbIcone";
-            this.pcbIcone.Size = new System.Drawing.Size(21, 25);
+            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
             this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
             // 
-            // dateTimePicker1
+            // cmbPeriodo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(52, 222);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 102;
+            this.cmbPeriodo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPeriodo.FormattingEnabled = true;
+            this.cmbPeriodo.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde"});
+            this.cmbPeriodo.Location = new System.Drawing.Point(33, 197);
+            this.cmbPeriodo.Name = "cmbPeriodo";
+            this.cmbPeriodo.Size = new System.Drawing.Size(135, 27);
+            this.cmbPeriodo.TabIndex = 105;
             // 
-            // dateTimePicker2
+            // lblPeriodo
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(243, 222);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(101, 20);
-            this.dateTimePicker2.TabIndex = 103;
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblPeriodo.Location = new System.Drawing.Point(29, 170);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(58, 19);
+            this.lblPeriodo.TabIndex = 104;
+            this.lblPeriodo.Text = "Período";
             // 
-            // Form3
+            // cmbProfessor
+            // 
+            this.cmbProfessor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProfessor.FormattingEnabled = true;
+            this.cmbProfessor.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde"});
+            this.cmbProfessor.Location = new System.Drawing.Point(195, 132);
+            this.cmbProfessor.Name = "cmbProfessor";
+            this.cmbProfessor.Size = new System.Drawing.Size(135, 27);
+            this.cmbProfessor.TabIndex = 107;
+            // 
+            // lblProfessor
+            // 
+            this.lblProfessor.AutoSize = true;
+            this.lblProfessor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfessor.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblProfessor.Location = new System.Drawing.Point(191, 105);
+            this.lblProfessor.Name = "lblProfessor";
+            this.lblProfessor.Size = new System.Drawing.Size(70, 19);
+            this.lblProfessor.TabIndex = 106;
+            this.lblProfessor.Text = "Professor";
+            // 
+            // cmbEstagio
+            // 
+            this.cmbEstagio.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstagio.FormattingEnabled = true;
+            this.cmbEstagio.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde"});
+            this.cmbEstagio.Location = new System.Drawing.Point(195, 197);
+            this.cmbEstagio.Name = "cmbEstagio";
+            this.cmbEstagio.Size = new System.Drawing.Size(135, 27);
+            this.cmbEstagio.TabIndex = 109;
+            // 
+            // lblEstagio
+            // 
+            this.lblEstagio.AutoSize = true;
+            this.lblEstagio.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstagio.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblEstagio.Location = new System.Drawing.Point(191, 170);
+            this.lblEstagio.Name = "lblEstagio";
+            this.lblEstagio.Size = new System.Drawing.Size(57, 19);
+            this.lblEstagio.TabIndex = 108;
+            this.lblEstagio.Text = "Estágio";
+            // 
+            // cmbCurso
+            // 
+            this.cmbCurso.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde"});
+            this.cmbCurso.Location = new System.Drawing.Point(33, 132);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(135, 27);
+            this.cmbCurso.TabIndex = 111;
+            // 
+            // lblCurso
+            // 
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblCurso.Location = new System.Drawing.Point(29, 105);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(46, 19);
+            this.lblCurso.TabIndex = 110;
+            this.lblCurso.Text = "Curso";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(109, 43);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(172, 26);
+            this.lblTitulo.TabIndex = 112;
+            this.lblTitulo.Text = "Cadastro da Turma";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnCancelar.Location = new System.Drawing.Point(141, 263);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(77, 28);
+            this.btnCancelar.TabIndex = 114;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnEnviar.Location = new System.Drawing.Point(262, 263);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(67, 28);
+            this.btnEnviar.TabIndex = 113;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            // 
+            // CadastroTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(401, 348);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(368, 303);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.cmbCurso);
+            this.Controls.Add(this.lblCurso);
+            this.Controls.Add(this.cmbEstagio);
+            this.Controls.Add(this.lblEstagio);
+            this.Controls.Add(this.cmbProfessor);
+            this.Controls.Add(this.lblProfessor);
+            this.Controls.Add(this.cmbPeriodo);
+            this.Controls.Add(this.lblPeriodo);
             this.Controls.Add(this.pnlFormBorder);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblTurma);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form3";
+            this.Name = "CadastroTurma";
             this.Text = "Form3";
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
@@ -281,22 +305,22 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblTurma;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel pnlFormBorder;
         private System.Windows.Forms.Button lblMaximizar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label lblLIGMA;
         private System.Windows.Forms.PictureBox pcbIcone;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox cmbPeriodo;
+        private System.Windows.Forms.Label lblPeriodo;
+        private System.Windows.Forms.ComboBox cmbProfessor;
+        private System.Windows.Forms.Label lblProfessor;
+        private System.Windows.Forms.ComboBox cmbEstagio;
+        private System.Windows.Forms.Label lblEstagio;
+        private System.Windows.Forms.ComboBox cmbCurso;
+        private System.Windows.Forms.Label lblCurso;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEnviar;
     }
 }

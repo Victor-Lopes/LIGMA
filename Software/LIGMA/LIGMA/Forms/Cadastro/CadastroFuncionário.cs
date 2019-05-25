@@ -8,13 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ptcc1
+namespace LIGMA.Forms.Cadastro
 {
-    public partial class Form2 : Form
+    public partial class CadastroFuncionario : Form
     {
-        public Form2()
+        public CadastroFuncionario()
         {
             InitializeComponent();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

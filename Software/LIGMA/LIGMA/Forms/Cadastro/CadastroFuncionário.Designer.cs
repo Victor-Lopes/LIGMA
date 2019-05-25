@@ -1,6 +1,6 @@
-﻿namespace Ptcc1
+﻿namespace LIGMA.Forms.Cadastro
 {
-    partial class Form2
+    partial class CadastroFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -57,18 +57,18 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlFormBorder = new System.Windows.Forms.Panel();
-            this.lblLIGMA = new System.Windows.Forms.Label();
             this.lblMaximizar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.lblLIGMA = new System.Windows.Forms.Label();
             this.pcbIcone = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,9 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Professor",
+            "Cordenador"});
             this.comboBox1.Location = new System.Drawing.Point(632, 141);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 27);
@@ -293,6 +296,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(100, 27);
             this.comboBox2.TabIndex = 67;
+            this.comboBox2.Visible = false;
             // 
             // label14
             // 
@@ -303,6 +307,7 @@
             this.label14.Size = new System.Drawing.Size(57, 19);
             this.label14.TabIndex = 66;
             this.label14.Text = "Idioma:";
+            this.label14.Visible = false;
             // 
             // textBox14
             // 
@@ -340,28 +345,10 @@
             this.label15.TabIndex = 73;
             this.label15.Text = "Cidade:";
             // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(492, 268);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 27);
-            this.textBox15.TabIndex = 80;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(488, 246);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 19);
-            this.label17.TabIndex = 79;
-            this.label17.Text = "Bairro:";
-            // 
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(340, 268);
+            this.textBox11.Location = new System.Drawing.Point(492, 268);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 27);
             this.textBox11.TabIndex = 78;
@@ -370,7 +357,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(335, 243);
+            this.label18.Location = new System.Drawing.Point(487, 243);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(103, 19);
             this.label18.TabIndex = 77;
@@ -418,19 +405,6 @@
             this.pnlFormBorder.Size = new System.Drawing.Size(791, 32);
             this.pnlFormBorder.TabIndex = 84;
             // 
-            // lblLIGMA
-            // 
-            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblLIGMA.AutoSize = true;
-            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
-            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
-            this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(48, 18);
-            this.lblLIGMA.TabIndex = 11;
-            this.lblLIGMA.Text = "LIGMA";
-            // 
             // lblMaximizar
             // 
             this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -446,6 +420,7 @@
             this.lblMaximizar.Size = new System.Drawing.Size(25, 29);
             this.lblMaximizar.TabIndex = 14;
             this.lblMaximizar.UseVisualStyleBackColor = false;
+            this.lblMaximizar.Click += new System.EventHandler(this.lblMaximizar_Click);
             // 
             // btnMinimizar
             // 
@@ -462,6 +437,7 @@
             this.btnMinimizar.Size = new System.Drawing.Size(25, 29);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
@@ -476,6 +452,20 @@
             this.btnFechar.Size = new System.Drawing.Size(25, 29);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // lblLIGMA
+            // 
+            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblLIGMA.AutoSize = true;
+            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
+            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
+            this.lblLIGMA.Name = "lblLIGMA";
+            this.lblLIGMA.Size = new System.Drawing.Size(48, 18);
+            this.lblLIGMA.TabIndex = 11;
+            this.lblLIGMA.Text = "LIGMA";
             // 
             // pcbIcone
             // 
@@ -493,7 +483,25 @@
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
             // 
-            // Form2
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(335, 246);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(52, 19);
+            this.label17.TabIndex = 79;
+            this.label17.Text = "Bairro:";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(339, 268);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 27);
+            this.textBox15.TabIndex = 80;
+            // 
+            // CadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -536,7 +544,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "CadastroFuncionario";
             this.Text = "Form2";
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
@@ -576,8 +584,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button3;
@@ -588,5 +594,7 @@
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label lblLIGMA;
         private System.Windows.Forms.PictureBox pcbIcone;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox15;
     }
 }
