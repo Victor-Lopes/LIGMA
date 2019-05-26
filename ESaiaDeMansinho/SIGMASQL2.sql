@@ -156,7 +156,7 @@ CREATE TABLE tbPagamento(
 	ValorLiquido money not null,
 	Descontos money not null DEFAULT 0.00,
 	Bônus money not null DEFAULT 0.00, 
-	StatusPagamento char(1) not null, -- P-Pago, N-Não Pago
+	StatusPagamento char(1) not null DEFAULT 'N', -- P-Pago, N-Não Pago
 	CodProfessor smallint not null
 	CONSTRAINT FK_Pagamento_Professor FOREIGN KEY REFERENCES tbProfessor(CodProf)
 );
