@@ -62,5 +62,15 @@ namespace LIGMA
             btnEnviar.BackColor = Color.Transparent;
             btnEnviar.ForeColor = Color.MidnightBlue;
         }
+
+        private void btnVoltar_MouseEnter(object sender, EventArgs e)
+        {
+            btnVoltar.Font = new System.Drawing.Font("Calibri", 9.5F, System.Drawing.FontStyle.Bold);
+        }
+
+        private void lbtnVoltar_MouseLeave(object sender, EventArgs e)
+        {
+            btnVoltar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular);
+        }
     }
 }

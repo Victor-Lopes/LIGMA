@@ -16,7 +16,7 @@ CREATE TABLE tbEndereco (
 	CEP char(8),
 	Numero smallint,
 	CONSTRAINT PK_Endereco PRIMARY KEY CLUSTERED(CEP, Numero),
-	Cimplemento varchar(30) not null,
+	Complemento varchar(30) not null,
 	Cidade varchar(25) not null,
 	UF char(2) not null,
 	Logradouro varchar(10) not null
@@ -66,24 +66,30 @@ CREATE TABLE tbDiaSemana(
 	CONSTRAINT PK_DiaSemana PRIMARY KEY,
 	Nome varchar(7) not null
 );
+
+insert into tbDiaSemana values('Segunda'),
+							  ('Terça'),
+							  ('Quarta'),
+							  ('Quinta'),
+							  ('Sexta'),
+							  ('Sábado'),
+							  ('Domingo'); 
 GO
 
 CREATE TABLE tbPeriodo(
 	CodPeriodo smallint identity(1,1)
 	CONSTRAINT PK_Periodo PRIMARY KEY,
-	NomePeriodo varchar(7) not null, --3 dias(seg, quarta, sexta), 2 dias(ter, quinta), 1 dia(sabado),
-	HorasAula int not null,
-	HorarioInicial time not null,
-	HorarioFinal time not null
+	NomePeriodo varchar(30) not null -- TIREI DA TABELA PERIODO AS HORAS
 );
 GO
 
 CREATE TABLE tbPeriodo_DiaSemana(
+	CodPeriodoDiaSemana smallint identity(1,1)
+	CONSTRAINT PK_PeriodoDiaSemana PRIMARY KEY,
 	CodPeriodo smallint not null
 	CONSTRAINT FK_PeriodoDiaSemana_Periodo FOREIGN KEY REFERENCES tbPeriodo(CodPeriodo),
 	CodDiaSemana smallint not null
-	CONSTRAINT FK_PeriodoDiaSemana_DiaSemana FOREIGN KEY REFERENCES tbDiaSemana(CodDiaSemana),
-	CONSTRAINT PK_Periodo_DiaSemana PRIMARY KEY CLUSTERED(CodPeriodo, CodDiaSemana)
+	CONSTRAINT FK_PeriodoDiaSemana_DiaSemana FOREIGN KEY REFERENCES tbDiaSemana(CodDiaSemana) --MUDEI A CHAVE
 );
 GO
 

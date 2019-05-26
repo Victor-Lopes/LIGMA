@@ -51,47 +51,47 @@
             // 
             // txtDataAula
             // 
-            this.txtDataAula.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataAula.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtDataAula.Location = new System.Drawing.Point(15, 173);
             this.txtDataAula.Name = "txtDataAula";
-            this.txtDataAula.Size = new System.Drawing.Size(129, 27);
+            this.txtDataAula.Size = new System.Drawing.Size(129, 25);
             this.txtDataAula.TabIndex = 103;
             // 
             // txtBox
             // 
-            this.txtBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtBox.Location = new System.Drawing.Point(15, 114);
             this.txtBox.Name = "txtBox";
-            this.txtBox.Size = new System.Drawing.Size(129, 27);
+            this.txtBox.Size = new System.Drawing.Size(129, 25);
             this.txtBox.TabIndex = 102;
             // 
             // lblDataAula
             // 
             this.lblDataAula.AutoSize = true;
-            this.lblDataAula.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataAula.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblDataAula.Location = new System.Drawing.Point(11, 151);
             this.lblDataAula.Name = "lblDataAula";
-            this.lblDataAula.Size = new System.Drawing.Size(97, 19);
+            this.lblDataAula.Size = new System.Drawing.Size(89, 18);
             this.lblDataAula.TabIndex = 101;
             this.lblDataAula.Text = "Data da Aula:";
             // 
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCurso.Location = new System.Drawing.Point(173, 92);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(50, 19);
+            this.lblCurso.Size = new System.Drawing.Size(47, 18);
             this.lblCurso.TabIndex = 100;
             this.lblCurso.Text = "Curso:";
             // 
             // lblTurma
             // 
             this.lblTurma.AutoSize = true;
-            this.lblTurma.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurma.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblTurma.Location = new System.Drawing.Point(13, 92);
             this.lblTurma.Name = "lblTurma";
-            this.lblTurma.Size = new System.Drawing.Size(49, 19);
+            this.lblTurma.Size = new System.Drawing.Size(46, 18);
             this.lblTurma.TabIndex = 99;
             this.lblTurma.Text = "Turma";
             // 
@@ -118,10 +118,10 @@
             // lblListaPresenca
             // 
             this.lblListaPresenca.AutoSize = true;
-            this.lblListaPresenca.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaPresenca.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblListaPresenca.Location = new System.Drawing.Point(11, 210);
             this.lblListaPresenca.Name = "lblListaPresenca";
-            this.lblListaPresenca.Size = new System.Drawing.Size(127, 19);
+            this.lblListaPresenca.Size = new System.Drawing.Size(118, 18);
             this.lblListaPresenca.TabIndex = 116;
             this.lblListaPresenca.Text = "Lista de Presença:";
             // 
@@ -130,7 +130,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.Location = new System.Drawing.Point(252, 446);
             this.btnCancelar.Name = "btnCancelar";
@@ -144,7 +144,7 @@
             this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.Location = new System.Drawing.Point(352, 446);
             this.btnEnviar.Name = "btnEnviar";
@@ -234,6 +234,7 @@
             // rchCurso
             // 
             this.rchCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rchCurso.Font = new System.Drawing.Font("Calibri", 11F);
             this.rchCurso.Location = new System.Drawing.Point(177, 114);
             this.rchCurso.Name = "rchCurso";
             this.rchCurso.Size = new System.Drawing.Size(262, 86);

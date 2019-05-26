@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace LIGMA.Forms.TelaPrincipal
 {
-    public partial class EditarAluno : Form
+    public partial class MudarSenha : Form
     {
         Form aluno = new Aluno();
 
-        public EditarAluno()
+        public MudarSenha()
         {
             InitializeComponent();
         }

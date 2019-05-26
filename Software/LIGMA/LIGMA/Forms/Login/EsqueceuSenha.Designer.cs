@@ -90,6 +90,8 @@
             this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnMinimizar.Location = new System.Drawing.Point(196, 2);
@@ -108,6 +110,8 @@
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnFechar.Location = new System.Drawing.Point(233, 1);
@@ -181,6 +185,8 @@
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
+            this.btnVoltar.MouseEnter += new System.EventHandler(this.btnVoltar_MouseEnter);
+            this.btnVoltar.MouseLeave += new System.EventHandler(this.lbtnVoltar_MouseLeave);
             // 
             // EsqueceuSenha
             // 

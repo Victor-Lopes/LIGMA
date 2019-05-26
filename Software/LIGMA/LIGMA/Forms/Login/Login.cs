@@ -102,7 +102,7 @@ namespace LIGMA
 
         private void lnkEsqueceuSenha_MouseEnter(object sender, EventArgs e)
         {
-            lnkEsqueceuSenha.Font = new System.Drawing.Font("Calibri", 9.3F, System.Drawing.FontStyle.Bold);
+            lnkEsqueceuSenha.Font = new System.Drawing.Font("Calibri", 9.5F, System.Drawing.FontStyle.Bold);
         }
 
         private void lnkEsqueceuSenha_MouseLeave(object sender, EventArgs e)

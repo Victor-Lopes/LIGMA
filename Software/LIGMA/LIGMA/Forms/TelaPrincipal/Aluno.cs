@@ -38,7 +38,7 @@ namespace LIGMA.Forms.TelaPrincipal
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Form edit = new EditarAluno();
+            Form edit = new MudarSenha();
             edit.Show();
         }
 
@@ -81,5 +81,16 @@ namespace LIGMA.Forms.TelaPrincipal
             }
         }
 
+        private void btnAulaExtra_MouseEnter(object sender, EventArgs e)
+        {
+            btnAulaExtra.BackColor = Color.MidnightBlue;
+            btnAulaExtra.ForeColor = Color.Transparent;
+        }
+
+        private void btnAulaExtra_MouseLeave(object sender, EventArgs e)
+        {
+            btnAulaExtra.ForeColor = Color.MidnightBlue;
+            btnAulaExtra.BackColor = Color.Transparent;
+        }
     }
 }

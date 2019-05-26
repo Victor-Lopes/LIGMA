@@ -57,15 +57,15 @@
             this.lblCidade = new System.Windows.Forms.Label();
             this.lblUF = new System.Windows.Forms.Label();
             this.pnlFormBorder = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.lblLIGMA = new System.Windows.Forms.Label();
+            this.pcbIcone = new System.Windows.Forms.PictureBox();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbUF = new System.Windows.Forms.ComboBox();
             this.txtFinalContrato = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.pcbIcone = new System.Windows.Forms.PictureBox();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +76,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(227, 39);
+            this.lblTitulo.Location = new System.Drawing.Point(266, 44);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(155, 23);
             this.lblTitulo.TabIndex = 2;
@@ -86,196 +86,196 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(8, 94);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(107, 19);
+            this.lblNome.Size = new System.Drawing.Size(103, 18);
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "Nome do aluno";
             // 
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndereco.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblEndereco.ForeColor = System.Drawing.Color.Black;
             this.lblEndereco.Location = new System.Drawing.Point(8, 271);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(69, 19);
+            this.lblEndereco.Size = new System.Drawing.Size(66, 18);
             this.lblEndereco.TabIndex = 4;
             this.lblEndereco.Text = "Endereço";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(339, 212);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(50, 19);
+            this.lblEmail.Size = new System.Drawing.Size(47, 18);
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "E-mail";
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCPF.ForeColor = System.Drawing.Color.Black;
             this.lblCPF.Location = new System.Drawing.Point(339, 94);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(33, 19);
+            this.lblCPF.Size = new System.Drawing.Size(31, 18);
             this.lblCPF.TabIndex = 6;
             this.lblCPF.Text = "CPF";
             // 
             // lblRG
             // 
             this.lblRG.AutoSize = true;
-            this.lblRG.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRG.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblRG.ForeColor = System.Drawing.Color.Black;
             this.lblRG.Location = new System.Drawing.Point(526, 94);
             this.lblRG.Name = "lblRG";
-            this.lblRG.Size = new System.Drawing.Size(28, 19);
+            this.lblRG.Size = new System.Drawing.Size(25, 18);
             this.lblRG.TabIndex = 7;
             this.lblRG.Text = "RG";
             // 
             // lblDataNasc
             // 
             this.lblDataNasc.AutoSize = true;
-            this.lblDataNasc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataNasc.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblDataNasc.ForeColor = System.Drawing.Color.Black;
             this.lblDataNasc.Location = new System.Drawing.Point(8, 153);
             this.lblDataNasc.Name = "lblDataNasc";
-            this.lblDataNasc.Size = new System.Drawing.Size(141, 19);
+            this.lblDataNasc.Size = new System.Drawing.Size(132, 18);
             this.lblDataNasc.TabIndex = 14;
             this.lblDataNasc.Text = "Data de Nascimento";
             // 
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefone.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblTelefone.ForeColor = System.Drawing.Color.Black;
             this.lblTelefone.Location = new System.Drawing.Point(8, 212);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(65, 19);
+            this.lblTelefone.Size = new System.Drawing.Size(63, 18);
             this.lblTelefone.TabIndex = 15;
             this.lblTelefone.Text = "Telefone";
             // 
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCelular.ForeColor = System.Drawing.Color.Black;
             this.lblCelular.Location = new System.Drawing.Point(183, 212);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(55, 19);
+            this.lblCelular.Size = new System.Drawing.Size(52, 18);
             this.lblCelular.TabIndex = 16;
             this.lblCelular.Text = "Celular";
             // 
             // lblPeriodo
             // 
             this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblPeriodo.ForeColor = System.Drawing.Color.Black;
             this.lblPeriodo.Location = new System.Drawing.Point(162, 153);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(58, 19);
+            this.lblPeriodo.Size = new System.Drawing.Size(56, 18);
             this.lblPeriodo.TabIndex = 17;
             this.lblPeriodo.Text = "Período";
             // 
             // lblCEP
             // 
             this.lblCEP.AutoSize = true;
-            this.lblCEP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCEP.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCEP.ForeColor = System.Drawing.Color.Black;
             this.lblCEP.Location = new System.Drawing.Point(526, 271);
             this.lblCEP.Name = "lblCEP";
-            this.lblCEP.Size = new System.Drawing.Size(34, 19);
+            this.lblCEP.Size = new System.Drawing.Size(31, 18);
             this.lblCEP.TabIndex = 18;
             this.lblCEP.Text = "CEP";
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtNome.Location = new System.Drawing.Point(12, 116);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(278, 27);
+            this.txtNome.Size = new System.Drawing.Size(278, 25);
             this.txtNome.TabIndex = 19;
             // 
             // txtDataNasc
             // 
-            this.txtDataNasc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNasc.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtDataNasc.Location = new System.Drawing.Point(12, 175);
             this.txtDataNasc.Name = "txtDataNasc";
-            this.txtDataNasc.Size = new System.Drawing.Size(137, 27);
+            this.txtDataNasc.Size = new System.Drawing.Size(137, 25);
             this.txtDataNasc.TabIndex = 20;
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtEndereco.Location = new System.Drawing.Point(12, 293);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(278, 27);
+            this.txtEndereco.Size = new System.Drawing.Size(278, 25);
             this.txtEndereco.TabIndex = 21;
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtEmail.Location = new System.Drawing.Point(343, 234);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(337, 27);
+            this.txtEmail.Size = new System.Drawing.Size(337, 25);
             this.txtEmail.TabIndex = 22;
             // 
             // txtCPF
             // 
-            this.txtCPF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtCPF.Location = new System.Drawing.Point(343, 116);
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(135, 27);
+            this.txtCPF.Size = new System.Drawing.Size(135, 25);
             this.txtCPF.TabIndex = 23;
             // 
             // txtRG
             // 
-            this.txtRG.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtRG.Location = new System.Drawing.Point(530, 116);
             this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(151, 27);
+            this.txtRG.Size = new System.Drawing.Size(151, 25);
             this.txtRG.TabIndex = 24;
             // 
             // txtCEP
             // 
-            this.txtCEP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCEP.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtCEP.Location = new System.Drawing.Point(530, 293);
             this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(151, 27);
+            this.txtCEP.Size = new System.Drawing.Size(151, 25);
             this.txtCEP.TabIndex = 25;
             // 
             // txtCelular
             // 
-            this.txtCelular.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtCelular.Location = new System.Drawing.Point(12, 234);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(103, 27);
+            this.txtCelular.Size = new System.Drawing.Size(103, 25);
             this.txtCelular.TabIndex = 26;
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtTelefone.Location = new System.Drawing.Point(187, 234);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(103, 27);
+            this.txtTelefone.Size = new System.Drawing.Size(103, 25);
             this.txtTelefone.TabIndex = 27;
             // 
             // cmbPeriodo
             // 
             this.cmbPeriodo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbPeriodo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPeriodo.Font = new System.Drawing.Font("Calibri", 11F);
             this.cmbPeriodo.FormattingEnabled = true;
             this.cmbPeriodo.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
             this.cmbPeriodo.Location = new System.Drawing.Point(166, 175);
             this.cmbPeriodo.Name = "cmbPeriodo";
-            this.cmbPeriodo.Size = new System.Drawing.Size(124, 27);
+            this.cmbPeriodo.Size = new System.Drawing.Size(124, 26);
             this.cmbPeriodo.TabIndex = 34;
             // 
             // btnEnviar
@@ -284,7 +284,7 @@
             this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.Location = new System.Drawing.Point(604, 395);
             this.btnEnviar.Name = "btnEnviar";
@@ -299,7 +299,7 @@
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.Location = new System.Drawing.Point(477, 395);
             this.btnCancelar.Name = "btnCancelar";
@@ -311,50 +311,50 @@
             // 
             // txtComplemento
             // 
-            this.txtComplemento.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtComplemento.Location = new System.Drawing.Point(343, 293);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(135, 27);
+            this.txtComplemento.Size = new System.Drawing.Size(135, 25);
             this.txtComplemento.TabIndex = 68;
             // 
             // lblComplemento
             // 
             this.lblComplemento.AutoSize = true;
-            this.lblComplemento.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplemento.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblComplemento.ForeColor = System.Drawing.Color.Black;
             this.lblComplemento.Location = new System.Drawing.Point(339, 271);
             this.lblComplemento.Name = "lblComplemento";
-            this.lblComplemento.Size = new System.Drawing.Size(99, 19);
+            this.lblComplemento.Size = new System.Drawing.Size(97, 18);
             this.lblComplemento.TabIndex = 67;
             this.lblComplemento.Text = "Complemento";
             // 
             // txtCidade
             // 
-            this.txtCidade.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtCidade.Location = new System.Drawing.Point(166, 352);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(124, 27);
+            this.txtCidade.Size = new System.Drawing.Size(124, 25);
             this.txtCidade.TabIndex = 70;
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidade.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCidade.ForeColor = System.Drawing.Color.Black;
             this.lblCidade.Location = new System.Drawing.Point(162, 330);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(54, 19);
+            this.lblCidade.Size = new System.Drawing.Size(51, 18);
             this.lblCidade.TabIndex = 69;
             this.lblCidade.Text = "Cidade";
             // 
             // lblUF
             // 
             this.lblUF.AutoSize = true;
-            this.lblUF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUF.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblUF.ForeColor = System.Drawing.Color.Black;
             this.lblUF.Location = new System.Drawing.Point(8, 330);
             this.lblUF.Name = "lblUF";
-            this.lblUF.Size = new System.Drawing.Size(26, 19);
+            this.lblUF.Size = new System.Drawing.Size(24, 18);
             this.lblUF.TabIndex = 71;
             this.lblUF.Text = "UF";
             // 
@@ -371,73 +371,6 @@
             this.pnlFormBorder.Name = "pnlFormBorder";
             this.pnlFormBorder.Size = new System.Drawing.Size(698, 29);
             this.pnlFormBorder.TabIndex = 75;
-            // 
-            // lblLIGMA
-            // 
-            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblLIGMA.AutoSize = true;
-            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 12F);
-            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
-            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
-            this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(52, 19);
-            this.lblLIGMA.TabIndex = 11;
-            this.lblLIGMA.Text = "LIGMA";
-            // 
-            // cmbCurso
-            // 
-            this.cmbCurso.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Items.AddRange(new object[] {
-            "Manhã",
-            "Tarde"});
-            this.cmbCurso.Location = new System.Drawing.Point(343, 175);
-            this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(135, 27);
-            this.cmbCurso.TabIndex = 77;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(339, 153);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 19);
-            this.label1.TabIndex = 76;
-            this.label1.Text = "Curso";
-            // 
-            // cmbUF
-            // 
-            this.cmbUF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbUF.FormattingEnabled = true;
-            this.cmbUF.Items.AddRange(new object[] {
-            "Manhã",
-            "Tarde"});
-            this.cmbUF.Location = new System.Drawing.Point(12, 352);
-            this.cmbUF.Name = "cmbUF";
-            this.cmbUF.Size = new System.Drawing.Size(51, 27);
-            this.cmbUF.TabIndex = 78;
-            // 
-            // txtFinalContrato
-            // 
-            this.txtFinalContrato.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFinalContrato.Location = new System.Drawing.Point(531, 175);
-            this.txtFinalContrato.Name = "txtFinalContrato";
-            this.txtFinalContrato.Size = new System.Drawing.Size(150, 27);
-            this.txtFinalContrato.TabIndex = 80;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(526, 153);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 19);
-            this.label2.TabIndex = 79;
-            this.label2.Text = "Data Final do Contrato";
             // 
             // btnMinimizar
             // 
@@ -473,6 +406,19 @@
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // lblLIGMA
+            // 
+            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblLIGMA.AutoSize = true;
+            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 12F);
+            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
+            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
+            this.lblLIGMA.Name = "lblLIGMA";
+            this.lblLIGMA.Size = new System.Drawing.Size(52, 19);
+            this.lblLIGMA.TabIndex = 11;
+            this.lblLIGMA.Text = "LIGMA";
+            // 
             // pcbIcone
             // 
             this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -488,6 +434,60 @@
             this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
+            // 
+            // cmbCurso
+            // 
+            this.cmbCurso.Font = new System.Drawing.Font("Calibri", 11F);
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde"});
+            this.cmbCurso.Location = new System.Drawing.Point(343, 175);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(135, 26);
+            this.cmbCurso.TabIndex = 77;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 11F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(339, 153);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 18);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "Curso";
+            // 
+            // cmbUF
+            // 
+            this.cmbUF.Font = new System.Drawing.Font("Calibri", 11F);
+            this.cmbUF.FormattingEnabled = true;
+            this.cmbUF.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde"});
+            this.cmbUF.Location = new System.Drawing.Point(12, 352);
+            this.cmbUF.Name = "cmbUF";
+            this.cmbUF.Size = new System.Drawing.Size(51, 26);
+            this.cmbUF.TabIndex = 78;
+            // 
+            // txtFinalContrato
+            // 
+            this.txtFinalContrato.Font = new System.Drawing.Font("Calibri", 11F);
+            this.txtFinalContrato.Location = new System.Drawing.Point(531, 175);
+            this.txtFinalContrato.Name = "txtFinalContrato";
+            this.txtFinalContrato.Size = new System.Drawing.Size(150, 25);
+            this.txtFinalContrato.TabIndex = 80;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 11F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(526, 153);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 18);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "Data Final do Contrato";
             // 
             // CadastroAluno
             // 

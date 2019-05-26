@@ -128,6 +128,7 @@
             // 
             this.cmbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.Items.AddRange(new object[] {
             "Professor",
@@ -189,6 +190,8 @@
             this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnMinimizar.Location = new System.Drawing.Point(197, 1);
@@ -244,6 +247,7 @@
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.pcbLogo);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(147)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

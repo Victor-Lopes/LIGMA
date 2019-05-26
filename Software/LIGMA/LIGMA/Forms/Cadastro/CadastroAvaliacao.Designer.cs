@@ -51,7 +51,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.Location = new System.Drawing.Point(218, 268);
             this.btnCancelar.Name = "btnCancelar";
@@ -65,7 +65,7 @@
             this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.Location = new System.Drawing.Point(301, 268);
             this.btnEnviar.Name = "btnEnviar";
@@ -89,25 +89,25 @@
             // 
             // cmbTurma
             // 
-            this.cmbTurma.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTurma.Font = new System.Drawing.Font("Calibri", 11F);
             this.cmbTurma.FormattingEnabled = true;
             this.cmbTurma.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
             this.cmbTurma.Location = new System.Drawing.Point(11, 132);
             this.cmbTurma.Name = "cmbTurma";
-            this.cmbTurma.Size = new System.Drawing.Size(135, 27);
+            this.cmbTurma.Size = new System.Drawing.Size(135, 26);
             this.cmbTurma.TabIndex = 123;
             // 
             // lblTurma
             // 
             this.lblTurma.AutoSize = true;
             this.lblTurma.BackColor = System.Drawing.Color.Transparent;
-            this.lblTurma.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurma.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblTurma.ForeColor = System.Drawing.Color.Black;
             this.lblTurma.Location = new System.Drawing.Point(7, 109);
             this.lblTurma.Name = "lblTurma";
-            this.lblTurma.Size = new System.Drawing.Size(49, 19);
+            this.lblTurma.Size = new System.Drawing.Size(46, 18);
             this.lblTurma.TabIndex = 122;
             this.lblTurma.Text = "Turma";
             // 
@@ -115,22 +115,22 @@
             // 
             this.lblData.AutoSize = true;
             this.lblData.BackColor = System.Drawing.Color.Transparent;
-            this.lblData.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblData.ForeColor = System.Drawing.Color.Black;
             this.lblData.Location = new System.Drawing.Point(8, 167);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(40, 19);
+            this.lblData.Size = new System.Drawing.Size(36, 18);
             this.lblData.TabIndex = 118;
             this.lblData.Text = "Data";
             // 
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblDescricao.ForeColor = System.Drawing.Color.Black;
             this.lblDescricao.Location = new System.Drawing.Point(169, 109);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(73, 19);
+            this.lblDescricao.Size = new System.Drawing.Size(67, 18);
             this.lblDescricao.TabIndex = 116;
             this.lblDescricao.Text = "Descrição";
             // 
@@ -213,16 +213,16 @@
             // 
             // mskData
             // 
-            this.mskData.Font = new System.Drawing.Font("Calibri", 12F);
+            this.mskData.Font = new System.Drawing.Font("Calibri", 11F);
             this.mskData.Location = new System.Drawing.Point(12, 190);
             this.mskData.Name = "mskData";
-            this.mskData.Size = new System.Drawing.Size(135, 27);
+            this.mskData.Size = new System.Drawing.Size(135, 25);
             this.mskData.TabIndex = 127;
             // 
             // rchDescricao
             // 
             this.rchDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rchDescricao.Font = new System.Drawing.Font("Calibri", 12F);
+            this.rchDescricao.Font = new System.Drawing.Font("Calibri", 11F);
             this.rchDescricao.Location = new System.Drawing.Point(173, 132);
             this.rchDescricao.Name = "rchDescricao";
             this.rchDescricao.Size = new System.Drawing.Size(195, 85);
