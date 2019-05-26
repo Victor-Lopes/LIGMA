@@ -12,25 +12,21 @@ USE dbLIGMA;
 GO
 
 CREATE TABLE tbDadosComuns (
-	CEP char(8),
-	Numero smallint,
-<<<<<<< HEAD
-	CONSTRAINT PK_Endereco PRIMARY KEY CLUSTERED(CEP, Numero),
-=======
-	Nome varchar(75) not null,
 	CodDados smallint identity(1,1)
 	CONSTRAINT PK_DadosComuns PRIMARY KEY,
->>>>>>> 76f55a7229af8da09840f8af41d42d734559f168
-	Complemento varchar(30) not null,
-	Cidade varchar(25) not null,
-	UF char(2) not null,
-	Logradouro varchar(10) not null,
+	Nome varchar(75) not null,
 	TelFixo decimal(8),
 	TelCelular decimal(9),
 	DataNasc date not null,
 	RG char(10) not null,
 	CPF decimal(11) not null
 	CONSTRAINT UK_Func_CPF UNIQUE(CPF),
+	Complemento varchar(30) not null,
+	Cidade varchar(25) not null,
+	UF char(2) not null,
+	Logradouro varchar(10) not null,
+	CEP char(8),
+	Numero smallint
 	);
 GO
 
@@ -73,21 +69,12 @@ CREATE TABLE tbDiaSemana(
 );
 
 insert into tbDiaSemana values('Segunda'),
-<<<<<<< HEAD
 							  ('Terça'),
 							  ('Quarta'),
 							  ('Quinta'),
 							  ('Sexta'),
 							  ('Sábado'),
 							  ('Domingo'); 
-=======
-			      ('Terça'),
-			      ('Quarta'),
-			      ('Quinta'),
-			      ('Sexta'),
-			      ('Sábado'),
-			      ('Domingo'); --adicionei isso
->>>>>>> f1a4e3095f32ec167a0cee5d28dbbdb09941f79d
 GO
 
 CREATE TABLE tbPeriodo(
@@ -103,11 +90,7 @@ CREATE TABLE tbPeriodo_DiaSemana(
 	CodPeriodo smallint not null
 	CONSTRAINT FK_PeriodoDiaSemana_Periodo FOREIGN KEY REFERENCES tbPeriodo(CodPeriodo),
 	CodDiaSemana smallint not null
-<<<<<<< HEAD
-	CONSTRAINT FK_PeriodoDiaSemana_DiaSemana FOREIGN KEY REFERENCES tbDiaSemana(CodDiaSemana) --MUDEI A CHAVE
-=======
 	CONSTRAINT FK_PeriodoDiaSemana_DiaSemana FOREIGN KEY REFERENCES tbDiaSemana(CodDiaSemana)
->>>>>>> f1a4e3095f32ec167a0cee5d28dbbdb09941f79d
 );
 GO
 
