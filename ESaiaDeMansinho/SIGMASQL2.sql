@@ -1,6 +1,5 @@
 USE master;
 GO
---ADICIONAR TABELA INTERMEDIARIA ENTRE CURSO E PROFESSOR :D
 
 
 IF DB_ID('dbLIGMA') is not null DROP DATABASE dbLIGMA;
@@ -35,9 +34,10 @@ CREATE TABLE tbLogin (
 	CodLogin smallint identity(1,1)
 	CONSTRAINT PK_Login PRIMARY KEY,
 	Senha varchar(20) not null,
-	Email varchar(50) not null,
+	Email varchar(50) not null
+	CONSTRAINT UK_Login_Email UNIQUE,
 	Ativada bit not null default 1 --1 pra verdadeiro 0 pra falso
-	CONSTRAINT UK_Login_Email UNIQUE
+	
 	);
 GO
 
@@ -67,24 +67,30 @@ CREATE TABLE tbDiaSemana(
 	CONSTRAINT PK_DiaSemana PRIMARY KEY,
 	Nome varchar(7) not null
 );
+
+insert into tbDiaSemana values('Segunda'),
+			      ('Terça'),
+			      ('Quarta'),
+			      ('Quinta'),
+			      ('Sexta'),
+			      ('Sábado'),
+			      ('Domingo'); --adicionei isso
 GO
 
 CREATE TABLE tbPeriodo(
 	CodPeriodo smallint identity(1,1)
 	CONSTRAINT PK_Periodo PRIMARY KEY,
-	NomePeriodo varchar(7) not null, --3 dias(seg, quarta, sexta), 2 dias(ter, quinta), 1 dia(sabado),
-	HorasAula int not null,
-	HorarioInicial time not null,
-	HorarioFinal time not null
+	NomePeriodo varchar(30) not null -- TIREI DA TABELA PERIODO AS HORAS
 );
 GO
 
 CREATE TABLE tbPeriodo_DiaSemana(
+	CodPeriodoDiaSemana smallint identity(1,1)
+	CONSTRAINT PK_PeriodoDiaSemana PRIMARY KEY,
 	CodPeriodo smallint not null
 	CONSTRAINT FK_PeriodoDiaSemana_Periodo FOREIGN KEY REFERENCES tbPeriodo(CodPeriodo),
 	CodDiaSemana smallint not null
-	CONSTRAINT FK_PeriodoDiaSemana_DiaSemana FOREIGN KEY REFERENCES tbDiaSemana(CodDiaSemana),
-	CONSTRAINT PK_Periodo_DiaSemana PRIMARY KEY CLUSTERED(CodPeriodo, CodDiaSemana)
+	CONSTRAINT FK_PeriodoDiaSemana_DiaSemana FOREIGN KEY REFERENCES tbDiaSemana(CodDiaSemana)
 );
 GO
 
@@ -105,7 +111,8 @@ CREATE TABLE tbTurma(
 	CONSTRAINT FK_Aula_Prof FOREIGN KEY REFERENCES tbProfessor(CodProf),
 	CodPeriodo smallint not null
 	CONSTRAINT FK_Turma_Periodo FOREIGN KEY REFERENCES tbPeriodo(CodPeriodo),
-	Estagio varchar(15) not null
+	Estagio varchar(15) not null,
+	Preço money not null --adicionei isso
 );
 GO
 
