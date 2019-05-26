@@ -17,14 +17,19 @@ namespace LIGMA.Forms.Cadastro
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lblMaximizar_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
+        }
 
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -30,27 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aluno));
             this.pnlInfoAluno = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblPresenca = new System.Windows.Forms.Label();
             this.lblEstagio = new System.Windows.Forms.Label();
             this.lblCurso = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.dgvNotas = new System.Windows.Forms.DataGridView();
             this.dgvAulas = new System.Windows.Forms.DataGridView();
-            this.lblNotas = new System.Windows.Forms.Label();
             this.lblAulas = new System.Windows.Forms.Label();
             this.pnlFormBorder = new System.Windows.Forms.Panel();
             this.lblLIGMA = new System.Windows.Forms.Label();
-            this.lblMaximizar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNotas = new System.Windows.Forms.Label();
+            this.dgvNotas = new System.Windows.Forms.DataGridView();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.pcbIcone = new System.Windows.Forms.PictureBox();
             this.pcbFotoAluno = new System.Windows.Forms.PictureBox();
             this.pnlInfoAluno.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAulas)).BeginInit();
             this.pnlFormBorder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFotoAluno)).BeginInit();
             this.SuspendLayout();
@@ -59,9 +60,10 @@
             // 
             this.pnlInfoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.pnlInfoAluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInfoAluno.Controls.Add(this.btnEditar);
+            this.pnlInfoAluno.Controls.Add(this.btnLogout);
             this.pnlInfoAluno.Controls.Add(this.lblPeriodo);
             this.pnlInfoAluno.Controls.Add(this.lblPresenca);
+            this.pnlInfoAluno.Controls.Add(this.btnEditar);
             this.pnlInfoAluno.Controls.Add(this.lblEstagio);
             this.pnlInfoAluno.Controls.Add(this.lblCurso);
             this.pnlInfoAluno.Controls.Add(this.lblNome);
@@ -72,25 +74,50 @@
             this.pnlInfoAluno.Size = new System.Drawing.Size(179, 481);
             this.pnlInfoAluno.TabIndex = 1;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.Red;
+            this.btnLogout.Location = new System.Drawing.Point(-1, 407);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(179, 24);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "LogOut";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.MouseEnter += new System.EventHandler(this.btnLogout_MouseEnter);
+            this.btnLogout.MouseLeave += new System.EventHandler(this.btnLogout_MouseLeave);
+            // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(50, 422);
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnEditar.Location = new System.Drawing.Point(-1, 385);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 25);
+            this.btnEditar.Size = new System.Drawing.Size(179, 22);
             this.btnEditar.TabIndex = 7;
-            this.btnEditar.Text = "Editar Perfil";
+            this.btnEditar.Text = "Mudar Senha";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnEditar.MouseEnter += new System.EventHandler(this.btnEditar_MouseEnter);
+            this.btnEditar.MouseLeave += new System.EventHandler(this.btnEditar_MouseLeave);
             // 
             // lblPeriodo
             // 
             this.lblPeriodo.AutoSize = true;
             this.lblPeriodo.BackColor = System.Drawing.Color.Transparent;
             this.lblPeriodo.ForeColor = System.Drawing.Color.Black;
-            this.lblPeriodo.Location = new System.Drawing.Point(64, 378);
+            this.lblPeriodo.Location = new System.Drawing.Point(59, 324);
             this.lblPeriodo.Name = "lblPeriodo";
             this.lblPeriodo.Size = new System.Drawing.Size(49, 14);
             this.lblPeriodo.TabIndex = 5;
@@ -101,18 +128,19 @@
             this.lblPresenca.AutoSize = true;
             this.lblPresenca.BackColor = System.Drawing.Color.Transparent;
             this.lblPresenca.ForeColor = System.Drawing.Color.Black;
-            this.lblPresenca.Location = new System.Drawing.Point(33, 340);
+            this.lblPresenca.Location = new System.Drawing.Point(29, 289);
             this.lblPresenca.Name = "lblPresenca";
-            this.lblPresenca.Size = new System.Drawing.Size(126, 14);
+            this.lblPresenca.Size = new System.Drawing.Size(123, 14);
             this.lblPresenca.TabIndex = 4;
-            this.lblPresenca.Text = "Situação de Presença:";
+            this.lblPresenca.Text = "Situação de Presença";
+            this.lblPresenca.Click += new System.EventHandler(this.lblPresenca_Click);
             // 
             // lblEstagio
             // 
             this.lblEstagio.AutoSize = true;
             this.lblEstagio.BackColor = System.Drawing.Color.Transparent;
             this.lblEstagio.ForeColor = System.Drawing.Color.Black;
-            this.lblEstagio.Location = new System.Drawing.Point(64, 295);
+            this.lblEstagio.Location = new System.Drawing.Point(59, 254);
             this.lblEstagio.Name = "lblEstagio";
             this.lblEstagio.Size = new System.Drawing.Size(47, 14);
             this.lblEstagio.TabIndex = 3;
@@ -123,7 +151,7 @@
             this.lblCurso.AutoSize = true;
             this.lblCurso.BackColor = System.Drawing.Color.Transparent;
             this.lblCurso.ForeColor = System.Drawing.Color.Black;
-            this.lblCurso.Location = new System.Drawing.Point(68, 244);
+            this.lblCurso.Location = new System.Drawing.Point(65, 216);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(37, 14);
             this.lblCurso.TabIndex = 2;
@@ -134,45 +162,27 @@
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.Color.Transparent;
             this.lblNome.ForeColor = System.Drawing.Color.Black;
-            this.lblNome.Location = new System.Drawing.Point(68, 209);
+            this.lblNome.Location = new System.Drawing.Point(63, 181);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(42, 14);
+            this.lblNome.Size = new System.Drawing.Size(39, 14);
             this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome:";
-            // 
-            // dgvNotas
-            // 
-            this.dgvNotas.BackgroundColor = System.Drawing.Color.White;
-            this.dgvNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNotas.Location = new System.Drawing.Point(275, 61);
-            this.dgvNotas.Name = "dgvNotas";
-            this.dgvNotas.Size = new System.Drawing.Size(444, 162);
-            this.dgvNotas.TabIndex = 2;
+            this.lblNome.Text = "Nome";
             // 
             // dgvAulas
             // 
-            this.dgvAulas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAulas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.dgvAulas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAulas.Location = new System.Drawing.Point(275, 295);
+            this.dgvAulas.GridColor = System.Drawing.Color.White;
+            this.dgvAulas.Location = new System.Drawing.Point(222, 67);
             this.dgvAulas.Name = "dgvAulas";
             this.dgvAulas.Size = new System.Drawing.Size(444, 162);
             this.dgvAulas.TabIndex = 3;
-            // 
-            // lblNotas
-            // 
-            this.lblNotas.AutoSize = true;
-            this.lblNotas.ForeColor = System.Drawing.Color.Black;
-            this.lblNotas.Location = new System.Drawing.Point(473, 44);
-            this.lblNotas.Name = "lblNotas";
-            this.lblNotas.Size = new System.Drawing.Size(39, 14);
-            this.lblNotas.TabIndex = 4;
-            this.lblNotas.Text = "Notas";
             // 
             // lblAulas
             // 
             this.lblAulas.AutoSize = true;
             this.lblAulas.ForeColor = System.Drawing.Color.Black;
-            this.lblAulas.Location = new System.Drawing.Point(473, 278);
+            this.lblAulas.Location = new System.Drawing.Point(421, 50);
             this.lblAulas.Name = "lblAulas";
             this.lblAulas.Size = new System.Drawing.Size(38, 14);
             this.lblAulas.TabIndex = 5;
@@ -183,15 +193,14 @@
             this.pnlFormBorder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFormBorder.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pnlFormBorder.Controls.Add(this.lblMaximizar);
+            this.pnlFormBorder.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnlFormBorder.Controls.Add(this.btnMinimizar);
             this.pnlFormBorder.Controls.Add(this.btnFechar);
             this.pnlFormBorder.Controls.Add(this.lblLIGMA);
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.Location = new System.Drawing.Point(0, 0);
             this.pnlFormBorder.Name = "pnlFormBorder";
-            this.pnlFormBorder.Size = new System.Drawing.Size(800, 29);
+            this.pnlFormBorder.Size = new System.Drawing.Size(714, 29);
             this.pnlFormBorder.TabIndex = 10;
             // 
             // lblLIGMA
@@ -207,22 +216,35 @@
             this.lblLIGMA.TabIndex = 11;
             this.lblLIGMA.Text = "LIGMA";
             // 
-            // lblMaximizar
+            // label1
             // 
-            this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.lblMaximizar.BackgroundImage = global::LIGMA.Properties.Resources.MaximizarJanela;
-            this.lblMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lblMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMaximizar.Location = new System.Drawing.Point(740, 0);
-            this.lblMaximizar.Margin = new System.Windows.Forms.Padding(5);
-            this.lblMaximizar.Name = "lblMaximizar";
-            this.lblMaximizar.Padding = new System.Windows.Forms.Padding(3);
-            this.lblMaximizar.Size = new System.Drawing.Size(25, 26);
-            this.lblMaximizar.TabIndex = 14;
-            this.lblMaximizar.UseVisualStyleBackColor = false;
-            this.lblMaximizar.Click += new System.EventHandler(this.lblMaximizar_Click);
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(342, 368);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 14);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "As notas ainda não foram lançadas!";
+            // 
+            // lblNotas
+            // 
+            this.lblNotas.AutoSize = true;
+            this.lblNotas.ForeColor = System.Drawing.Color.Black;
+            this.lblNotas.Location = new System.Drawing.Point(420, 281);
+            this.lblNotas.Name = "lblNotas";
+            this.lblNotas.Size = new System.Drawing.Size(39, 14);
+            this.lblNotas.TabIndex = 13;
+            this.lblNotas.Text = "Notas";
+            // 
+            // dgvNotas
+            // 
+            this.dgvNotas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.dgvNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNotas.GridColor = System.Drawing.Color.White;
+            this.dgvNotas.Location = new System.Drawing.Point(222, 298);
+            this.dgvNotas.Name = "dgvNotas";
+            this.dgvNotas.Size = new System.Drawing.Size(444, 162);
+            this.dgvNotas.TabIndex = 12;
             // 
             // btnMinimizar
             // 
@@ -232,11 +254,12 @@
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(708, 0);
+            this.btnMinimizar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnMinimizar.Location = new System.Drawing.Point(655, 1);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -249,9 +272,10 @@
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(772, 0);
+            this.btnFechar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnFechar.Location = new System.Drawing.Point(689, 0);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 26);
+            this.btnFechar.Size = new System.Drawing.Size(25, 28);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -274,7 +298,8 @@
             // 
             // pcbFotoAluno
             // 
-            this.pcbFotoAluno.Location = new System.Drawing.Point(37, 61);
+            this.pcbFotoAluno.Image = global::LIGMA.Properties.Resources.Usuario;
+            this.pcbFotoAluno.Location = new System.Drawing.Point(32, 33);
             this.pcbFotoAluno.Name = "pcbFotoAluno";
             this.pcbFotoAluno.Size = new System.Drawing.Size(100, 102);
             this.pcbFotoAluno.TabIndex = 0;
@@ -285,25 +310,29 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 507);
+            this.ClientSize = new System.Drawing.Size(714, 507);
+            this.Controls.Add(this.lblNotas);
+            this.Controls.Add(this.dgvNotas);
             this.Controls.Add(this.pnlFormBorder);
             this.Controls.Add(this.lblAulas);
-            this.Controls.Add(this.lblNotas);
             this.Controls.Add(this.dgvAulas);
-            this.Controls.Add(this.dgvNotas);
             this.Controls.Add(this.pnlInfoAluno);
+            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 9F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(714, 507);
+            this.MinimumSize = new System.Drawing.Size(714, 507);
             this.Name = "Aluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aluno";
             this.pnlInfoAluno.ResumeLayout(false);
             this.pnlInfoAluno.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAulas)).EndInit();
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFotoAluno)).EndInit();
             this.ResumeLayout(false);
@@ -320,15 +349,16 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbFotoAluno;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView dgvNotas;
         private System.Windows.Forms.DataGridView dgvAulas;
-        private System.Windows.Forms.Label lblNotas;
         private System.Windows.Forms.Label lblAulas;
         private System.Windows.Forms.Panel pnlFormBorder;
         private System.Windows.Forms.Label lblLIGMA;
         private System.Windows.Forms.PictureBox pcbIcone;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button lblMaximizar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNotas;
+        private System.Windows.Forms.DataGridView dgvNotas;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

@@ -72,39 +72,44 @@
             // btnLogin
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogin.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(13)))), ((int)(((byte)(136)))));
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(86, 322);
+            this.btnLogin.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnLogin.Location = new System.Drawing.Point(96, 322);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(68, 25);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
+            this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
             // lnkEsqueceuSenha
             // 
-            this.lnkEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(13)))), ((int)(((byte)(136)))));
+            this.lnkEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.Red;
             this.lnkEsqueceuSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnkEsqueceuSenha.AutoSize = true;
-            this.lnkEsqueceuSenha.DisabledLinkColor = System.Drawing.Color.RoyalBlue;
+            this.lnkEsqueceuSenha.BackColor = System.Drawing.Color.Transparent;
+            this.lnkEsqueceuSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lnkEsqueceuSenha.DisabledLinkColor = System.Drawing.Color.White;
             this.lnkEsqueceuSenha.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkEsqueceuSenha.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lnkEsqueceuSenha.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.lnkEsqueceuSenha.Location = new System.Drawing.Point(70, 367);
+            this.lnkEsqueceuSenha.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lnkEsqueceuSenha.LinkColor = System.Drawing.Color.MidnightBlue;
+            this.lnkEsqueceuSenha.Location = new System.Drawing.Point(80, 367);
             this.lnkEsqueceuSenha.Name = "lnkEsqueceuSenha";
             this.lnkEsqueceuSenha.Size = new System.Drawing.Size(106, 14);
             this.lnkEsqueceuSenha.TabIndex = 7;
             this.lnkEsqueceuSenha.TabStop = true;
             this.lnkEsqueceuSenha.Text = "Esqueceu a Senha";
-            this.lnkEsqueceuSenha.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(147)))));
+            this.lnkEsqueceuSenha.VisitedLinkColor = System.Drawing.Color.MidnightBlue;
+            this.lnkEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEsqueceuSenha_LinkClicked);
+            this.lnkEsqueceuSenha.MouseEnter += new System.EventHandler(this.lnkEsqueceuSenha_MouseEnter);
+            this.lnkEsqueceuSenha.MouseLeave += new System.EventHandler(this.lnkEsqueceuSenha_MouseLeave);
             // 
             // lblSlogan
             // 
@@ -112,7 +117,7 @@
             this.lblSlogan.AutoSize = true;
             this.lblSlogan.BackColor = System.Drawing.Color.Transparent;
             this.lblSlogan.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSlogan.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblSlogan.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblSlogan.Location = new System.Drawing.Point(51, 106);
             this.lblSlogan.Name = "lblSlogan";
             this.lblSlogan.Size = new System.Drawing.Size(156, 14);
@@ -122,6 +127,7 @@
             // cmbUsuario
             // 
             this.cmbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.Items.AddRange(new object[] {
             "Professor",
@@ -137,7 +143,7 @@
             this.pnlFormBorder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFormBorder.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pnlFormBorder.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnlFormBorder.Controls.Add(this.lblLIGMA);
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.Controls.Add(this.btnMinimizar);
@@ -184,11 +190,12 @@
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(205, 0);
+            this.btnMinimizar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnMinimizar.Location = new System.Drawing.Point(197, 1);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -201,9 +208,10 @@
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(232, 0);
+            this.btnFechar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnFechar.Location = new System.Drawing.Point(233, 0);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 26);
+            this.btnFechar.Size = new System.Drawing.Size(25, 28);
             this.btnFechar.TabIndex = 0;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);

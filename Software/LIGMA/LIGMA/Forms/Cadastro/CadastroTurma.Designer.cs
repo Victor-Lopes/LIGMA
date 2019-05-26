@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlFormBorder = new System.Windows.Forms.Panel();
-            this.lblMaximizar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblLIGMA = new System.Windows.Forms.Label();
@@ -51,71 +50,54 @@
             // 
             // pnlFormBorder
             // 
-            this.pnlFormBorder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlFormBorder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFormBorder.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pnlFormBorder.Controls.Add(this.lblMaximizar);
+            this.pnlFormBorder.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnlFormBorder.Controls.Add(this.btnMinimizar);
             this.pnlFormBorder.Controls.Add(this.btnFechar);
             this.pnlFormBorder.Controls.Add(this.lblLIGMA);
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
+            this.pnlFormBorder.ForeColor = System.Drawing.Color.MidnightBlue;
             this.pnlFormBorder.Location = new System.Drawing.Point(0, 0);
             this.pnlFormBorder.Name = "pnlFormBorder";
-            this.pnlFormBorder.Size = new System.Drawing.Size(368, 29);
+            this.pnlFormBorder.Size = new System.Drawing.Size(321, 29);
             this.pnlFormBorder.TabIndex = 101;
-            // 
-            // lblMaximizar
-            // 
-            this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.lblMaximizar.BackgroundImage = global::LIGMA.Properties.Resources.MaximizarJanela;
-            this.lblMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lblMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMaximizar.Location = new System.Drawing.Point(304, 0);
-            this.lblMaximizar.Margin = new System.Windows.Forms.Padding(5);
-            this.lblMaximizar.Name = "lblMaximizar";
-            this.lblMaximizar.Padding = new System.Windows.Forms.Padding(3);
-            this.lblMaximizar.Size = new System.Drawing.Size(25, 26);
-            this.lblMaximizar.TabIndex = 14;
-            this.lblMaximizar.UseVisualStyleBackColor = false;
-            this.lblMaximizar.Click += new System.EventHandler(this.lblMaximizar_Click);
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(272, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(260, 2);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(336, 0);
+            this.btnFechar.Location = new System.Drawing.Point(294, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 26);
+            this.btnFechar.Size = new System.Drawing.Size(25, 28);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // lblLIGMA
             // 
-            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLIGMA.AutoSize = true;
             this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,7 +110,7 @@
             // 
             // pcbIcone
             // 
-            this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pcbIcone.BackColor = System.Drawing.Color.Transparent;
             this.pcbIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -149,7 +131,7 @@
             this.cmbPeriodo.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbPeriodo.Location = new System.Drawing.Point(33, 197);
+            this.cmbPeriodo.Location = new System.Drawing.Point(12, 181);
             this.cmbPeriodo.Name = "cmbPeriodo";
             this.cmbPeriodo.Size = new System.Drawing.Size(135, 27);
             this.cmbPeriodo.TabIndex = 105;
@@ -158,8 +140,8 @@
             // 
             this.lblPeriodo.AutoSize = true;
             this.lblPeriodo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeriodo.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblPeriodo.Location = new System.Drawing.Point(29, 170);
+            this.lblPeriodo.ForeColor = System.Drawing.Color.Black;
+            this.lblPeriodo.Location = new System.Drawing.Point(8, 158);
             this.lblPeriodo.Name = "lblPeriodo";
             this.lblPeriodo.Size = new System.Drawing.Size(58, 19);
             this.lblPeriodo.TabIndex = 104;
@@ -172,7 +154,7 @@
             this.cmbProfessor.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbProfessor.Location = new System.Drawing.Point(195, 132);
+            this.cmbProfessor.Location = new System.Drawing.Point(174, 122);
             this.cmbProfessor.Name = "cmbProfessor";
             this.cmbProfessor.Size = new System.Drawing.Size(135, 27);
             this.cmbProfessor.TabIndex = 107;
@@ -181,8 +163,8 @@
             // 
             this.lblProfessor.AutoSize = true;
             this.lblProfessor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfessor.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProfessor.Location = new System.Drawing.Point(191, 105);
+            this.lblProfessor.ForeColor = System.Drawing.Color.Black;
+            this.lblProfessor.Location = new System.Drawing.Point(170, 100);
             this.lblProfessor.Name = "lblProfessor";
             this.lblProfessor.Size = new System.Drawing.Size(70, 19);
             this.lblProfessor.TabIndex = 106;
@@ -195,7 +177,7 @@
             this.cmbEstagio.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbEstagio.Location = new System.Drawing.Point(195, 197);
+            this.cmbEstagio.Location = new System.Drawing.Point(174, 181);
             this.cmbEstagio.Name = "cmbEstagio";
             this.cmbEstagio.Size = new System.Drawing.Size(135, 27);
             this.cmbEstagio.TabIndex = 109;
@@ -204,8 +186,8 @@
             // 
             this.lblEstagio.AutoSize = true;
             this.lblEstagio.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstagio.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblEstagio.Location = new System.Drawing.Point(191, 170);
+            this.lblEstagio.ForeColor = System.Drawing.Color.Black;
+            this.lblEstagio.Location = new System.Drawing.Point(170, 158);
             this.lblEstagio.Name = "lblEstagio";
             this.lblEstagio.Size = new System.Drawing.Size(57, 19);
             this.lblEstagio.TabIndex = 108;
@@ -218,7 +200,7 @@
             this.cmbCurso.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbCurso.Location = new System.Drawing.Point(33, 132);
+            this.cmbCurso.Location = new System.Drawing.Point(12, 122);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(135, 27);
             this.cmbCurso.TabIndex = 111;
@@ -227,8 +209,8 @@
             // 
             this.lblCurso.AutoSize = true;
             this.lblCurso.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblCurso.Location = new System.Drawing.Point(29, 105);
+            this.lblCurso.ForeColor = System.Drawing.Color.Black;
+            this.lblCurso.Location = new System.Drawing.Point(8, 100);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(46, 19);
             this.lblCurso.TabIndex = 110;
@@ -239,8 +221,8 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(109, 43);
+            this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(77, 42);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(172, 26);
             this.lblTitulo.TabIndex = 112;
@@ -250,11 +232,11 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnCancelar.Location = new System.Drawing.Point(141, 263);
+            this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnCancelar.Location = new System.Drawing.Point(159, 240);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(77, 28);
             this.btnCancelar.TabIndex = 114;
@@ -264,11 +246,11 @@
             // btnEnviar
             // 
             this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnEnviar.Location = new System.Drawing.Point(262, 263);
+            this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnEnviar.Location = new System.Drawing.Point(242, 240);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(67, 28);
             this.btnEnviar.TabIndex = 113;
@@ -280,7 +262,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(368, 303);
+            this.ClientSize = new System.Drawing.Size(321, 303);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.lblTitulo);
@@ -306,7 +288,6 @@
 
         #endregion
         private System.Windows.Forms.Panel pnlFormBorder;
-        private System.Windows.Forms.Button lblMaximizar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label lblLIGMA;

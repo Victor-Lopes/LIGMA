@@ -1,4 +1,5 @@
 ﻿using System;
+using LIGMA.Forms.TelaPrincipal;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace LIGMA.Forms.Cadastro
 {
     public partial class CadastroAluno : Form
     {
+
+        Form aluno = new Aluno();
 
         public CadastroAluno()
         {
@@ -33,5 +36,10 @@ namespace LIGMA.Forms.Cadastro
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            aluno.Show();
+        }
     }
 }

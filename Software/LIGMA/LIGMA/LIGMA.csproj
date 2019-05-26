@@ -155,6 +155,9 @@
     <EmbeddedResource Include="Forms\TelaPrincipal\EditarAluno.resx">
       <DependentUpon>EditarAluno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TelaPrincipal\Professor.resx">
+      <DependentUpon>Professor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -213,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MaximizarJanela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

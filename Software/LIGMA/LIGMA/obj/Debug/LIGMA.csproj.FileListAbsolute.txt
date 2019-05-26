@@ -20,10 +20,6 @@ C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\S
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.csproj.CoreCompileInputs.cache
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.exe
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.pdb
-C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\Ptcc1.Form1.resources
-C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\Ptcc1.Form2.resources
-C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\Ptcc1.Form3.resources
-C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\Ptcc1.Form4.resources
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.EsqueceuSenha.resources
 T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.EsqueceuSenha.resources
 T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\Ptcc1.CadastroAluno.resources
@@ -32,3 +28,11 @@ T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\D
 T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\Ptcc1.Form4.resources
 T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.Administração.resources
 T:\Usuarios\INFORMATICA\3A ETIM\Guilherme&Gustavo\Mini Projeto\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.EditarAluno.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroAvaliacao.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroAluno.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroFuncionario.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroTurma.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroAula.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Administração.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.EditarAluno.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Professor.resources

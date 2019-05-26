@@ -31,5 +31,6 @@ namespace LIGMA.Forms.Cadastro
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
     }
 }
