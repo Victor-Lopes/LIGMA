@@ -45,6 +45,7 @@ CREATE TABLE tbFuncionario (
 	CodFunc smallint identity(1,1)
 	CONSTRAINT PK_Func PRIMARY KEY,
 	Salario money not null,
+	Cargo varchar(20) not null,
 	CodDados smallint
 	CONSTRAINT FK_Func_Dados FOREIGN KEY REFERENCES tbDadosComuns(CodDados),
 	CodLogin smallint not null
