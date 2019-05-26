@@ -12,14 +12,26 @@ GO
 USE dbLIGMA;
 GO
 
-CREATE TABLE tbEndereco (
+CREATE TABLE tbDadosComuns (
 	CEP char(8),
 	Numero smallint,
+<<<<<<< HEAD
 	CONSTRAINT PK_Endereco PRIMARY KEY CLUSTERED(CEP, Numero),
+=======
+	Nome varchar(75) not null,
+	CodDados smallint identity(1,1)
+	CONSTRAINT PK_DadosComuns PRIMARY KEY,
+>>>>>>> 76f55a7229af8da09840f8af41d42d734559f168
 	Complemento varchar(30) not null,
 	Cidade varchar(25) not null,
 	UF char(2) not null,
-	Logradouro varchar(10) not null
+	Logradouro varchar(10) not null,
+	TelFixo decimal(8),
+	TelCelular decimal(9),
+	DataNasc date not null,
+	RG char(10) not null,
+	CPF decimal(11) not null
+	CONSTRAINT UK_Func_CPF UNIQUE(CPF),
 	);
 GO
 
@@ -27,7 +39,7 @@ CREATE TABLE tbLogin (
 	CodLogin smallint identity(1,1)
 	CONSTRAINT PK_Login PRIMARY KEY,
 	Senha varchar(20) not null,
-	Email varchar(20) not null,
+	Email varchar(50) not null,
 	Ativada bit not null default 1 --1 pra verdadeiro 0 pra falso
 	CONSTRAINT UK_Login_Email UNIQUE
 	);
@@ -36,17 +48,10 @@ GO
 CREATE TABLE tbFuncionario (
 	CodFunc smallint identity(1,1)
 	CONSTRAINT PK_Func PRIMARY KEY,
-	RG char(10) not null,
-	TelFixo decimal(8),
-	CPF decimal(11) not null
-	CONSTRAINT UK_Func_CPF UNIQUE,
-	Nome varchar(75) not null,
 	Salario money not null,
-	DataNasc date not null,
-	TelCelular decimal(9),
-	CEP char(8) not null,
-	Numero smallint not null,
-	CONSTRAINT FK_Func_End FOREIGN KEY(Cep, Numero) REFERENCES tbEndereco(Cep, Numero),
+	Cargo varchar(20) not null,
+	CodDados smallint
+	CONSTRAINT FK_Func_Dados FOREIGN KEY REFERENCES tbDadosComuns(CodDados),
 	CodLogin smallint not null
 	CONSTRAINT FK_Func_Login FOREIGN KEY REFERENCES tbLogin(CodLogin)
 );
@@ -55,7 +60,7 @@ GO
 CREATE TABLE tbProfessor (
 	CodProf smallint identity(1,1)
 	CONSTRAINT PK_Prof PRIMARY KEY,
-	Idioma varchar(15) not null,
+	Idioma varchar(18) not null,
 	CodFunc smallint not null
 	CONSTRAINT FK_Prof_Func FOREIGN KEY REFERENCES tbFuncionario(CodFunc)
 );
@@ -126,20 +131,12 @@ CREATE TABLE tbAula(
 CREATE TABLE tbAluno(
 	CodAluno smallint identity(1,1)	
 	CONSTRAINT PK_Aluno PRIMARY KEY,
-	DataNasc date not null,
-	Nome varchar(150) not null,
-	CPF decimal(11) not null,
-	CONSTRAINT UK_Aluno_CPF UNIQUE(CPF),
-	RG varchar(10) not null,
 	DataMatricula date not null,
 	DataFinal date not null,
-	TelFixo decimal(10),
-	TelCel decimal(11),
 	CodTurma smallint not null
 	CONSTRAINT FK_Aluno_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma),
-	CEP char(8) not null,
-	Numero smallint not null,
-	CONSTRAINT FK_Aluno_Endereco FOREIGN KEY(CEP, Numero) REFERENCES tbEndereco(CEP,Numero)
+	CodDados smallint
+	CONSTRAINT FK_Aluno_dados FOREIGN KEY REFERENCES tbDadosComuns(CodDados)
 );
 GO
 
