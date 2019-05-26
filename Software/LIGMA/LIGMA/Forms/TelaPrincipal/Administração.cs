@@ -13,7 +13,7 @@ namespace LIGMA
 {
     public partial class Administração : Form
     {
-        Form edit = new EditarAdmin();
+        Form edit = new MudarSenha();
 
         public Administração()
         {
@@ -39,5 +39,6 @@ namespace LIGMA
         {
             edit.Show();
         }
+
     }
 }

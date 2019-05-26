@@ -28,13 +28,15 @@ namespace LIGMA
         {
             if (txtEmail.Text == "")
             {
-                lblMensagem.ForeColor = Color.Red;
+                lblMensagem.ForeColor = Color.Transparent;
+                lblMensagem.BackColor = Color.Red;
                 lblMensagem.Text = "Email Inválido!";
                 lblMensagem.Location = new System.Drawing.Point(80, 128);
             }
             else
             {
-                lblMensagem.ForeColor = Color.Black;
+                lblMensagem.BackColor = Color.Black;
+                lblMensagem.ForeColor = Color.White;
                 lblMensagem.Text = "Sua senha será enviada para esse email.";
                 lblMensagem.Location = new System.Drawing.Point(26, 128);
             }

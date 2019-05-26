@@ -35,8 +35,8 @@
             this.pcbIcone = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.cmbAula = new System.Windows.Forms.ComboBox();
-            this.lblAula = new System.Windows.Forms.Label();
+            this.cmbAulaAvaliacao = new System.Windows.Forms.ComboBox();
+            this.lblAulaAvaliacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grpMotivo = new System.Windows.Forms.GroupBox();
             this.rbtProvaPerdida = new System.Windows.Forms.RadioButton();
@@ -73,7 +73,7 @@
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             // 
@@ -87,7 +87,7 @@
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Location = new System.Drawing.Point(221, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 28);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             // 
@@ -149,28 +149,30 @@
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
             // 
-            // cmbAula
+            // cmbAulaAvaliacao
             // 
-            this.cmbAula.Font = new System.Drawing.Font("Calibri", 11F);
-            this.cmbAula.FormattingEnabled = true;
-            this.cmbAula.Items.AddRange(new object[] {
+            this.cmbAulaAvaliacao.Font = new System.Drawing.Font("Calibri", 11F);
+            this.cmbAulaAvaliacao.FormattingEnabled = true;
+            this.cmbAulaAvaliacao.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbAula.Location = new System.Drawing.Point(19, 101);
-            this.cmbAula.Name = "cmbAula";
-            this.cmbAula.Size = new System.Drawing.Size(200, 26);
-            this.cmbAula.TabIndex = 116;
+            this.cmbAulaAvaliacao.Location = new System.Drawing.Point(19, 209);
+            this.cmbAulaAvaliacao.Name = "cmbAulaAvaliacao";
+            this.cmbAulaAvaliacao.Size = new System.Drawing.Size(200, 26);
+            this.cmbAulaAvaliacao.TabIndex = 116;
+            this.cmbAulaAvaliacao.Visible = false;
             // 
-            // lblAula
+            // lblAulaAvaliacao
             // 
-            this.lblAula.AutoSize = true;
-            this.lblAula.Font = new System.Drawing.Font("Calibri", 11F);
-            this.lblAula.ForeColor = System.Drawing.Color.Black;
-            this.lblAula.Location = new System.Drawing.Point(15, 79);
-            this.lblAula.Name = "lblAula";
-            this.lblAula.Size = new System.Drawing.Size(36, 18);
-            this.lblAula.TabIndex = 115;
-            this.lblAula.Text = "Aula";
+            this.lblAulaAvaliacao.AutoSize = true;
+            this.lblAulaAvaliacao.Font = new System.Drawing.Font("Calibri", 11F);
+            this.lblAulaAvaliacao.ForeColor = System.Drawing.Color.Black;
+            this.lblAulaAvaliacao.Location = new System.Drawing.Point(15, 188);
+            this.lblAulaAvaliacao.Name = "lblAulaAvaliacao";
+            this.lblAulaAvaliacao.Size = new System.Drawing.Size(36, 18);
+            this.lblAulaAvaliacao.TabIndex = 115;
+            this.lblAulaAvaliacao.Text = "Aula";
+            this.lblAulaAvaliacao.Visible = false;
             // 
             // lblTitulo
             // 
@@ -191,7 +193,7 @@
             this.grpMotivo.Controls.Add(this.rbtFalta);
             this.grpMotivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpMotivo.Font = new System.Drawing.Font("Calibri", 11F);
-            this.grpMotivo.Location = new System.Drawing.Point(19, 133);
+            this.grpMotivo.Location = new System.Drawing.Point(18, 73);
             this.grpMotivo.Name = "grpMotivo";
             this.grpMotivo.Size = new System.Drawing.Size(200, 111);
             this.grpMotivo.TabIndex = 120;
@@ -231,8 +233,8 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.cmbAula);
-            this.Controls.Add(this.lblAula);
+            this.Controls.Add(this.cmbAulaAvaliacao);
+            this.Controls.Add(this.lblAulaAvaliacao);
             this.Controls.Add(this.pnlFormBorder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SolicitaçãoAulaExtra";
@@ -259,8 +261,8 @@
         private System.Windows.Forms.PictureBox pcbIcone;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.ComboBox cmbAula;
-        private System.Windows.Forms.Label lblAula;
+        private System.Windows.Forms.ComboBox cmbAulaAvaliacao;
+        private System.Windows.Forms.Label lblAulaAvaliacao;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox grpMotivo;
         private System.Windows.Forms.RadioButton rbtProvaPerdida;

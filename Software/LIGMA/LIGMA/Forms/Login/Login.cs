@@ -67,6 +67,7 @@ namespace LIGMA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             Form aluno = new Aluno();
             Form prof = new Professor();
             Form admin = new Administração();

@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlFormBorder = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.lblLIGMA = new System.Windows.Forms.Label();
+            this.pcbIcone = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtRG = new System.Windows.Forms.TextBox();
@@ -37,9 +40,6 @@
             this.lblRG = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.pcbIcone = new System.Windows.Forms.PictureBox();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,46 @@
             this.pnlFormBorder.Size = new System.Drawing.Size(369, 29);
             this.pnlFormBorder.TabIndex = 109;
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(306, 2);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
+            this.btnMinimizar.TabIndex = 13;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Location = new System.Drawing.Point(341, 1);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
+            this.btnFechar.TabIndex = 12;
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // lblLIGMA
             // 
             this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -71,6 +111,22 @@
             this.lblLIGMA.TabIndex = 11;
             this.lblLIGMA.Text = "LIGMA";
             // 
+            // pcbIcone
+            // 
+            this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pcbIcone.BackColor = System.Drawing.Color.Transparent;
+            this.pcbIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbIcone.ErrorImage = global::LIGMA.Properties.Resources.logo;
+            this.pcbIcone.Image = global::LIGMA.Properties.Resources._12133tongue_109560;
+            this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
+            this.pcbIcone.Location = new System.Drawing.Point(3, 4);
+            this.pcbIcone.Name = "pcbIcone";
+            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
+            this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbIcone.TabIndex = 10;
+            this.pcbIcone.TabStop = false;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -78,7 +134,7 @@
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.Location = new System.Drawing.Point(12, 159);
             this.btnCancelar.Name = "btnCancelar";
@@ -97,7 +153,7 @@
             this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.Location = new System.Drawing.Point(273, 159);
             this.btnEnviar.Name = "btnEnviar";
@@ -111,22 +167,22 @@
             // txtRG
             // 
             this.txtRG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRG.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtRG.Location = new System.Drawing.Point(199, 113);
             this.txtRG.Name = "txtRG";
             this.txtRG.PasswordChar = '*';
-            this.txtRG.Size = new System.Drawing.Size(158, 27);
+            this.txtRG.Size = new System.Drawing.Size(158, 25);
             this.txtRG.TabIndex = 97;
             this.txtRG.UseSystemPasswordChar = true;
             // 
             // txtCPF
             // 
             this.txtCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCPF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.Font = new System.Drawing.Font("Calibri", 11F);
             this.txtCPF.Location = new System.Drawing.Point(12, 113);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.PasswordChar = '*';
-            this.txtCPF.Size = new System.Drawing.Size(142, 27);
+            this.txtCPF.Size = new System.Drawing.Size(142, 25);
             this.txtCPF.TabIndex = 96;
             this.txtCPF.UseSystemPasswordChar = true;
             // 
@@ -134,11 +190,11 @@
             // 
             this.lblRG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRG.AutoSize = true;
-            this.lblRG.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRG.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblRG.ForeColor = System.Drawing.Color.Black;
             this.lblRG.Location = new System.Drawing.Point(195, 91);
             this.lblRG.Name = "lblRG";
-            this.lblRG.Size = new System.Drawing.Size(115, 19);
+            this.lblRG.Size = new System.Drawing.Size(110, 18);
             this.lblRG.TabIndex = 86;
             this.lblRG.Text = "Confirmar Senha";
             // 
@@ -146,11 +202,11 @@
             // 
             this.lblCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCPF.ForeColor = System.Drawing.Color.Black;
             this.lblCPF.Location = new System.Drawing.Point(8, 91);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(85, 19);
+            this.lblCPF.Size = new System.Drawing.Size(81, 18);
             this.lblCPF.TabIndex = 85;
             this.lblCPF.Text = "Senha Nova";
             // 
@@ -167,57 +223,7 @@
             this.lblTitulo.Text = "Alterar Senha";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(307, 2);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
-            this.btnMinimizar.TabIndex = 13;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
-            this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(341, 0);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 28);
-            this.btnFechar.TabIndex = 12;
-            this.btnFechar.UseVisualStyleBackColor = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // pcbIcone
-            // 
-            this.pcbIcone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pcbIcone.BackColor = System.Drawing.Color.Transparent;
-            this.pcbIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pcbIcone.ErrorImage = global::LIGMA.Properties.Resources.logo;
-            this.pcbIcone.Image = global::LIGMA.Properties.Resources._12133tongue_109560;
-            this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
-            this.pcbIcone.Location = new System.Drawing.Point(3, 4);
-            this.pcbIcone.Name = "pcbIcone";
-            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
-            this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbIcone.TabIndex = 10;
-            this.pcbIcone.TabStop = false;
-            // 
-            // EditarAluno
+            // MudarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,7 +237,8 @@
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EditarAluno";
+            this.Name = "MudarSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EditarAluno";
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
