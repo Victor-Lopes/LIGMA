@@ -24,9 +24,10 @@ BEGIN
 	IF @Email IS NULL or @Senha IS NULL or @CEP = 0 or @Numero = 0 or @Nome IS NULL or 
 		@Cidade IS NULL or @UF IS NULL or @Logradouro IS NULL or
 		@RG IS NULL or @CPF = 0 or @DataNasc IS NULL and @Salario IS NULL or @Cargo IS NULL
-		SELECT 'H· atributos vazios' [ERRO];
-	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j· registrado!' ERRO;
-	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcion·rio j· registrado!' ERRO;
+
+		SELECT 'H√° atributos vazios' [ERRO];
+	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j√° registrado!' ERRO;
+	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcion√°rio j√° registrado!' ERRO;
 	ELSE
 		BEGIN
 			INSERT INTO tbLogin(Email,Senha) VALUES (@Email, @Senha);
@@ -49,9 +50,10 @@ delete tbFuncionario; DBCC CHECKIDENT('tbFuncionario', RESEED, 0);
 delete tbLogin; DBCC CHECKIDENT('tbLogin', RESEED, 0);
 delete tbDadosComuns; DBCC CHECKIDENT('tbDadosComuns', RESEED, 0);
 
-exec spcadFunc  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
-exec spcadFunc  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo„o1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
-exec spcadFunc  'Exemplo@oi.com1', '12345678', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
+exec spcadFunc  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
+exec spcadFunc  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo√£o1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
+exec spcadFunc  'Exemplo@oi.com1', '12345678', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
+
 
 */
 
@@ -91,9 +93,10 @@ BEGIN
 	IF @Email IS NULL or @Senha IS NULL or @CEP = 0 or @Numero = 0 or @Nome IS NULL or
 		@Cidade IS NULL or @UF IS NULL or @Logradouro IS NULL or
 		@RG IS NULL or @CPF = 0 or @DataNasc IS NULL and @Salario IS NULL or @Cargo IS NULL or @Idioma is null
-		SELECT 'H· atributos vazios!' [ERRO];
-	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j· registrado!' ERRO;
-	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcion·rio j· registrado!' ERRO;
+
+		SELECT 'H√° atributos vazios!' [ERRO];
+	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j√° registrado!' ERRO;
+	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcion√°rio j√° registrado!' ERRO;
 	ELSE
 		BEGIN
 			INSERT INTO tbLogin(Email,Senha) VALUES (@Email, @Senha);
@@ -118,16 +121,19 @@ BEGIN
 END
 GO
 /*
-exec spcadProf  'Exemplo@oi1.com', '12345678', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678902, '22-12-2002', 670.00, 'Professor','Espanhol', 123456789, 12345678;
-exec spcadProf  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo„o1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
-exec spcadProf  'Exemplo@oi.com1', '12345678', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
+
+exec spcadProf  'Exemplo@oi1.com', '12345678', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678902, '22-12-2002', 670.00, 'Professor','Espanhol', 123456789, 12345678;
+exec spcadProf  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo√£o1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
+exec spcadProf  'Exemplo@oi.com1', '12345678', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
+
 */
 
 create view vwProfessor as 
 	select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Nascimento], RG, CPF, Logradouro, CEP, Numero, Salario, Cargo, Idioma, 
 		CASE StatusPagamento
-		WHEN 'N' THEN 'N„o Pago'
-		ELSE 'Pago' END AS [SituÁ„o do Pagamento], 
+
+		WHEN 'N' THEN 'N√£o Pago'
+		ELSE 'Pago' END AS [Situ√ß√£o do Pagamento],
 	Email, Senha,
 	    CASE Ativada
         WHEN 0 THEN 'Desativado'
@@ -152,7 +158,8 @@ begin
 	declare @NomePeriodo varchar(40);
 	declare @Mensagem varchar(40);
 	if @CodDiaSemana is null SELECT @Mensagem = 'Selecione pelo menos um dia da semana!';
-	else if @HorarioAula < '7:00' or @HorarioAula > '19:00' SELECT @Mensagem = 'Hor·rio Inv·lido!'
+	else if @HorarioAula < '7:00' or @HorarioAula > '19:00' SELECT @Mensagem = 'Hor√°rio Inv√°lido!'
+
 	else
 	begin
 		declare @Dia1 varchar(8) = (SELECT Nome from tbDiaSemana where CodDiaSemana = @CodDiaSemana);
@@ -164,7 +171,7 @@ begin
 		else SELECT @NomePeriodo = @Dia1 +', '+ @Dia2 +', '+ @Dia3 + ' - ' + convert(varchar, @HorarioAula,8);
 
 		if @NomePeriodo is not null and exists(select NomePeriodo from tbPeriodo where NomePeriodo = @NomePeriodo) 
-		SELECT @Mensagem = 'VocÍ j· tem um periodo semelhante!';
+		SELECT @Mensagem = 'VocÔøΩ jÔøΩ tem um periodo semelhante!';
 		else
 		begin
 			insert into tbPeriodo(NomePeriodo, HorarioAula) values (@NomePeriodo, @HorarioAula);
@@ -178,12 +185,14 @@ begin
 		end
 	end
 	SELECT @Mensagem Mensagem;
+
 end
 GO
  /*
 exec spPeriodo  1, null, null, '7:00';
-exec spPeriodo  1, 2, null, '19:00';
-exec spPeriodo  1, 2, 3, '7:00';
+exec spPeriodo  1, 2, null, '6:59';
+exec spPeriodo  1, 2, 3;
+exec spPeriodo  1, null, null;
 
 truncate table tbPeriodo_DiaSemana;
 delete tbPeriodo; DBCC CHECKIDENT ('tbPeriodo', RESEED, 0);
@@ -206,7 +215,7 @@ create proc spTurma(
 begin
 	if exists(select * from tbTurma where CodCurso = @CodCurso and CodPeriodo = @CodPeriodo and
 			  CodProf = @CodProf and Estagio = @Estagio)
-	SELECT 'J· existe essa turma!' ERRO
+	SELECT 'J√° existe essa turma!' ERRO
 	else
 	begin
 		insert into tbTurma(CodCurso, CodPeriodo, CodProf, Estagio, Preco)
@@ -217,12 +226,12 @@ end
 GO
 
 /*
-exec spTurma 1, 1, 1, 'Intermedi·rio', 156.00;
+exec spTurma 1, 1, 1, 'Intermedi√°rio', 156.00;
 GO
 */
 
 create view vwTurma as
-select Estagio Est·gio, Preco PreÁo, C.Idioma, NomePeriodo [PerÌodo], Nome Professor from tbTurma T
+select Estagio Est√°gio, Preco Pre√ßo, C.Idioma, NomePeriodo [Per√≠odo], Nome Professor from tbTurma T
 	inner join tbCurso C on C.CodCurso = T.CodCurso 
 	inner join tbPeriodo P on P.CodPeriodo = T.CodPeriodo
 	inner join tbProfessor PR on PR.CodProf = T.CodProf
@@ -253,9 +262,9 @@ BEGIN
 	IF @Email IS NULL or @Senha IS NULL or @CEP = 0 or @Numero = 0 or @Nome IS NULL or 
 		@Cidade IS NULL or @UF IS NULL or @Logradouro IS NULL or
 		@RG IS NULL or @CPF = 0 or @DataNasc IS NULL and @DataFinal IS NULL or @DataMatricula IS NULL
-		SELECT 'H· atributos vazios' [ERRO];
-	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j· registrado!' ERRO;
-	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Aluno j· registrado!' ERRO;
+		SELECT 'H√° atributos vazios' [ERRO];
+	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j√° registrado!' ERRO;
+	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Aluno j√° registrado!' ERRO;
 	ELSE
 		BEGIN
 			INSERT INTO tbLogin(Email,Senha) VALUES (@Email, @Senha);
@@ -276,7 +285,7 @@ END
 GO
 
 /*
-exec spcadAluno  'Exemplo@oi2.com', '12345678', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678903, '22-12-2002', '22-12-2018', '22-12-2020', 123456789, 12345678, 1; 
+exec spcadAluno  'Exemplo@oi2.com', '12345678', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678903, '22-12-2002', '22-12-2018', '22-12-2020', 123456789, 12345678, 1; 
 
 select * from tbAluno; 
 
@@ -286,10 +295,10 @@ delete tbAluno; DBCC CHECKIDENT('tbAluno', RESEED, 0);
 */ 
 
 create view vwAluno as
-select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Nascimento], RG, CPF, Logradouro, CEP, Numero, DataMatricula [Data de Matricula], DataFinal [Data Final do Contrato], Estagio Est·gio, NomePeriodo [PerÌodo], 
+select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Nascimento], RG, CPF, Logradouro, CEP, Numero, DataMatricula [Data de Matricula], DataFinal [Data Final do Contrato], Estagio Est√°gio, NomePeriodo [Per√≠odo], 
 		CASE SituacaoMensalidade
-		WHEN 0 THEN 'N„o Pago'
-		ELSE 'Pago' END AS [SituÁ„o da Mensalidade], 
+		WHEN 0 THEN 'N√£o Pago'
+		ELSE 'Pago' END AS [Situ√ß√£o da Mensalidade], 
 	Email, Senha,
 	    CASE Ativada
         WHEN 0 THEN 'Desativado'
@@ -308,7 +317,7 @@ create proc spcadAula(
 	@Descricao varchar(100)
 )as begin
 	if exists(select * from tbAula where Sala = @Sala and CodTurma = @CodTurma and Data_Hora = @Data_Hora)
-		SELECT 'Aula j· Registrada!' ERRO;
+		SELECT 'Aula j√° Registrada!' ERRO;
 	else
 	begin
 
@@ -336,8 +345,8 @@ GO
 exec spAulaAluno 1, 1;
 */
 
-create view vwListaPresenÁa as
-select Nome [Nome do Aluno], Sala [N˙mero da Sala], Estagio [Est·gio], Data_Hora [Data] from tbAluno AL
+create view vwListaPresen√ßa as
+select Nome [Nome do Aluno], Sala [N√∫mero da Sala], Estagio [Est√°gio], Data_Hora [Data] from tbAluno AL
 	inner join tbDadosComuns DC on DC.CodDados = AL.CodDados
 	inner join tbAula_Aluno AA on AL.CodAluno = AA.CodAluno
 	inner join tbAula A on A.CodAula = AA.CodAula
@@ -369,25 +378,10 @@ create proc spNota(
 	insert into tbNota value(@CodAluno, @CodAvaliacao, @Nota);
 end
 GO
+			if @Dia3 is not null insert into tbPeriodo_DiaSemana(CodPeriodo, CodDiaSemana) values (@CodPeriodo, @CodDiaSemana3);
 
-create proc sp_logar_usuario(
-@email varchar (50),
-@senha_usuario varchar (20)
-)
-as
-begin
-	if (select count (*) as CNT from tbLogin where Email = @email and Senha = @senha_usuario) = 1
-		update tbUsuario set Ativada = 1 where Emal = @email and Senha = @senha_usuario;
-end
-GO
+			SELECT @Mensagem = 'Dados Incluidos com Sucesso!' 
 
-create proc sp_mudar_senha(
-@senhaatual varchar(20)
-@senhanova varchar (20)
-)
-as
-begin
-	if (select count (*) as CNT from tbLogin Senha = @senhaatual) = 1
-		update tbUsuario set Senha = @senhanova where Senha = @senhaatual;
-end
-GO
+		end
+	end
+	SELECT @Mensagem as Mensagem;
