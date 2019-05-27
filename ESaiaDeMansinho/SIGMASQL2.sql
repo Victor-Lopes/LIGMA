@@ -21,7 +21,7 @@ CREATE TABLE tbDadosComuns (
 	RG char(10) not null,
 	CPF decimal(11) not null
 	CONSTRAINT UK_Func_CPF UNIQUE(CPF),
-	Complemento varchar(30) not null,
+	Complemento varchar(30),
 	Cidade varchar(25) not null,
 	UF char(2) not null,
 	Logradouro varchar(10) not null,
@@ -37,8 +37,9 @@ CREATE TABLE tbLogin (
 	Email varchar(50) not null
 	CONSTRAINT UK_Login_Email UNIQUE,
 	Ativada bit not null default 1 --1 pra verdadeiro 0 pra falso
-	
 	);
+
+	insert into tbLogin(Senha,Email) values ('admin', 'admin@a.com'); 
 GO
 
 CREATE TABLE tbFuncionario (
@@ -80,7 +81,8 @@ GO
 CREATE TABLE tbPeriodo(
 	CodPeriodo smallint identity(1,1)
 	CONSTRAINT PK_Periodo PRIMARY KEY,
-	NomePeriodo varchar(30) not null -- TIREI DA TABELA PERIODO AS HORAS
+	NomePeriodo varchar(40) not null,
+	HorarioAula time not null 
 );
 GO
 
@@ -97,9 +99,12 @@ GO
 CREATE TABLE tbCurso (
 	CodCurso smallint identity(1,1)
 	CONSTRAINT PK_Curso PRIMARY KEY,
-	Idioma varchar(15) not null,
-	TempoTotal int not null
+	Idioma varchar(15) not null
 );
+
+insert into tbCurso values('Inglês' ),
+			('Espanhol'),
+						  ('Francês'); 
 GO
 
 CREATE TABLE tbTurma(
@@ -112,7 +117,7 @@ CREATE TABLE tbTurma(
 	CodPeriodo smallint not null
 	CONSTRAINT FK_Turma_Periodo FOREIGN KEY REFERENCES tbPeriodo(CodPeriodo),
 	Estagio varchar(15) not null,
-	Preço money not null --adicionei isso
+	Preco money not null
 );
 GO
 
@@ -122,7 +127,8 @@ CREATE TABLE tbAula(
 	Sala smallint not null,
 	Data_Hora datetime not null,
 	CodTurma smallint not null
-	CONSTRAINT FK_Aula_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma) --Adicionei código turma
+	CONSTRAINT FK_Aula_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma),
+	Descricao varchar(100)
 );
 
 CREATE TABLE tbAluno(
@@ -133,21 +139,14 @@ CREATE TABLE tbAluno(
 	CodTurma smallint not null
 	CONSTRAINT FK_Aluno_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma),
 	CodDados smallint
-	CONSTRAINT FK_Aluno_dados FOREIGN KEY REFERENCES tbDadosComuns(CodDados)
+	CONSTRAINT FK_Aluno_Dados FOREIGN KEY REFERENCES tbDadosComuns(CodDados),
+	CodLogin smallint not null
+	CONSTRAINT FK_Aluno_Login FOREIGN KEY REFERENCES tbLogin(CodLogin),
+	SituacaoMensalidade bit not null DEFAULT 0 --1 PAGO, 0 NÃO PAGO ADICIONEI ISSO
 );
 GO
 
-CREATE TABLE tbMensalidade(
-	CodMensalidade smallint identity(1,1)
-	CONSTRAINT PK_Mensalidade PRIMARY KEY,
-	DiaPagamento date not null,
-	Valor money not null,
-	MetodoPagamento varchar(8) not null, 
-	StatusPagamento char(1) not null, -- P-Pago, A-Atrasado, N-Não Pago
-	CodAluno smallint not null
-	CONSTRAINT FK_Mensalidade_Aluno FOREIGN KEY REFERENCES tbAluno(CodAluno)
-);
-GO
+--APAGUEI A TABELA MENSALIDADE
 
 CREATE TABLE tbPagamento(
 	CodPagamento smallint identity(1,1)
@@ -156,7 +155,7 @@ CREATE TABLE tbPagamento(
 	ValorLiquido money not null,
 	Descontos money not null DEFAULT 0.00,
 	Bônus money not null DEFAULT 0.00, 
-	StatusPagamento char(1) not null, -- P-Pago, N-Não Pago
+	StatusPagamento char(1) not null DEFAULT 'N', -- P-Pago, N-Não Pago
 	CodProfessor smallint not null
 	CONSTRAINT FK_Pagamento_Professor FOREIGN KEY REFERENCES tbProfessor(CodProf)
 );
@@ -177,10 +176,10 @@ CREATE TABLE tbAvaliacao(
 	CONSTRAINT PK_Avaliacao PRIMARY KEY,
 	CodProfessor smallint not null
 	CONSTRAINT FK_Avaliacao_Professor FOREIGN KEY REFERENCES tbProfessor(CodProf),
-	DataAvalicao date not null,
+	DataAvaliacao date not null,
 	CodTurma smallint not null
 	CONSTRAINT FK_Avaliacao_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma),
-	Descricao varchar(75) 
+	Descricao varchar(100) --MUDEI O TAMANHO
 );
 GO
 
