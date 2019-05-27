@@ -36,13 +36,14 @@
             this.pnlInfoAluno = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pcbFotoAdmin = new System.Windows.Forms.PictureBox();
             this.btnRegistrarAula = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.ckdAulasSolicitas = new System.Windows.Forms.CheckedListBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             this.pnlInfoAluno.SuspendLayout();
@@ -177,20 +178,6 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 9F);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(-1, 288);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(163, 24);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Turmas";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -204,6 +191,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Funcionários";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -218,6 +206,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Alunos";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pcbFotoAdmin
             // 
@@ -236,7 +225,7 @@
             this.btnRegistrarAula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarAula.Font = new System.Drawing.Font("Calibri", 9F);
             this.btnRegistrarAula.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrarAula.Location = new System.Drawing.Point(572, 227);
+            this.btnRegistrarAula.Location = new System.Drawing.Point(569, 359);
             this.btnRegistrarAula.Name = "btnRegistrarAula";
             this.btnRegistrarAula.Size = new System.Drawing.Size(88, 28);
             this.btnRegistrarAula.TabIndex = 18;
@@ -249,23 +238,47 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(362, 56);
+            this.label1.Location = new System.Drawing.Point(359, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 14);
             this.label1.TabIndex = 22;
             this.label1.Text = "Aulas Extras Solicitadas";
             // 
-            // checkedListBox1
+            // ckdAulasSolicitas
             // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.checkedListBox1.Font = new System.Drawing.Font("Calibri", 9F);
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(216, 73);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(444, 155);
-            this.checkedListBox1.TabIndex = 21;
+            this.ckdAulasSolicitas.BackColor = System.Drawing.SystemColors.Window;
+            this.ckdAulasSolicitas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ckdAulasSolicitas.Font = new System.Drawing.Font("Calibri", 9F);
+            this.ckdAulasSolicitas.FormattingEnabled = true;
+            this.ckdAulasSolicitas.Location = new System.Drawing.Point(213, 205);
+            this.ckdAulasSolicitas.Margin = new System.Windows.Forms.Padding(4);
+            this.ckdAulasSolicitas.Name = "ckdAulasSolicitas";
+            this.ckdAulasSolicitas.Size = new System.Drawing.Size(444, 155);
+            this.ckdAulasSolicitas.TabIndex = 21;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(-15, -15);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 23;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 9F);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(-1, 288);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(163, 24);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Turmas";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Administração
             // 
@@ -273,8 +286,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(713, 513);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.ckdAulasSolicitas);
             this.Controls.Add(this.btnRegistrarAula);
             this.Controls.Add(this.pnlFormBorder);
             this.Controls.Add(this.pnlInfoAluno);
@@ -300,7 +314,6 @@
         private System.Windows.Forms.Label lblLIGMA;
         private System.Windows.Forms.PictureBox pcbIcone;
         private System.Windows.Forms.Panel pnlInfoAluno;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnLogout;
@@ -308,6 +321,8 @@
         private System.Windows.Forms.PictureBox pcbFotoAdmin;
         private System.Windows.Forms.Button btnRegistrarAula;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.CheckedListBox ckdAulasSolicitas;
+        private System.Windows.Forms.Button button3;
     }
 }

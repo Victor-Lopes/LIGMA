@@ -64,6 +64,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(44, 264);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(167, 22);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);

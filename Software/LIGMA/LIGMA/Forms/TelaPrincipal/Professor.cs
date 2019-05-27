@@ -101,16 +101,5 @@ namespace LIGMA
             btnRegistrarAula.ForeColor = Color.Black;
         }
 
-        private void btnLancarNota_MouseEnter(object sender, EventArgs e)
-        {
-            btnLancarNota.ForeColor = Color.Transparent;
-            btnLancarNota.BackColor = Color.Black;
-        }
-
-        private void btnLancarNota_MouseLeave(object sender, EventArgs e)
-        {
-            btnLancarNota.BackColor = Color.Transparent;
-            btnLancarNota.ForeColor = Color.Black;
-        }
     }
 }

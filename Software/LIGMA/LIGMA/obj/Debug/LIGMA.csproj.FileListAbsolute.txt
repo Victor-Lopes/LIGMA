@@ -36,3 +36,5 @@ C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\S
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Administração.resources
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.EditarAluno.resources
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Professor.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.SolicitaçãoAulaExtra.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.MudarSenha.resources

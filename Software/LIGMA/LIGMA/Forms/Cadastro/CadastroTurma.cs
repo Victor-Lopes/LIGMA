@@ -32,5 +32,9 @@ namespace LIGMA.Forms.Cadastro
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            //VOLTAR PRO ADMIN
+        }
     }
 }

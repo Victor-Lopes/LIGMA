@@ -68,6 +68,9 @@
             this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Location = new System.Drawing.Point(187, 2);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
@@ -76,6 +79,7 @@
             this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
@@ -84,12 +88,16 @@
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Location = new System.Drawing.Point(221, 1);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // lblLIGMA
             // 
@@ -123,6 +131,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
@@ -134,10 +143,13 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.MouseEnter += new System.EventHandler(this.btnCancelar_MouseEnter);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
             // 
             // btnEnviar
             // 
             this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
@@ -148,9 +160,14 @@
             this.btnEnviar.TabIndex = 117;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.btnEnviar.MouseEnter += new System.EventHandler(this.btnEntrar_MouseEnter);
+            this.btnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
             // 
             // cmbAulaAvaliacao
             // 
+            this.cmbAulaAvaliacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAulaAvaliacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAulaAvaliacao.Font = new System.Drawing.Font("Calibri", 11F);
             this.cmbAulaAvaliacao.FormattingEnabled = true;
             this.cmbAulaAvaliacao.Items.AddRange(new object[] {
@@ -203,6 +220,7 @@
             // rbtProvaPerdida
             // 
             this.rbtProvaPerdida.AutoSize = true;
+            this.rbtProvaPerdida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtProvaPerdida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtProvaPerdida.Location = new System.Drawing.Point(21, 63);
             this.rbtProvaPerdida.Name = "rbtProvaPerdida";
@@ -215,6 +233,7 @@
             // rbtFalta
             // 
             this.rbtFalta.AutoSize = true;
+            this.rbtFalta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtFalta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtFalta.Location = new System.Drawing.Point(21, 35);
             this.rbtFalta.Name = "rbtFalta";
@@ -223,6 +242,7 @@
             this.rbtFalta.TabStop = true;
             this.rbtFalta.Text = "Falta";
             this.rbtFalta.UseVisualStyleBackColor = true;
+            this.rbtFalta.CheckedChanged += new System.EventHandler(this.rbtFalta_CheckedChanged);
             // 
             // SolicitaçãoAulaExtra
             // 
@@ -242,6 +262,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SolicitaçãoAulaExtra";
+            this.Load += new System.EventHandler(this.SolicitaçãoAulaExtra_Load);
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).EndInit();

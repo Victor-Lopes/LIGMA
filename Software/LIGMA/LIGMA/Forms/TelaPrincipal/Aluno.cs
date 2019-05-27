@@ -100,5 +100,10 @@ namespace LIGMA.Forms.TelaPrincipal
             aulaextra.Show();
             this.Hide();
         }
+
+        private void dgvNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //SE TIVER ALGUM SELECT DE NOTAS DEIXA ISSO VISIVEL
+        }
     }
 }
