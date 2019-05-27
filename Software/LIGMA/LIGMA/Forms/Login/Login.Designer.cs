@@ -64,6 +64,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(44, 264);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(167, 22);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
@@ -194,11 +195,11 @@
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnMinimizar.Location = new System.Drawing.Point(197, 1);
+            this.btnMinimizar.Location = new System.Drawing.Point(199, 3);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -210,11 +211,13 @@
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnFechar.Location = new System.Drawing.Point(233, 0);
+            this.btnFechar.Location = new System.Drawing.Point(233, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 28);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 0;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);

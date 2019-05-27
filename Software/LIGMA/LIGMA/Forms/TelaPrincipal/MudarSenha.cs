@@ -2,18 +2,21 @@
 using LIGMA.Forms.TelaPrincipal;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace LIGMA.Forms.TelaPrincipal
 {
     public partial class MudarSenha : Form
     {
         Form aluno = new Aluno();
+        SqlConnection con = new SqlConnection(StringConexao.connectionString);
+        SqlDataReader reader;
 
         public MudarSenha()
         {
@@ -56,8 +59,45 @@ namespace LIGMA.Forms.TelaPrincipal
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            aluno.Show();
             this.Hide();
         }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            using (con)
+            {
+                try
+                {
+                    if (txtSenhaNova == txtConfirmar)
+                    {
+                        SqlCommand scmd = new SqlCommand("sp_logar_usuario", con);
+                        scmd.CommandType = CommandType.StoredProcedure;
+
+                        scmd.Parameters.Add("@senhaatual", SqlDbType.NVarChar).Value = txtAtual.Text;
+                        scmd.Parameters.Add("@senhanova", SqlDbType.NVarChar).Value = txtSenhaNova.Text;
+                        con.Open();
+
+                        int a = scmd.ExecuteNonQuery();
+                        if (a > 0)
+                        {
+                            this.Hide();
+                            con.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("As Senhas Não Batem!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }    
+        } 
     }
 }

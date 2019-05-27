@@ -14,7 +14,7 @@ namespace LIGMA
 {
     public partial class Professor : Form
     {
-        Form edit = new EditarAdmin();
+        Form edit = new MudarSenha();
         Form novaAula = new CadastroAula();
         Form login = new frmLogin();
 
@@ -40,6 +40,7 @@ namespace LIGMA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            this.Hide();
             edit.Show();
         }
 
@@ -80,8 +81,12 @@ namespace LIGMA
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            login.Show();
-            this.Hide();
+            DialogResult result = MessageBox.Show("Você voltará para a tela de Login. Deseja Sair?", "LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                login.Show();
+                this.Hide();
+            }
         }
 
         private void btnRegistrarAula_MouseEnter(object sender, EventArgs e)
@@ -96,16 +101,5 @@ namespace LIGMA
             btnRegistrarAula.ForeColor = Color.Black;
         }
 
-        private void btnLancarNota_MouseEnter(object sender, EventArgs e)
-        {
-            btnLancarNota.ForeColor = Color.Transparent;
-            btnLancarNota.BackColor = Color.Black;
-        }
-
-        private void btnLancarNota_MouseLeave(object sender, EventArgs e)
-        {
-            btnLancarNota.BackColor = Color.Transparent;
-            btnLancarNota.ForeColor = Color.Black;
-        }
     }
 }

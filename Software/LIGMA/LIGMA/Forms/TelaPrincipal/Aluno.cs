@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LIGMA.Forms.Cadastro;
+using LIGMA.Forms;
 
 namespace LIGMA.Forms.TelaPrincipal
 {
     public partial class Aluno : Form
     {
-        
         
         Form login = new frmLogin();
 
@@ -73,7 +74,7 @@ namespace LIGMA.Forms.TelaPrincipal
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Deseja Sair?", "LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult result = MessageBox.Show("Você voltará para a tela de Login. Deseja Sair?", "LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (result == DialogResult.Yes)
             {
                 login.Show();
@@ -91,6 +92,18 @@ namespace LIGMA.Forms.TelaPrincipal
         {
             btnAulaExtra.ForeColor = Color.MidnightBlue;
             btnAulaExtra.BackColor = Color.Transparent;
+        }
+
+        private void btnAulaExtra_Click(object sender, EventArgs e)
+        {
+            Form aulaextra = new SolicitaçãoAulaExtra();
+            aulaextra.Show();
+            this.Hide();
+        }
+
+        private void dgvNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //SE TIVER ALGUM SELECT DE NOTAS DEIXA ISSO VISIVEL
         }
     }
 }

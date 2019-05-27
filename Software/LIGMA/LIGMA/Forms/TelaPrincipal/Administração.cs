@@ -1,4 +1,5 @@
-﻿using LIGMA.Forms.TelaPrincipal;
+﻿using LIGMA.Forms.Consulta;
+using LIGMA.Forms.TelaPrincipal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace LIGMA
 {
     public partial class Administração : Form
     {
-        Form edit = new EditarAdmin();
+        Form edit = new MudarSenha();
 
         public Administração()
         {
@@ -38,6 +39,20 @@ namespace LIGMA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             edit.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form consaluno = new ConsultaAluno();
+            consaluno.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form consprof = new ConsultaFuncionario();
+            consprof.Show();
+            this.Hide();
         }
     }
 }

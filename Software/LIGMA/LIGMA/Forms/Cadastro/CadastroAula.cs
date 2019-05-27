@@ -31,5 +31,15 @@ namespace LIGMA.Forms.Cadastro
         {
             Application.Exit();
         }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            //Enviar Formulário aqui
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            //VOLTAR PRO PROFESSOR
+        }
     }
 }

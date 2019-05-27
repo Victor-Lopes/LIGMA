@@ -94,11 +94,11 @@
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnMinimizar.Location = new System.Drawing.Point(196, 2);
+            this.btnMinimizar.Location = new System.Drawing.Point(199, 2);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -114,9 +114,9 @@
             this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnFechar.Location = new System.Drawing.Point(233, 1);
+            this.btnFechar.Location = new System.Drawing.Point(233, 2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 28);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 0;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -128,7 +128,7 @@
             this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Font = new System.Drawing.Font("Calibri", 9F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.Location = new System.Drawing.Point(88, 162);
             this.btnEnviar.Name = "btnEnviar";
@@ -143,7 +143,7 @@
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 9F);
             this.txtEmail.Location = new System.Drawing.Point(41, 90);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(167, 22);
@@ -152,18 +152,20 @@
             // lblColqueEmail
             // 
             this.lblColqueEmail.AutoSize = true;
-            this.lblColqueEmail.Location = new System.Drawing.Point(41, 71);
+            this.lblColqueEmail.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lblColqueEmail.Location = new System.Drawing.Point(40, 71);
             this.lblColqueEmail.Name = "lblColqueEmail";
-            this.lblColqueEmail.Size = new System.Drawing.Size(94, 13);
+            this.lblColqueEmail.Size = new System.Drawing.Size(109, 14);
             this.lblColqueEmail.TabIndex = 14;
             this.lblColqueEmail.Text = "Coloque seu Email";
             // 
             // lblMensagem
             // 
             this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Location = new System.Drawing.Point(26, 128);
+            this.lblMensagem.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lblMensagem.Location = new System.Drawing.Point(19, 128);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(201, 13);
+            this.lblMensagem.Size = new System.Drawing.Size(233, 14);
             this.lblMensagem.TabIndex = 15;
             this.lblMensagem.Text = "Sua senha será enviada para esse email.";
             this.lblMensagem.Visible = false;
@@ -175,7 +177,7 @@
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Font = new System.Drawing.Font("Calibri", 9F);
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
             this.btnVoltar.Location = new System.Drawing.Point(3, 35);
             this.btnVoltar.Name = "btnVoltar";

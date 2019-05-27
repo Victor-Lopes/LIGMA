@@ -24,6 +24,7 @@ BEGIN
 	IF @Email IS NULL or @Senha IS NULL or @CEP = 0 or @Numero = 0 or @Nome IS NULL or 
 		@Cidade IS NULL or @UF IS NULL or @Logradouro IS NULL or
 		@RG IS NULL or @CPF = 0 or @DataNasc IS NULL and @Salario IS NULL or @Cargo IS NULL
+
 		SELECT 'Há atributos vazios' [ERRO];
 	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email já registrado!' ERRO;
 	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcionário já registrado!' ERRO;
@@ -52,6 +53,7 @@ delete tbDadosComuns; DBCC CHECKIDENT('tbDadosComuns', RESEED, 0);
 exec spcadFunc  'Exemplo@oi.com', '12345678', '12345678', 12, 'João', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
 exec spcadFunc  'Exemplo@oi.com', '12345678', '12345678', 12, 'João1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
 exec spcadFunc  'Exemplo@oi.com1', '12345678', '12345678', 12, 'João', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
+
 
 */
 
@@ -91,6 +93,7 @@ BEGIN
 	IF @Email IS NULL or @Senha IS NULL or @CEP = 0 or @Numero = 0 or @Nome IS NULL or
 		@Cidade IS NULL or @UF IS NULL or @Logradouro IS NULL or
 		@RG IS NULL or @CPF = 0 or @DataNasc IS NULL and @Salario IS NULL or @Cargo IS NULL or @Idioma is null
+
 		SELECT 'Há atributos vazios!' [ERRO];
 	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email já registrado!' ERRO;
 	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcionário já registrado!' ERRO;
@@ -118,16 +121,19 @@ BEGIN
 END
 GO
 /*
+
 exec spcadProf  'Exemplo@oi1.com', '12345678', '12345678', 12, 'João', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678902, '22-12-2002', 670.00, 'Professor','Espanhol', 123456789, 12345678;
 exec spcadProf  'Exemplo@oi.com', '12345678', '12345678', 12, 'João1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
 exec spcadProf  'Exemplo@oi.com1', '12345678', '12345678', 12, 'João', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
+
 */
 
 create view vwProfessor as 
 	select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Nascimento], RG, CPF, Logradouro, CEP, Numero, Salario, Cargo, Idioma, 
 		CASE StatusPagamento
+
 		WHEN 'N' THEN 'Não Pago'
-		ELSE 'Pago' END AS [Situção do Pagamento], 
+		ELSE 'Pago' END AS [Situção do Pagamento],
 	Email, Senha,
 	    CASE Ativada
         WHEN 0 THEN 'Desativado'
@@ -153,6 +159,7 @@ begin
 	declare @Mensagem varchar(40);
 	if @CodDiaSemana is null SELECT @Mensagem = 'Selecione pelo menos um dia da semana!';
 	else if @HorarioAula < '7:00' or @HorarioAula > '19:00' SELECT @Mensagem = 'Horário Inválido!'
+
 	else
 	begin
 		declare @Dia1 varchar(8) = (SELECT Nome from tbDiaSemana where CodDiaSemana = @CodDiaSemana);
@@ -164,7 +171,7 @@ begin
 		else SELECT @NomePeriodo = @Dia1 +', '+ @Dia2 +', '+ @Dia3 + ' - ' + convert(varchar, @HorarioAula,8);
 
 		if @NomePeriodo is not null and exists(select NomePeriodo from tbPeriodo where NomePeriodo = @NomePeriodo) 
-		SELECT @Mensagem = 'Você já tem um periodo semelhante!';
+		SELECT @Mensagem = 'Voc� j� tem um periodo semelhante!';
 		else
 		begin
 			insert into tbPeriodo(NomePeriodo, HorarioAula) values (@NomePeriodo, @HorarioAula);
@@ -178,6 +185,7 @@ begin
 		end
 	end
 	SELECT @Mensagem Mensagem;
+
 end
 GO
  /*
@@ -377,51 +385,3 @@ GO
 		end
 	end
 	SELECT @Mensagem as Mensagem;
-end
-GO
-
--- CADASTRAR PROFESSOR
-CREATE PROC cadProf  @Email VARCHAR(50), @Senha varchar(20), @CEP char(8), @Numero smallint, @Nome varchar(75),
-						@Complemento varchar(30) = '', @Cidade varchar(25), @UF char(2), @Logradouro varchar(140),
-						@RG char(10), @CPF decimal(11), @DataNasc date, @Salario money, @Cargo varchar(20), @Idioma varchar(18),
-						@TelCelular decimal(9) = 0, @TelFixo decimal(8) = 0
-AS
-BEGIN
-	IF @Email IS NULL AND @Senha IS NULL AND @CEP <> 0AND @Numero <> 0 AND @Nome IS NULL AND 
-		@Cidade IS NULL AND @UF IS NULL AND @Logradouro IS NULL AND
-		@RG IS NULL AND @CPF <> 0 AND @DataNasc IS NULL and @Salario IS NULL AND @Cargo IS NULL
-		AND @Idioma IS NULL
-		SELECT 'Há atributos vazios' AS [ERRO];
-	ELSE
-		BEGIN
-			INSERT INTO tbLogin(Email,Senha) VALUES (@Email, @Senha);
-
-			INSERT INTO tbDadosComuns(CEP, Numero, Nome, Complemento, Cidade, UF, Logradouro, RG, CPF, DataNasc)
-			VALUES (@CEP, @Numero, @Nome, @Complemento, @Cidade, @UF, @Logradouro, @RG, @CPF, @DataNasc);
-
-			DECLARE @CodLogin smallint=(SELECT TOP 1 codLogin FROM tbLogin ORDER BY CodLogin);
-			DECLARE @CodDados smallint=(SELECT TOP 1 CodDados FROM tbDadosComuns ORDER BY CodDados);
-			INSERT INTO tbFuncionario(CodLogin, CodDados, Salario, Cargo)
-			VALUES (@CodLogin, @CodDados, @Salario, @Cargo);
-
-			DECLARE @CodFunc smallint=(SELECT TOP 1 CodFunc FROM tbFuncionario ORDER BY CodFunc);
-
-			INSERT INTO tbProfessor(Idioma, CodFunc)
-			VALUES (@Idioma, @CodFunc);
-		END
-END
-GO
-
-
- /*
-exec sp_insert_periodo null, 1, null, null;
-exec sp_insert_periodo null, 1, 2, null;
-exec sp_insert_periodo null, 1, 2, 3;
-exec sp_insert_periodo '3 dias', 4, 5, 6;
-exec sp_insert_periodo 'Segunda', 3, null, null;
-exec sp_insert_periodo null, 1, null, null;
-
-truncate table tbPeriodo_DiaSemana;
-delete tbPeriodo; DBCC CHECKIDENT ('tbPeriodo', RESEED, 0);
-*/
-

@@ -1,4 +1,4 @@
-USE master;
+﻿USE master;
 GO
 
 
@@ -36,7 +36,8 @@ CREATE TABLE tbLogin (
 	Senha varchar(20) not null,
 	Email varchar(50) not null
 	CONSTRAINT UK_Login_Email UNIQUE,
-	Ativada bit not null default 1 --1 pra verdadeiro 0 pra falso
+	Ativada bit not null default 0 --1 pra verdadeiro 0 pra falso
+
 	);
 
 	insert into tbLogin(Senha,Email) values ('admin', 'admin@a.com'); 
@@ -103,7 +104,9 @@ CREATE TABLE tbCurso (
 );
 
 insert into tbCurso values('Inglês' ),
-			('Espanhol'),
+
+						  ('Espanhol'),
+
 						  ('Francês'); 
 GO
 
@@ -142,7 +145,9 @@ CREATE TABLE tbAluno(
 	CONSTRAINT FK_Aluno_Dados FOREIGN KEY REFERENCES tbDadosComuns(CodDados),
 	CodLogin smallint not null
 	CONSTRAINT FK_Aluno_Login FOREIGN KEY REFERENCES tbLogin(CodLogin),
+
 	SituacaoMensalidade bit not null DEFAULT 0 --1 PAGO, 0 NÃO PAGO ADICIONEI ISSO
+
 );
 GO
 

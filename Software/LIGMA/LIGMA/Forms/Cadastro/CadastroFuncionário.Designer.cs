@@ -377,6 +377,7 @@
             this.button3.TabIndex = 83;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -417,11 +418,11 @@
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnMinimizar.Location = new System.Drawing.Point(659, 2);
+            this.btnMinimizar.Location = new System.Drawing.Point(666, 1);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(28, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -436,9 +437,9 @@
             this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnFechar.Location = new System.Drawing.Point(700, 0);
+            this.btnFechar.Location = new System.Drawing.Point(700, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 28);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);

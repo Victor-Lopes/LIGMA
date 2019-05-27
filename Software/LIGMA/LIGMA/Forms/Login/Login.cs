@@ -8,11 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LIGMA
 {
+
     public partial class frmLogin : Form
-    { 
+    {
+        SqlConnection con = new SqlConnection(StringConexao.connectionString);
+        SqlDataReader reader;
 
         public frmLogin()
         {
@@ -65,17 +69,59 @@ namespace LIGMA
             }
         }
 
+        Form aluno = new Aluno();
+        Form prof = new Professor();
+        Form admin = new Administração();
+        void LoginSQL()
+        {
+            using (con)
+            {
+                try
+                {
+                    if ((txtLogin.Text == "Email") || (txtSenha.Text == "Senha"))
+                    {
+                        MessageBox.Show("Digite valores válidos nos campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        SqlCommand scmd = new SqlCommand("sp_logar_usuario", con);
+                        scmd.CommandType = CommandType.StoredProcedure;
+
+                        scmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = txtLogin.Text;
+                        scmd.Parameters.Add("@senha_usuario", SqlDbType.NVarChar).Value = txtSenha.Text;
+                        con.Open();
+
+                        int a = scmd.ExecuteNonQuery();
+                        if (a > 0)
+                        {
+                            if (cmbUsuario.SelectedValue.ToString() == "Aluno") aluno.Show();
+                            else if (cmbUsuario.SelectedValue.ToString() == "Professor") prof.Show();
+                            else admin.Show();
+
+                            this.Hide();
+                            con.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não foi possível logar! Verifique o login e a senha.", "Erro ao logar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            con.Close();
+                        }
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form aluno = new Aluno();
-            Form prof = new Professor();
-            Form admin = new Administração();
-
-            if (cmbUsuario.SelectedItem.ToString() == "Aluno") aluno.Show();
-            else if (cmbUsuario.SelectedItem.ToString() == "Professor") prof.Show();
-            else admin.Show();
-            this.Close();
-
+            LoginSQL();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)

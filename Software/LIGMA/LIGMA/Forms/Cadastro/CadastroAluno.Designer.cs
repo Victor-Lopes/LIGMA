@@ -381,11 +381,11 @@
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(636, 1);
+            this.btnMinimizar.Location = new System.Drawing.Point(635, 2);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -399,9 +399,9 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(670, 0);
+            this.btnFechar.Location = new System.Drawing.Point(670, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 28);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);

@@ -39,7 +39,7 @@ namespace LIGMA.Forms.Cadastro
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            aluno.Show();
+            //VOLTAR PRO ADMIN
         }
     }
 }

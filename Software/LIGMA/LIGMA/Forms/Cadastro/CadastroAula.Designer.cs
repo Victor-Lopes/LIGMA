@@ -39,11 +39,11 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.pnlFormBorder = new System.Windows.Forms.Panel();
+            this.lblLIGMA = new System.Windows.Forms.Label();
+            this.rchCurso = new System.Windows.Forms.RichTextBox();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.lblLIGMA = new System.Windows.Forms.Label();
             this.pcbIcone = new System.Windows.Forms.PictureBox();
-            this.rchCurso = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaPresenca)).BeginInit();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
@@ -138,6 +138,7 @@
             this.btnCancelar.TabIndex = 119;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEnviar
             // 
@@ -152,6 +153,7 @@
             this.btnEnviar.TabIndex = 118;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // pnlFormBorder
             // 
@@ -168,6 +170,29 @@
             this.pnlFormBorder.Size = new System.Drawing.Size(453, 29);
             this.pnlFormBorder.TabIndex = 120;
             // 
+            // lblLIGMA
+            // 
+            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblLIGMA.AutoSize = true;
+            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 12F);
+            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
+            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
+            this.lblLIGMA.Name = "lblLIGMA";
+            this.lblLIGMA.Size = new System.Drawing.Size(52, 19);
+            this.lblLIGMA.TabIndex = 11;
+            this.lblLIGMA.Text = "LIGMA";
+            // 
+            // rchCurso
+            // 
+            this.rchCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rchCurso.Font = new System.Drawing.Font("Calibri", 11F);
+            this.rchCurso.Location = new System.Drawing.Point(177, 114);
+            this.rchCurso.Name = "rchCurso";
+            this.rchCurso.Size = new System.Drawing.Size(262, 86);
+            this.rchCurso.TabIndex = 121;
+            this.rchCurso.Text = "";
+            // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -181,7 +206,7 @@
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -195,25 +220,12 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnFechar.Location = new System.Drawing.Point(426, 0);
+            this.btnFechar.Location = new System.Drawing.Point(426, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 28);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // lblLIGMA
-            // 
-            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblLIGMA.AutoSize = true;
-            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 12F);
-            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
-            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
-            this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(52, 19);
-            this.lblLIGMA.TabIndex = 11;
-            this.lblLIGMA.Text = "LIGMA";
             // 
             // pcbIcone
             // 
@@ -230,16 +242,6 @@
             this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
-            // 
-            // rchCurso
-            // 
-            this.rchCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rchCurso.Font = new System.Drawing.Font("Calibri", 11F);
-            this.rchCurso.Location = new System.Drawing.Point(177, 114);
-            this.rchCurso.Name = "rchCurso";
-            this.rchCurso.Size = new System.Drawing.Size(262, 86);
-            this.rchCurso.TabIndex = 121;
-            this.rchCurso.Text = "";
             // 
             // CadastroAula
             // 

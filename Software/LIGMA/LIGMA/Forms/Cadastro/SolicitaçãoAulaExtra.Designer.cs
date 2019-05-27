@@ -35,8 +35,8 @@
             this.pcbIcone = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.cmbAula = new System.Windows.Forms.ComboBox();
-            this.lblAula = new System.Windows.Forms.Label();
+            this.cmbAulaAvaliacao = new System.Windows.Forms.ComboBox();
+            this.lblAulaAvaliacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grpMotivo = new System.Windows.Forms.GroupBox();
             this.rbtProvaPerdida = new System.Windows.Forms.RadioButton();
@@ -68,14 +68,18 @@
             this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Location = new System.Drawing.Point(187, 2);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
@@ -84,12 +88,16 @@
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Location = new System.Drawing.Point(221, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 28);
+            this.btnFechar.Size = new System.Drawing.Size(25, 26);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // lblLIGMA
             // 
@@ -123,6 +131,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
@@ -134,10 +143,13 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.MouseEnter += new System.EventHandler(this.btnCancelar_MouseEnter);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
             // 
             // btnEnviar
             // 
             this.btnEnviar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
@@ -148,29 +160,36 @@
             this.btnEnviar.TabIndex = 117;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.btnEnviar.MouseEnter += new System.EventHandler(this.btnEntrar_MouseEnter);
+            this.btnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
             // 
-            // cmbAula
+            // cmbAulaAvaliacao
             // 
-            this.cmbAula.Font = new System.Drawing.Font("Calibri", 11F);
-            this.cmbAula.FormattingEnabled = true;
-            this.cmbAula.Items.AddRange(new object[] {
+            this.cmbAulaAvaliacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAulaAvaliacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAulaAvaliacao.Font = new System.Drawing.Font("Calibri", 11F);
+            this.cmbAulaAvaliacao.FormattingEnabled = true;
+            this.cmbAulaAvaliacao.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbAula.Location = new System.Drawing.Point(19, 101);
-            this.cmbAula.Name = "cmbAula";
-            this.cmbAula.Size = new System.Drawing.Size(200, 26);
-            this.cmbAula.TabIndex = 116;
+            this.cmbAulaAvaliacao.Location = new System.Drawing.Point(19, 209);
+            this.cmbAulaAvaliacao.Name = "cmbAulaAvaliacao";
+            this.cmbAulaAvaliacao.Size = new System.Drawing.Size(200, 26);
+            this.cmbAulaAvaliacao.TabIndex = 116;
+            this.cmbAulaAvaliacao.Visible = false;
             // 
-            // lblAula
+            // lblAulaAvaliacao
             // 
-            this.lblAula.AutoSize = true;
-            this.lblAula.Font = new System.Drawing.Font("Calibri", 11F);
-            this.lblAula.ForeColor = System.Drawing.Color.Black;
-            this.lblAula.Location = new System.Drawing.Point(15, 79);
-            this.lblAula.Name = "lblAula";
-            this.lblAula.Size = new System.Drawing.Size(36, 18);
-            this.lblAula.TabIndex = 115;
-            this.lblAula.Text = "Aula";
+            this.lblAulaAvaliacao.AutoSize = true;
+            this.lblAulaAvaliacao.Font = new System.Drawing.Font("Calibri", 11F);
+            this.lblAulaAvaliacao.ForeColor = System.Drawing.Color.Black;
+            this.lblAulaAvaliacao.Location = new System.Drawing.Point(15, 188);
+            this.lblAulaAvaliacao.Name = "lblAulaAvaliacao";
+            this.lblAulaAvaliacao.Size = new System.Drawing.Size(36, 18);
+            this.lblAulaAvaliacao.TabIndex = 115;
+            this.lblAulaAvaliacao.Text = "Aula";
+            this.lblAulaAvaliacao.Visible = false;
             // 
             // lblTitulo
             // 
@@ -191,7 +210,7 @@
             this.grpMotivo.Controls.Add(this.rbtFalta);
             this.grpMotivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpMotivo.Font = new System.Drawing.Font("Calibri", 11F);
-            this.grpMotivo.Location = new System.Drawing.Point(19, 133);
+            this.grpMotivo.Location = new System.Drawing.Point(18, 73);
             this.grpMotivo.Name = "grpMotivo";
             this.grpMotivo.Size = new System.Drawing.Size(200, 111);
             this.grpMotivo.TabIndex = 120;
@@ -201,6 +220,7 @@
             // rbtProvaPerdida
             // 
             this.rbtProvaPerdida.AutoSize = true;
+            this.rbtProvaPerdida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtProvaPerdida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtProvaPerdida.Location = new System.Drawing.Point(21, 63);
             this.rbtProvaPerdida.Name = "rbtProvaPerdida";
@@ -213,6 +233,7 @@
             // rbtFalta
             // 
             this.rbtFalta.AutoSize = true;
+            this.rbtFalta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtFalta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtFalta.Location = new System.Drawing.Point(21, 35);
             this.rbtFalta.Name = "rbtFalta";
@@ -221,6 +242,7 @@
             this.rbtFalta.TabStop = true;
             this.rbtFalta.Text = "Falta";
             this.rbtFalta.UseVisualStyleBackColor = true;
+            this.rbtFalta.CheckedChanged += new System.EventHandler(this.rbtFalta_CheckedChanged);
             // 
             // SolicitaçãoAulaExtra
             // 
@@ -231,8 +253,8 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.cmbAula);
-            this.Controls.Add(this.lblAula);
+            this.Controls.Add(this.cmbAulaAvaliacao);
+            this.Controls.Add(this.lblAulaAvaliacao);
             this.Controls.Add(this.pnlFormBorder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SolicitaçãoAulaExtra";
@@ -240,6 +262,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SolicitaçãoAulaExtra";
+            this.Load += new System.EventHandler(this.SolicitaçãoAulaExtra_Load);
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).EndInit();
@@ -259,8 +282,8 @@
         private System.Windows.Forms.PictureBox pcbIcone;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.ComboBox cmbAula;
-        private System.Windows.Forms.Label lblAula;
+        private System.Windows.Forms.ComboBox cmbAulaAvaliacao;
+        private System.Windows.Forms.Label lblAulaAvaliacao;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox grpMotivo;
         private System.Windows.Forms.RadioButton rbtProvaPerdida;
