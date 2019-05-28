@@ -59,8 +59,9 @@
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.ForeColor = System.Drawing.Color.MidnightBlue;
             this.pnlFormBorder.Location = new System.Drawing.Point(0, 0);
+            this.pnlFormBorder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlFormBorder.Name = "pnlFormBorder";
-            this.pnlFormBorder.Size = new System.Drawing.Size(321, 29);
+            this.pnlFormBorder.Size = new System.Drawing.Size(428, 36);
             this.pnlFormBorder.TabIndex = 101;
             // 
             // lblLIGMA
@@ -70,9 +71,10 @@
             this.lblLIGMA.AutoSize = true;
             this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLIGMA.ForeColor = System.Drawing.Color.White;
-            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
+            this.lblLIGMA.Location = new System.Drawing.Point(40, 6);
+            this.lblLIGMA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(48, 18);
+            this.lblLIGMA.Size = new System.Drawing.Size(63, 23);
             this.lblLIGMA.TabIndex = 11;
             this.lblLIGMA.Text = "LIGMA";
             // 
@@ -83,9 +85,10 @@
             this.cmbPeriodo.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbPeriodo.Location = new System.Drawing.Point(12, 181);
+            this.cmbPeriodo.Location = new System.Drawing.Point(16, 223);
+            this.cmbPeriodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbPeriodo.Name = "cmbPeriodo";
-            this.cmbPeriodo.Size = new System.Drawing.Size(135, 26);
+            this.cmbPeriodo.Size = new System.Drawing.Size(179, 30);
             this.cmbPeriodo.TabIndex = 105;
             // 
             // lblPeriodo
@@ -93,9 +96,10 @@
             this.lblPeriodo.AutoSize = true;
             this.lblPeriodo.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblPeriodo.ForeColor = System.Drawing.Color.Black;
-            this.lblPeriodo.Location = new System.Drawing.Point(8, 158);
+            this.lblPeriodo.Location = new System.Drawing.Point(11, 194);
+            this.lblPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(56, 18);
+            this.lblPeriodo.Size = new System.Drawing.Size(70, 23);
             this.lblPeriodo.TabIndex = 104;
             this.lblPeriodo.Text = "Período";
             // 
@@ -106,9 +110,10 @@
             this.cmbProfessor.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbProfessor.Location = new System.Drawing.Point(174, 122);
+            this.cmbProfessor.Location = new System.Drawing.Point(232, 150);
+            this.cmbProfessor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbProfessor.Name = "cmbProfessor";
-            this.cmbProfessor.Size = new System.Drawing.Size(135, 26);
+            this.cmbProfessor.Size = new System.Drawing.Size(179, 30);
             this.cmbProfessor.TabIndex = 107;
             // 
             // lblProfessor
@@ -116,9 +121,10 @@
             this.lblProfessor.AutoSize = true;
             this.lblProfessor.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblProfessor.ForeColor = System.Drawing.Color.Black;
-            this.lblProfessor.Location = new System.Drawing.Point(170, 100);
+            this.lblProfessor.Location = new System.Drawing.Point(227, 123);
+            this.lblProfessor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfessor.Name = "lblProfessor";
-            this.lblProfessor.Size = new System.Drawing.Size(67, 18);
+            this.lblProfessor.Size = new System.Drawing.Size(85, 23);
             this.lblProfessor.TabIndex = 106;
             this.lblProfessor.Text = "Professor";
             // 
@@ -129,9 +135,10 @@
             this.cmbEstagio.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbEstagio.Location = new System.Drawing.Point(174, 181);
+            this.cmbEstagio.Location = new System.Drawing.Point(232, 223);
+            this.cmbEstagio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstagio.Name = "cmbEstagio";
-            this.cmbEstagio.Size = new System.Drawing.Size(135, 26);
+            this.cmbEstagio.Size = new System.Drawing.Size(179, 30);
             this.cmbEstagio.TabIndex = 109;
             // 
             // lblEstagio
@@ -139,9 +146,10 @@
             this.lblEstagio.AutoSize = true;
             this.lblEstagio.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblEstagio.ForeColor = System.Drawing.Color.Black;
-            this.lblEstagio.Location = new System.Drawing.Point(170, 158);
+            this.lblEstagio.Location = new System.Drawing.Point(227, 194);
+            this.lblEstagio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstagio.Name = "lblEstagio";
-            this.lblEstagio.Size = new System.Drawing.Size(52, 18);
+            this.lblEstagio.Size = new System.Drawing.Size(65, 23);
             this.lblEstagio.TabIndex = 108;
             this.lblEstagio.Text = "Estágio";
             // 
@@ -152,9 +160,10 @@
             this.cmbCurso.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbCurso.Location = new System.Drawing.Point(12, 122);
+            this.cmbCurso.Location = new System.Drawing.Point(16, 150);
+            this.cmbCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(135, 26);
+            this.cmbCurso.Size = new System.Drawing.Size(179, 30);
             this.cmbCurso.TabIndex = 111;
             // 
             // lblCurso
@@ -162,9 +171,10 @@
             this.lblCurso.AutoSize = true;
             this.lblCurso.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCurso.ForeColor = System.Drawing.Color.Black;
-            this.lblCurso.Location = new System.Drawing.Point(8, 100);
+            this.lblCurso.Location = new System.Drawing.Point(11, 123);
+            this.lblCurso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(43, 18);
+            this.lblCurso.Size = new System.Drawing.Size(55, 23);
             this.lblCurso.TabIndex = 110;
             this.lblCurso.Text = "Curso";
             // 
@@ -174,9 +184,10 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(77, 42);
+            this.lblTitulo.Location = new System.Drawing.Point(103, 52);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(172, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(224, 33);
             this.lblTitulo.TabIndex = 112;
             this.lblTitulo.Text = "Cadastro da Turma";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -188,9 +199,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnCancelar.Location = new System.Drawing.Point(159, 240);
+            this.btnCancelar.Location = new System.Drawing.Point(212, 295);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(77, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(103, 34);
             this.btnCancelar.TabIndex = 114;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -203,9 +215,10 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnEnviar.Location = new System.Drawing.Point(242, 240);
+            this.btnEnviar.Location = new System.Drawing.Point(323, 295);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(67, 28);
+            this.btnEnviar.Size = new System.Drawing.Size(89, 34);
             this.btnEnviar.TabIndex = 113;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
@@ -218,11 +231,11 @@
             this.btnMinimizar.BackgroundImage = global::LIGMA.Properties.Resources.MinimizarJanela;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(260, 2);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMinimizar.Location = new System.Drawing.Point(347, 2);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
+            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(4);
+            this.btnMinimizar.Size = new System.Drawing.Size(33, 32);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -235,9 +248,10 @@
             this.btnFechar.BackgroundImage = global::LIGMA.Properties.Resources.FecharJanela;
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(294, 1);
+            this.btnFechar.Location = new System.Drawing.Point(392, 1);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 26);
+            this.btnFechar.Size = new System.Drawing.Size(33, 32);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -251,19 +265,20 @@
             this.pcbIcone.ErrorImage = global::LIGMA.Properties.Resources.logo;
             this.pcbIcone.Image = global::LIGMA.Properties.Resources._12133tongue_109560;
             this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
-            this.pcbIcone.Location = new System.Drawing.Point(3, 4);
+            this.pcbIcone.Location = new System.Drawing.Point(4, 5);
+            this.pcbIcone.Margin = new System.Windows.Forms.Padding(4);
             this.pcbIcone.Name = "pcbIcone";
-            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
+            this.pcbIcone.Size = new System.Drawing.Size(28, 27);
             this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
             // 
             // CadastroTurma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(321, 303);
+            this.ClientSize = new System.Drawing.Size(428, 373);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.lblTitulo);
@@ -277,8 +292,10 @@
             this.Controls.Add(this.lblPeriodo);
             this.Controls.Add(this.pnlFormBorder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CadastroTurma";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.CadastroTurma_Load);
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).EndInit();

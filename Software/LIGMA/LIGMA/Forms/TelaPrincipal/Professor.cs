@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LIGMA.Forms.Consulta;
 
 namespace LIGMA
 {
@@ -101,5 +102,33 @@ namespace LIGMA
             btnRegistrarAula.ForeColor = Color.Black;
         }
 
+        private void Professor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pcbFotoAluno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form prova = new ConsultaAvaliacao();
+            prova.Show();
+            this.Hide();
+        }
+
+        private void btnConultarPagamento_Click(object sender, EventArgs e)
+        {
+            Form pgmt = new ConsultaPagamento();
+            pgmt.Show();
+            this.Close();
+        }
     }
 }

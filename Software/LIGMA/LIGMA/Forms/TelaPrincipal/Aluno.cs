@@ -15,7 +15,7 @@ namespace LIGMA.Forms.TelaPrincipal
     public partial class Aluno : Form
     {
         
-        Form login = new frmLogin();
+        
 
         public Aluno()
         {
@@ -74,6 +74,7 @@ namespace LIGMA.Forms.TelaPrincipal
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            Form login = new frmLogin();
             DialogResult result = MessageBox.Show("Você voltará para a tela de Login. Deseja Sair?", "LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (result == DialogResult.Yes)
             {
@@ -104,6 +105,11 @@ namespace LIGMA.Forms.TelaPrincipal
         private void dgvNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //SE TIVER ALGUM SELECT DE NOTAS DEIXA ISSO VISIVEL
+        }
+
+        private void Aluno_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

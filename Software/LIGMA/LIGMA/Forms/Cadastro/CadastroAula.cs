@@ -39,7 +39,9 @@ namespace LIGMA.Forms.Cadastro
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            //VOLTAR PRO PROFESSOR
+            Form p = new Professor();
+            p.Show();
+            this.Hide();
         }
     }
 }

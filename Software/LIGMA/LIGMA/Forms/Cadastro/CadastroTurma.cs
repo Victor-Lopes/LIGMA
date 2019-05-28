@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LIGMA.Forms.Consulta;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,14 @@ namespace LIGMA.Forms.Cadastro
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            //VOLTAR PRO ADMIN
+            Form turma = new ConsultaTurma();
+            turma.Show();
+            this.Hide();
+        }
+
+        private void CadastroTurma_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,8 +15,7 @@ namespace LIGMA
 
     public partial class frmLogin : Form
     {
-        SqlConnection con = new SqlConnection(StringConexao.connectionString);
-        SqlDataReader reader;
+
 
         public frmLogin()
         {
@@ -29,8 +28,26 @@ namespace LIGMA
             txtLogin.ForeColor = Color.Gray;
             txtSenha.Text = "Senha";
             txtSenha.ForeColor = Color.Gray;
-            cmbUsuario.SelectionStart = cmbUsuario.SelectedIndex = 0;
+            txtSenha.UseSystemPasswordChar = false;
+            cmbUsuario.SelectionStart =  cmbUsuario.SelectedIndex = 2;
             btnLogin.Focus();
+            
+
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
+            
+            try
+            {
+                con.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                this.Close();
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void txtLogin_Enter(object sender, EventArgs e)
@@ -57,7 +74,8 @@ namespace LIGMA
              {
                  txtSenha.Text = "";
                  txtSenha.ForeColor = Color.Gray;
-             }
+                txtSenha.UseSystemPasswordChar = true;
+            }
         }
 
         private void txtSenha_Leave(object sender, EventArgs e)
@@ -66,14 +84,17 @@ namespace LIGMA
             {
                 txtSenha.Text = "Senha";
                 txtSenha.ForeColor = Color.Gray;
+                txtSenha.UseSystemPasswordChar = true;
             }
         }
 
-        Form aluno = new Aluno();
-        Form prof = new Professor();
-        Form admin = new Administração();
+
         void LoginSQL()
         {
+            Form aluno = new Aluno();
+            Form prof = new Professor();
+            Form admin = new Administração();
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
             using (con)
             {
                 try
@@ -89,15 +110,60 @@ namespace LIGMA
 
                         scmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = txtLogin.Text;
                         scmd.Parameters.Add("@senha_usuario", SqlDbType.NVarChar).Value = txtSenha.Text;
+
                         con.Open();
 
                         int a = scmd.ExecuteNonQuery();
                         if (a > 0)
                         {
-                            if (cmbUsuario.SelectedValue.ToString() == "Aluno") aluno.Show();
-                            else if (cmbUsuario.SelectedValue.ToString() == "Professor") prof.Show();
-                            else admin.Show();
+                            int indice = cmbUsuario.SelectedIndex;
 
+                            if (indice == 1)
+                            {
+
+                                SqlCommand slal = new SqlCommand("sp_VEAluno", con);
+                                slal.CommandType = CommandType.StoredProcedure;
+                                slal.Parameters.Add("@email", SqlDbType.NVarChar).Value = txtLogin.Text;
+
+                                string r = slal.ExecuteScalar().ToString();
+
+                                if (r == "true") aluno.Show();
+                                else
+                                {
+                                    MessageBox.Show("Não foi possível logar como Aluno! Verifique o login e a senha.", "Erro ao logar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    con.Close();
+                                };
+                            }
+                            else if (indice == 0)
+                            {
+                                SqlCommand slal = new SqlCommand("sp_VEProf", con);
+                                slal.CommandType = CommandType.StoredProcedure;
+                                slal.Parameters.Add("@email", SqlDbType.NVarChar).Value = txtLogin.Text;
+
+                                string r = slal.ExecuteScalar().ToString();
+
+                                if (r == "true") prof.Show();
+                                else
+                                {
+                                    MessageBox.Show("Não foi possível logar como Professor! Verifique o login e a senha.", "Erro ao logar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    con.Close();
+                                }
+                            }
+                            else
+                            {
+                                SqlCommand slal = new SqlCommand("sp_VEAdmin", con);
+                                slal.CommandType = CommandType.StoredProcedure;
+                                slal.Parameters.Add("@email", SqlDbType.NVarChar).Value = txtLogin.Text;
+
+                                string r = slal.ExecuteScalar().ToString();
+
+                                if (r == "true") admin.Show();
+                                else
+                                {
+                                    MessageBox.Show("Não foi possível logar como Administraçã! Verifique o login e a senha.", "Erro ao logar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    con.Close();
+                                }
+                            }
                             this.Hide();
                             con.Close();
                         }
@@ -111,6 +177,10 @@ namespace LIGMA
                 catch (SqlException ex)
                 {
                     MessageBox.Show(ex.Message);
+                }
+               catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message+"em: "+ex.Source+" "+ ex.InnerException);
                 }
                 finally
                 {

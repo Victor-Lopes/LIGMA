@@ -34,7 +34,36 @@ C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\S
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroTurma.resources
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroAula.resources
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Administração.resources
-C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.EditarAluno.resources
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Professor.resources
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.SolicitaçãoAulaExtra.resources
 C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.MudarSenha.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.ConsultaFuncionario.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.ConsultaAluno.resources
+C:\Users\Victor\Documents\Documentos Escola\ESCOLA\TÉCNICO\PTCC\Projeto LIGMA\Software\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.ConsultaTurma.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\bin\Debug\LIGMA.exe.config
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\bin\Debug\LIGMA.exe
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\bin\Debug\LIGMA.pdb
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.csprojAssemblyReference.cache
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroAvaliacao.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.SolicitaçãoAulaExtra.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.ConsultaFuncionario.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.ConsultaAluno.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.ConsultaTurma.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.EsqueceuSenha.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroAluno.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroFuncionario.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroTurma.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Cadastro.CadastroAula.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Administração.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.Aluno.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.frmLogin.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.TelaPrincipal.MudarSenha.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Professor.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Properties.Resources.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.csproj.GenerateResource.cache
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.csproj.CoreCompileInputs.cache
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.exe
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.pdb
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.AlunosTurma.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.ConsultaAvaliacao.resources
+C:\Users\Victor\Desktop\Programa (1)\LIGMA\LIGMA\obj\Debug\LIGMA.Forms.Consulta.ConsultaPagamento.resources

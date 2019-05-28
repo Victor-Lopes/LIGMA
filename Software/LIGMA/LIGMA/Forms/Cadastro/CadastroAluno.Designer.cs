@@ -66,6 +66,8 @@
             this.cmbUF = new System.Windows.Forms.ComboBox();
             this.txtFinalContrato = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
             this.pnlFormBorder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
             this.SuspendLayout();
@@ -76,9 +78,10 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(266, 44);
+            this.lblTitulo.Location = new System.Drawing.Point(355, 54);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(155, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(199, 29);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Cadastro do Aluno";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -88,20 +91,23 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblNome.ForeColor = System.Drawing.Color.Black;
-            this.lblNome.Location = new System.Drawing.Point(8, 94);
+            this.lblNome.Location = new System.Drawing.Point(11, 116);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(103, 18);
+            this.lblNome.Size = new System.Drawing.Size(127, 23);
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "Nome do aluno";
             // 
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Enabled = false;
             this.lblEndereco.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblEndereco.ForeColor = System.Drawing.Color.Black;
-            this.lblEndereco.Location = new System.Drawing.Point(8, 271);
+            this.lblEndereco.Location = new System.Drawing.Point(11, 334);
+            this.lblEndereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(66, 18);
+            this.lblEndereco.Size = new System.Drawing.Size(82, 23);
             this.lblEndereco.TabIndex = 4;
             this.lblEndereco.Text = "Endereço";
             // 
@@ -110,9 +116,10 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
-            this.lblEmail.Location = new System.Drawing.Point(339, 212);
+            this.lblEmail.Location = new System.Drawing.Point(452, 261);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(47, 18);
+            this.lblEmail.Size = new System.Drawing.Size(57, 23);
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "E-mail";
             // 
@@ -121,9 +128,10 @@
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCPF.ForeColor = System.Drawing.Color.Black;
-            this.lblCPF.Location = new System.Drawing.Point(339, 94);
+            this.lblCPF.Location = new System.Drawing.Point(452, 116);
+            this.lblCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(31, 18);
+            this.lblCPF.Size = new System.Drawing.Size(39, 23);
             this.lblCPF.TabIndex = 6;
             this.lblCPF.Text = "CPF";
             // 
@@ -132,9 +140,10 @@
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblRG.ForeColor = System.Drawing.Color.Black;
-            this.lblRG.Location = new System.Drawing.Point(526, 94);
+            this.lblRG.Location = new System.Drawing.Point(701, 116);
+            this.lblRG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRG.Name = "lblRG";
-            this.lblRG.Size = new System.Drawing.Size(25, 18);
+            this.lblRG.Size = new System.Drawing.Size(32, 23);
             this.lblRG.TabIndex = 7;
             this.lblRG.Text = "RG";
             // 
@@ -143,9 +152,10 @@
             this.lblDataNasc.AutoSize = true;
             this.lblDataNasc.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblDataNasc.ForeColor = System.Drawing.Color.Black;
-            this.lblDataNasc.Location = new System.Drawing.Point(8, 153);
+            this.lblDataNasc.Location = new System.Drawing.Point(11, 188);
+            this.lblDataNasc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataNasc.Name = "lblDataNasc";
-            this.lblDataNasc.Size = new System.Drawing.Size(132, 18);
+            this.lblDataNasc.Size = new System.Drawing.Size(164, 23);
             this.lblDataNasc.TabIndex = 14;
             this.lblDataNasc.Text = "Data de Nascimento";
             // 
@@ -154,9 +164,10 @@
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblTelefone.ForeColor = System.Drawing.Color.Black;
-            this.lblTelefone.Location = new System.Drawing.Point(8, 212);
+            this.lblTelefone.Location = new System.Drawing.Point(11, 261);
+            this.lblTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(63, 18);
+            this.lblTelefone.Size = new System.Drawing.Size(74, 23);
             this.lblTelefone.TabIndex = 15;
             this.lblTelefone.Text = "Telefone";
             // 
@@ -165,9 +176,10 @@
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCelular.ForeColor = System.Drawing.Color.Black;
-            this.lblCelular.Location = new System.Drawing.Point(183, 212);
+            this.lblCelular.Location = new System.Drawing.Point(244, 261);
+            this.lblCelular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(52, 18);
+            this.lblCelular.Size = new System.Drawing.Size(63, 23);
             this.lblCelular.TabIndex = 16;
             this.lblCelular.Text = "Celular";
             // 
@@ -176,9 +188,10 @@
             this.lblPeriodo.AutoSize = true;
             this.lblPeriodo.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblPeriodo.ForeColor = System.Drawing.Color.Black;
-            this.lblPeriodo.Location = new System.Drawing.Point(162, 153);
+            this.lblPeriodo.Location = new System.Drawing.Point(216, 188);
+            this.lblPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(56, 18);
+            this.lblPeriodo.Size = new System.Drawing.Size(70, 23);
             this.lblPeriodo.TabIndex = 17;
             this.lblPeriodo.Text = "Período";
             // 
@@ -187,82 +200,95 @@
             this.lblCEP.AutoSize = true;
             this.lblCEP.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCEP.ForeColor = System.Drawing.Color.Black;
-            this.lblCEP.Location = new System.Drawing.Point(526, 271);
+            this.lblCEP.Location = new System.Drawing.Point(701, 334);
+            this.lblCEP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCEP.Name = "lblCEP";
-            this.lblCEP.Size = new System.Drawing.Size(31, 18);
+            this.lblCEP.Size = new System.Drawing.Size(39, 23);
             this.lblCEP.TabIndex = 18;
             this.lblCEP.Text = "CEP";
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtNome.Location = new System.Drawing.Point(12, 116);
+            this.txtNome.Location = new System.Drawing.Point(16, 143);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(278, 25);
+            this.txtNome.Size = new System.Drawing.Size(369, 30);
             this.txtNome.TabIndex = 19;
             // 
             // txtDataNasc
             // 
             this.txtDataNasc.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtDataNasc.Location = new System.Drawing.Point(12, 175);
+            this.txtDataNasc.Location = new System.Drawing.Point(16, 215);
+            this.txtDataNasc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDataNasc.Name = "txtDataNasc";
-            this.txtDataNasc.Size = new System.Drawing.Size(137, 25);
+            this.txtDataNasc.Size = new System.Drawing.Size(181, 30);
             this.txtDataNasc.TabIndex = 20;
             // 
             // txtEndereco
             // 
+            this.txtEndereco.Enabled = false;
             this.txtEndereco.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtEndereco.Location = new System.Drawing.Point(12, 293);
+            this.txtEndereco.Location = new System.Drawing.Point(16, 361);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(278, 25);
+            this.txtEndereco.Size = new System.Drawing.Size(369, 30);
             this.txtEndereco.TabIndex = 21;
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtEmail.Location = new System.Drawing.Point(343, 234);
+            this.txtEmail.Location = new System.Drawing.Point(457, 288);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(337, 25);
+            this.txtEmail.Size = new System.Drawing.Size(448, 30);
             this.txtEmail.TabIndex = 22;
             // 
             // txtCPF
             // 
             this.txtCPF.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtCPF.Location = new System.Drawing.Point(343, 116);
+            this.txtCPF.Location = new System.Drawing.Point(457, 143);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(135, 25);
+            this.txtCPF.Size = new System.Drawing.Size(179, 30);
             this.txtCPF.TabIndex = 23;
             // 
             // txtRG
             // 
             this.txtRG.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtRG.Location = new System.Drawing.Point(530, 116);
+            this.txtRG.Location = new System.Drawing.Point(707, 143);
+            this.txtRG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(151, 25);
+            this.txtRG.Size = new System.Drawing.Size(200, 30);
             this.txtRG.TabIndex = 24;
             // 
             // txtCEP
             // 
             this.txtCEP.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtCEP.Location = new System.Drawing.Point(530, 293);
+            this.txtCEP.Location = new System.Drawing.Point(707, 361);
+            this.txtCEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(151, 25);
+            this.txtCEP.Size = new System.Drawing.Size(200, 30);
             this.txtCEP.TabIndex = 25;
+            this.txtCEP.TextChanged += new System.EventHandler(this.txtCEP_TextChanged);
+            this.txtCEP.Leave += new System.EventHandler(this.txtCEP_Leave);
             // 
             // txtCelular
             // 
             this.txtCelular.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtCelular.Location = new System.Drawing.Point(12, 234);
+            this.txtCelular.Location = new System.Drawing.Point(16, 288);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(103, 25);
+            this.txtCelular.Size = new System.Drawing.Size(136, 30);
             this.txtCelular.TabIndex = 26;
             // 
             // txtTelefone
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtTelefone.Location = new System.Drawing.Point(187, 234);
+            this.txtTelefone.Location = new System.Drawing.Point(249, 288);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(103, 25);
+            this.txtTelefone.Size = new System.Drawing.Size(136, 30);
             this.txtTelefone.TabIndex = 27;
             // 
             // cmbPeriodo
@@ -273,9 +299,10 @@
             this.cmbPeriodo.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbPeriodo.Location = new System.Drawing.Point(166, 175);
+            this.cmbPeriodo.Location = new System.Drawing.Point(221, 215);
+            this.cmbPeriodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbPeriodo.Name = "cmbPeriodo";
-            this.cmbPeriodo.Size = new System.Drawing.Size(124, 26);
+            this.cmbPeriodo.Size = new System.Drawing.Size(164, 30);
             this.cmbPeriodo.TabIndex = 34;
             // 
             // btnEnviar
@@ -286,9 +313,10 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnEnviar.Location = new System.Drawing.Point(604, 395);
+            this.btnEnviar.Location = new System.Drawing.Point(805, 486);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(77, 28);
+            this.btnEnviar.Size = new System.Drawing.Size(103, 34);
             this.btnEnviar.TabIndex = 35;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
@@ -301,9 +329,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnCancelar.Location = new System.Drawing.Point(477, 395);
+            this.btnCancelar.Location = new System.Drawing.Point(636, 486);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(77, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(103, 34);
             this.btnCancelar.TabIndex = 66;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -311,50 +340,60 @@
             // 
             // txtComplemento
             // 
+            this.txtComplemento.Enabled = false;
             this.txtComplemento.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtComplemento.Location = new System.Drawing.Point(343, 293);
+            this.txtComplemento.Location = new System.Drawing.Point(457, 361);
+            this.txtComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(135, 25);
+            this.txtComplemento.Size = new System.Drawing.Size(179, 30);
             this.txtComplemento.TabIndex = 68;
             // 
             // lblComplemento
             // 
             this.lblComplemento.AutoSize = true;
+            this.lblComplemento.Enabled = false;
             this.lblComplemento.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblComplemento.ForeColor = System.Drawing.Color.Black;
-            this.lblComplemento.Location = new System.Drawing.Point(339, 271);
+            this.lblComplemento.Location = new System.Drawing.Point(452, 334);
+            this.lblComplemento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComplemento.Name = "lblComplemento";
-            this.lblComplemento.Size = new System.Drawing.Size(97, 18);
+            this.lblComplemento.Size = new System.Drawing.Size(118, 23);
             this.lblComplemento.TabIndex = 67;
             this.lblComplemento.Text = "Complemento";
             // 
             // txtCidade
             // 
+            this.txtCidade.Enabled = false;
             this.txtCidade.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtCidade.Location = new System.Drawing.Point(166, 352);
+            this.txtCidade.Location = new System.Drawing.Point(221, 433);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(124, 25);
+            this.txtCidade.Size = new System.Drawing.Size(164, 30);
             this.txtCidade.TabIndex = 70;
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
+            this.lblCidade.Enabled = false;
             this.lblCidade.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblCidade.ForeColor = System.Drawing.Color.Black;
-            this.lblCidade.Location = new System.Drawing.Point(162, 330);
+            this.lblCidade.Location = new System.Drawing.Point(216, 406);
+            this.lblCidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(51, 18);
+            this.lblCidade.Size = new System.Drawing.Size(62, 23);
             this.lblCidade.TabIndex = 69;
             this.lblCidade.Text = "Cidade";
             // 
             // lblUF
             // 
             this.lblUF.AutoSize = true;
+            this.lblUF.Enabled = false;
             this.lblUF.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblUF.ForeColor = System.Drawing.Color.Black;
-            this.lblUF.Location = new System.Drawing.Point(8, 330);
+            this.lblUF.Location = new System.Drawing.Point(11, 406);
+            this.lblUF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUF.Name = "lblUF";
-            this.lblUF.Size = new System.Drawing.Size(24, 18);
+            this.lblUF.Size = new System.Drawing.Size(31, 23);
             this.lblUF.TabIndex = 71;
             this.lblUF.Text = "UF";
             // 
@@ -368,8 +407,9 @@
             this.pnlFormBorder.Controls.Add(this.lblLIGMA);
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.Location = new System.Drawing.Point(0, 0);
+            this.pnlFormBorder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlFormBorder.Name = "pnlFormBorder";
-            this.pnlFormBorder.Size = new System.Drawing.Size(698, 29);
+            this.pnlFormBorder.Size = new System.Drawing.Size(931, 36);
             this.pnlFormBorder.TabIndex = 75;
             // 
             // btnMinimizar
@@ -381,11 +421,11 @@
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(635, 2);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMinimizar.Location = new System.Drawing.Point(847, 2);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
+            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimizar.Size = new System.Drawing.Size(33, 32);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -399,9 +439,10 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(670, 1);
+            this.btnFechar.Location = new System.Drawing.Point(893, 1);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 26);
+            this.btnFechar.Size = new System.Drawing.Size(33, 32);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -413,9 +454,10 @@
             this.lblLIGMA.AutoSize = true;
             this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 12F);
             this.lblLIGMA.ForeColor = System.Drawing.Color.White;
-            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
+            this.lblLIGMA.Location = new System.Drawing.Point(40, 6);
+            this.lblLIGMA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(52, 19);
+            this.lblLIGMA.Size = new System.Drawing.Size(65, 24);
             this.lblLIGMA.TabIndex = 11;
             this.lblLIGMA.Text = "LIGMA";
             // 
@@ -428,9 +470,10 @@
             this.pcbIcone.ErrorImage = global::LIGMA.Properties.Resources.logo;
             this.pcbIcone.Image = global::LIGMA.Properties.Resources._12133tongue_109560;
             this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
-            this.pcbIcone.Location = new System.Drawing.Point(3, 4);
+            this.pcbIcone.Location = new System.Drawing.Point(4, 5);
+            this.pcbIcone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbIcone.Name = "pcbIcone";
-            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
+            this.pcbIcone.Size = new System.Drawing.Size(28, 27);
             this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
@@ -442,9 +485,10 @@
             this.cmbCurso.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbCurso.Location = new System.Drawing.Point(343, 175);
+            this.cmbCurso.Location = new System.Drawing.Point(457, 215);
+            this.cmbCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(135, 26);
+            this.cmbCurso.Size = new System.Drawing.Size(179, 30);
             this.cmbCurso.TabIndex = 77;
             // 
             // label1
@@ -452,30 +496,34 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(339, 153);
+            this.label1.Location = new System.Drawing.Point(452, 188);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 18);
+            this.label1.Size = new System.Drawing.Size(55, 23);
             this.label1.TabIndex = 76;
             this.label1.Text = "Curso";
             // 
             // cmbUF
             // 
+            this.cmbUF.Enabled = false;
             this.cmbUF.Font = new System.Drawing.Font("Calibri", 11F);
             this.cmbUF.FormattingEnabled = true;
             this.cmbUF.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbUF.Location = new System.Drawing.Point(12, 352);
+            this.cmbUF.Location = new System.Drawing.Point(16, 433);
+            this.cmbUF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUF.Name = "cmbUF";
-            this.cmbUF.Size = new System.Drawing.Size(51, 26);
+            this.cmbUF.Size = new System.Drawing.Size(67, 30);
             this.cmbUF.TabIndex = 78;
             // 
             // txtFinalContrato
             // 
             this.txtFinalContrato.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtFinalContrato.Location = new System.Drawing.Point(531, 175);
+            this.txtFinalContrato.Location = new System.Drawing.Point(708, 215);
+            this.txtFinalContrato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFinalContrato.Name = "txtFinalContrato";
-            this.txtFinalContrato.Size = new System.Drawing.Size(150, 25);
+            this.txtFinalContrato.Size = new System.Drawing.Size(199, 30);
             this.txtFinalContrato.TabIndex = 80;
             // 
             // label2
@@ -483,18 +531,44 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(526, 153);
+            this.label2.Location = new System.Drawing.Point(701, 188);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 18);
+            this.label2.Size = new System.Drawing.Size(182, 23);
             this.label2.TabIndex = 79;
             this.label2.Text = "Data Final do Contrato";
             // 
+            // txtBairro
+            // 
+            this.txtBairro.Enabled = false;
+            this.txtBairro.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(457, 433);
+            this.txtBairro.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(132, 30);
+            this.txtBairro.TabIndex = 82;
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Enabled = false;
+            this.lblBairro.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBairro.ForeColor = System.Drawing.Color.Black;
+            this.lblBairro.Location = new System.Drawing.Point(452, 405);
+            this.lblBairro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(62, 23);
+            this.lblBairro.TabIndex = 81;
+            this.lblBairro.Text = "Bairro:";
+            // 
             // CadastroAluno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(697, 451);
+            this.ClientSize = new System.Drawing.Size(929, 555);
+            this.Controls.Add(this.txtBairro);
+            this.Controls.Add(this.lblBairro);
             this.Controls.Add(this.txtFinalContrato);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbUF);
@@ -531,11 +605,12 @@
             this.Controls.Add(this.lblTitulo);
             this.ForeColor = System.Drawing.Color.MidnightBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CadastroAluno";
-            this.Opacity = 0.25D;
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.CadastroAluno_Load);
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).EndInit();
@@ -583,6 +658,8 @@
         private System.Windows.Forms.ComboBox cmbUF;
         private System.Windows.Forms.TextBox txtFinalContrato;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label lblBairro;
     }
 }
 

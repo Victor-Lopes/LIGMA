@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LIGMA.Forms.Consulta;
 
 namespace LIGMA.Forms.Cadastro
 {
@@ -38,8 +39,38 @@ namespace LIGMA.Forms.Cadastro
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            //VOLTAR PRO ADMIN
+            Form aluno = new ConsultaAluno();
+            aluno.Show();
+            this.Hide(); 
+        }
+
+        private void CadastroAluno_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCEP_TextChanged(object sender, EventArgs e)
+        {
+            using (var ws = new WSCorreios.AtendeClienteClient())
+            {
+                try
+                { 
+                    var resultado = ws.consultaCEP(txtCEP.Text);
+                    txtEndereco.Text = resultado.end;
+                    txtCidade.Text = resultado.cidade;
+                    txtBairro.Text = resultado.bairro;
+                    cmbUF.Text = resultado.uf;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void txtCEP_Leave(object sender, EventArgs e)
+        {
+ 
         }
     }
 }

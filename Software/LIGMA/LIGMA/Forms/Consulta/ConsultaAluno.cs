@@ -155,9 +155,192 @@ namespace LIGMA.Forms.Consulta
             txtDataNascimento.Text = cliente.DataNascimento.ToShortDateString(); 
         }*/
         }
-    }
 
-    internal class Dim
-    {
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFinalContrato_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbUF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCidade_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtComplemento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblComplemento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPeriodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCEP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRG_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCPF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDataNasc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCEP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPeriodo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCelular_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTelefone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDataNasc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCPF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEndereco_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Form admin = new Administração();
+            admin.Show();
+            this.Hide();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }

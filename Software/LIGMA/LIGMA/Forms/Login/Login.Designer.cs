@@ -52,7 +52,7 @@
             this.txtLogin.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.Location = new System.Drawing.Point(44, 208);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(167, 22);
+            this.txtLogin.Size = new System.Drawing.Size(167, 26);
             this.txtLogin.TabIndex = 1;
             this.txtLogin.Enter += new System.EventHandler(this.txtLogin_Enter);
             this.txtLogin.Leave += new System.EventHandler(this.txtLogin_Leave);
@@ -64,8 +64,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(44, 264);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(167, 22);
+            this.txtSenha.Size = new System.Drawing.Size(167, 26);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
             this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
@@ -82,7 +81,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnLogin.Location = new System.Drawing.Point(96, 322);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(68, 25);
+            this.btnLogin.Size = new System.Drawing.Size(68, 29);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -101,9 +100,9 @@
             this.lnkEsqueceuSenha.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkEsqueceuSenha.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lnkEsqueceuSenha.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.lnkEsqueceuSenha.Location = new System.Drawing.Point(80, 367);
+            this.lnkEsqueceuSenha.Location = new System.Drawing.Point(68, 367);
             this.lnkEsqueceuSenha.Name = "lnkEsqueceuSenha";
-            this.lnkEsqueceuSenha.Size = new System.Drawing.Size(106, 14);
+            this.lnkEsqueceuSenha.Size = new System.Drawing.Size(118, 18);
             this.lnkEsqueceuSenha.TabIndex = 7;
             this.lnkEsqueceuSenha.TabStop = true;
             this.lnkEsqueceuSenha.Text = "Esqueceu a Senha";
@@ -121,7 +120,7 @@
             this.lblSlogan.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblSlogan.Location = new System.Drawing.Point(51, 106);
             this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(156, 14);
+            this.lblSlogan.Size = new System.Drawing.Size(170, 18);
             this.lblSlogan.TabIndex = 8;
             this.lblSlogan.Text = "Aprenda a usar essa língua";
             // 
@@ -137,7 +136,7 @@
             "Administração"});
             this.cmbUsuario.Location = new System.Drawing.Point(44, 150);
             this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(167, 22);
+            this.cmbUsuario.Size = new System.Drawing.Size(167, 26);
             this.cmbUsuario.TabIndex = 0;
             // 
             // pnlFormBorder
@@ -164,7 +163,7 @@
             this.lblLIGMA.ForeColor = System.Drawing.Color.White;
             this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
             this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(48, 18);
+            this.lblLIGMA.Size = new System.Drawing.Size(63, 23);
             this.lblLIGMA.TabIndex = 11;
             this.lblLIGMA.Text = "LIGMA";
             // 
@@ -238,7 +237,7 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(259, 394);

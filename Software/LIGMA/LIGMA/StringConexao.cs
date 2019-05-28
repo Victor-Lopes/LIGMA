@@ -8,7 +8,8 @@ namespace LIGMA
 {
     class StringConexao
     {
-        private static String _connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dbLIGMA;Integrated Security=True";
+        private static String _connectionString = @"Data Source=Victor-HP;Initial Catalog=dbLIGMA;Integrated Security=True";
+        
         public static string connectionString
         {
             get { return _connectionString; }

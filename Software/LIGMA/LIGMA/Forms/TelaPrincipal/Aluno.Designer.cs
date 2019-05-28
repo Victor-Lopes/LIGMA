@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aluno));
             this.pnlInfoAluno = new System.Windows.Forms.Panel();
-            this.btnAulaExtra = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblPresenca = new System.Windows.Forms.Label();
@@ -38,30 +37,30 @@
             this.lblEstagio = new System.Windows.Forms.Label();
             this.lblCurso = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.pcbFotoAluno = new System.Windows.Forms.PictureBox();
+            this.btnAulaExtra = new System.Windows.Forms.Button();
             this.dgvAulas = new System.Windows.Forms.DataGridView();
             this.lblAulas = new System.Windows.Forms.Label();
             this.pnlFormBorder = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.lblLIGMA = new System.Windows.Forms.Label();
+            this.pcbIcone = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNotas = new System.Windows.Forms.Label();
             this.dgvNotas = new System.Windows.Forms.DataGridView();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.pcbIcone = new System.Windows.Forms.PictureBox();
-            this.pcbFotoAluno = new System.Windows.Forms.PictureBox();
             this.pnlInfoAluno.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAulas)).BeginInit();
             this.pnlFormBorder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoAluno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInfoAluno
             // 
             this.pnlInfoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.pnlInfoAluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInfoAluno.Controls.Add(this.btnAulaExtra);
             this.pnlInfoAluno.Controls.Add(this.btnLogout);
             this.pnlInfoAluno.Controls.Add(this.lblPeriodo);
             this.pnlInfoAluno.Controls.Add(this.lblPresenca);
@@ -76,23 +75,6 @@
             this.pnlInfoAluno.Size = new System.Drawing.Size(179, 481);
             this.pnlInfoAluno.TabIndex = 1;
             // 
-            // btnAulaExtra
-            // 
-            this.btnAulaExtra.BackColor = System.Drawing.Color.Transparent;
-            this.btnAulaExtra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAulaExtra.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnAulaExtra.FlatAppearance.BorderSize = 0;
-            this.btnAulaExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAulaExtra.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnAulaExtra.Location = new System.Drawing.Point(-1, 370);
-            this.btnAulaExtra.Name = "btnAulaExtra";
-            this.btnAulaExtra.Size = new System.Drawing.Size(178, 22);
-            this.btnAulaExtra.TabIndex = 9;
-            this.btnAulaExtra.Text = "Solicitar Aula Extra";
-            this.btnAulaExtra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAulaExtra.UseVisualStyleBackColor = false;
-            this.btnAulaExtra.Click += new System.EventHandler(this.btnAulaExtra_Click);
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
@@ -103,7 +85,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.Red;
             this.btnLogout.Location = new System.Drawing.Point(-1, 419);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(179, 24);
+            this.btnLogout.Size = new System.Drawing.Size(179, 28);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "LogOut";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -119,7 +101,7 @@
             this.lblPeriodo.ForeColor = System.Drawing.Color.Black;
             this.lblPeriodo.Location = new System.Drawing.Point(59, 324);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(49, 14);
+            this.lblPeriodo.Size = new System.Drawing.Size(57, 18);
             this.lblPeriodo.TabIndex = 5;
             this.lblPeriodo.Text = "Periodo";
             // 
@@ -128,9 +110,9 @@
             this.lblPresenca.AutoSize = true;
             this.lblPresenca.BackColor = System.Drawing.Color.Transparent;
             this.lblPresenca.ForeColor = System.Drawing.Color.Black;
-            this.lblPresenca.Location = new System.Drawing.Point(29, 289);
+            this.lblPresenca.Location = new System.Drawing.Point(21, 289);
             this.lblPresenca.Name = "lblPresenca";
-            this.lblPresenca.Size = new System.Drawing.Size(123, 14);
+            this.lblPresenca.Size = new System.Drawing.Size(138, 18);
             this.lblPresenca.TabIndex = 4;
             this.lblPresenca.Text = "Situação de Presença";
             this.lblPresenca.Click += new System.EventHandler(this.lblPresenca_Click);
@@ -143,7 +125,7 @@
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnEditar.Location = new System.Drawing.Point(-1, 395);
+            this.btnEditar.Location = new System.Drawing.Point(-1, 393);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(179, 22);
             this.btnEditar.TabIndex = 7;
@@ -161,7 +143,7 @@
             this.lblEstagio.ForeColor = System.Drawing.Color.Black;
             this.lblEstagio.Location = new System.Drawing.Point(59, 254);
             this.lblEstagio.Name = "lblEstagio";
-            this.lblEstagio.Size = new System.Drawing.Size(47, 14);
+            this.lblEstagio.Size = new System.Drawing.Size(52, 18);
             this.lblEstagio.TabIndex = 3;
             this.lblEstagio.Text = "Estágio";
             // 
@@ -172,7 +154,7 @@
             this.lblCurso.ForeColor = System.Drawing.Color.Black;
             this.lblCurso.Location = new System.Drawing.Point(65, 216);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(37, 14);
+            this.lblCurso.Size = new System.Drawing.Size(43, 18);
             this.lblCurso.TabIndex = 2;
             this.lblCurso.Text = "Curso";
             // 
@@ -183,9 +165,34 @@
             this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(63, 181);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(39, 14);
+            this.lblNome.Size = new System.Drawing.Size(46, 18);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
+            // 
+            // pcbFotoAluno
+            // 
+            this.pcbFotoAluno.Image = global::LIGMA.Properties.Resources.Usuario;
+            this.pcbFotoAluno.Location = new System.Drawing.Point(33, 40);
+            this.pcbFotoAluno.Name = "pcbFotoAluno";
+            this.pcbFotoAluno.Size = new System.Drawing.Size(100, 102);
+            this.pcbFotoAluno.TabIndex = 0;
+            this.pcbFotoAluno.TabStop = false;
+            // 
+            // btnAulaExtra
+            // 
+            this.btnAulaExtra.BackColor = System.Drawing.Color.Transparent;
+            this.btnAulaExtra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAulaExtra.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnAulaExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAulaExtra.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnAulaExtra.Location = new System.Drawing.Point(575, 228);
+            this.btnAulaExtra.Name = "btnAulaExtra";
+            this.btnAulaExtra.Size = new System.Drawing.Size(91, 48);
+            this.btnAulaExtra.TabIndex = 9;
+            this.btnAulaExtra.Text = "Solicitar Aula Extra";
+            this.btnAulaExtra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAulaExtra.UseVisualStyleBackColor = false;
+            this.btnAulaExtra.Click += new System.EventHandler(this.btnAulaExtra_Click);
             // 
             // dgvAulas
             // 
@@ -203,7 +210,7 @@
             this.lblAulas.ForeColor = System.Drawing.Color.Black;
             this.lblAulas.Location = new System.Drawing.Point(421, 50);
             this.lblAulas.Name = "lblAulas";
-            this.lblAulas.Size = new System.Drawing.Size(38, 14);
+            this.lblAulas.Size = new System.Drawing.Size(42, 18);
             this.lblAulas.TabIndex = 5;
             this.lblAulas.Text = "Aulas";
             // 
@@ -221,51 +228,6 @@
             this.pnlFormBorder.Name = "pnlFormBorder";
             this.pnlFormBorder.Size = new System.Drawing.Size(714, 29);
             this.pnlFormBorder.TabIndex = 10;
-            // 
-            // lblLIGMA
-            // 
-            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblLIGMA.AutoSize = true;
-            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
-            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
-            this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(48, 18);
-            this.lblLIGMA.TabIndex = 11;
-            this.lblLIGMA.Text = "LIGMA";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(342, 368);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 14);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "As notas ainda não foram lançadas!";
-            // 
-            // lblNotas
-            // 
-            this.lblNotas.AutoSize = true;
-            this.lblNotas.ForeColor = System.Drawing.Color.Black;
-            this.lblNotas.Location = new System.Drawing.Point(420, 281);
-            this.lblNotas.Name = "lblNotas";
-            this.lblNotas.Size = new System.Drawing.Size(39, 14);
-            this.lblNotas.TabIndex = 13;
-            this.lblNotas.Text = "Notas";
-            this.lblNotas.Visible = false;
-            // 
-            // dgvNotas
-            // 
-            this.dgvNotas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.dgvNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNotas.GridColor = System.Drawing.Color.White;
-            this.dgvNotas.Location = new System.Drawing.Point(222, 298);
-            this.dgvNotas.Name = "dgvNotas";
-            this.dgvNotas.Size = new System.Drawing.Size(444, 162);
-            this.dgvNotas.TabIndex = 12;
-            this.dgvNotas.Visible = false;
             // 
             // btnMinimizar
             // 
@@ -304,6 +266,21 @@
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnFechar.MouseEnter += new System.EventHandler(this.btnAulaExtra_MouseEnter);
+            this.btnFechar.MouseLeave += new System.EventHandler(this.btnAulaExtra_MouseLeave);
+            // 
+            // lblLIGMA
+            // 
+            this.lblLIGMA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblLIGMA.AutoSize = true;
+            this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLIGMA.ForeColor = System.Drawing.Color.White;
+            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
+            this.lblLIGMA.Name = "lblLIGMA";
+            this.lblLIGMA.Size = new System.Drawing.Size(63, 23);
+            this.lblLIGMA.TabIndex = 11;
+            this.lblLIGMA.Text = "LIGMA";
             // 
             // pcbIcone
             // 
@@ -321,26 +298,50 @@
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
             // 
-            // pcbFotoAluno
+            // label1
             // 
-            this.pcbFotoAluno.Image = global::LIGMA.Properties.Resources.Usuario;
-            this.pcbFotoAluno.Location = new System.Drawing.Point(32, 33);
-            this.pcbFotoAluno.Name = "pcbFotoAluno";
-            this.pcbFotoAluno.Size = new System.Drawing.Size(100, 102);
-            this.pcbFotoAluno.TabIndex = 0;
-            this.pcbFotoAluno.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(342, 368);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 18);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "As notas ainda não foram lançadas!";
+            // 
+            // lblNotas
+            // 
+            this.lblNotas.AutoSize = true;
+            this.lblNotas.ForeColor = System.Drawing.Color.Black;
+            this.lblNotas.Location = new System.Drawing.Point(420, 279);
+            this.lblNotas.Name = "lblNotas";
+            this.lblNotas.Size = new System.Drawing.Size(44, 18);
+            this.lblNotas.TabIndex = 13;
+            this.lblNotas.Text = "Notas";
+            this.lblNotas.Visible = false;
+            // 
+            // dgvNotas
+            // 
+            this.dgvNotas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.dgvNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNotas.GridColor = System.Drawing.Color.White;
+            this.dgvNotas.Location = new System.Drawing.Point(222, 298);
+            this.dgvNotas.Name = "dgvNotas";
+            this.dgvNotas.Size = new System.Drawing.Size(444, 162);
+            this.dgvNotas.TabIndex = 12;
+            this.dgvNotas.Visible = false;
             // 
             // Aluno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(714, 507);
+            this.Controls.Add(this.dgvAulas);
+            this.Controls.Add(this.btnAulaExtra);
             this.Controls.Add(this.lblNotas);
             this.Controls.Add(this.dgvNotas);
             this.Controls.Add(this.pnlFormBorder);
             this.Controls.Add(this.lblAulas);
-            this.Controls.Add(this.dgvAulas);
             this.Controls.Add(this.pnlInfoAluno);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 9F);
@@ -352,16 +353,17 @@
             this.Name = "Aluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aluno";
+            this.Load += new System.EventHandler(this.Aluno_Load);
             this.MouseEnter += new System.EventHandler(this.btnAulaExtra_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.btnAulaExtra_MouseLeave);
             this.pnlInfoAluno.ResumeLayout(false);
             this.pnlInfoAluno.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoAluno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAulas)).EndInit();
             this.pnlFormBorder.ResumeLayout(false);
             this.pnlFormBorder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoAluno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

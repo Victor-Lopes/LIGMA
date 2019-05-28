@@ -39,6 +39,7 @@ namespace LIGMA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             edit.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +53,24 @@ namespace LIGMA
         {
             Form consprof = new ConsultaFuncionario();
             consprof.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Form login = new frmLogin();
+            DialogResult result = MessageBox.Show("Você voltará para a tela de Login. Deseja Sair?", "LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                login.Show();
+                this.Hide();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form turma = new ConsultaTurma();
+            turma.Show();
             this.Hide();
         }
     }

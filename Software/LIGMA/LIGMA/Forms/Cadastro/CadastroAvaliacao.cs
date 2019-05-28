@@ -31,5 +31,12 @@ namespace LIGMA.Forms.Cadastro
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Form p = new Professor();
+            p.Show();
+            this.Hide();
+        }
     }
 }

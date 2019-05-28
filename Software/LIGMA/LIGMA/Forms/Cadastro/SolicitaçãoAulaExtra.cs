@@ -119,7 +119,8 @@ namespace LIGMA.Forms.Cadastro
         private void SolicitaçãoAulaExtra_Load(object sender, EventArgs e)
         {
             rbtFalta.Checked = true;
-            SqlCommand cmd = new SqlCommand("SELECT CodAula as [Codigo], CONCAT(Estagio, ', Data: ', convert(varchar, Data_Hora, 3), ', Sala: ', Sala) as [Aula] from vwListaPresença", con);
+
+            SqlCommand cmd = new SqlCommand("SELECT A.CodAula as [Codigo], CONCAT(Estágio, ', Data: ', convert(varchar, Data, 3), ', Sala: ', [Número da Sala]) as [Aula] from vwListaPresença", con);
             try
             {
                 con.Open();
@@ -143,7 +144,10 @@ namespace LIGMA.Forms.Cadastro
             }
             catch (SqlException ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message+"em: "+ex.Source + " "+ex.InnerException);
+                this.Hide();
+                Form aluno = new Aluno();
+                aluno.Show();
             }
             finally
             {

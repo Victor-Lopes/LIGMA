@@ -57,8 +57,9 @@
             this.pnlFormBorder.Controls.Add(this.pcbIcone);
             this.pnlFormBorder.ForeColor = System.Drawing.Color.MidnightBlue;
             this.pnlFormBorder.Location = new System.Drawing.Point(0, 0);
+            this.pnlFormBorder.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFormBorder.Name = "pnlFormBorder";
-            this.pnlFormBorder.Size = new System.Drawing.Size(248, 29);
+            this.pnlFormBorder.Size = new System.Drawing.Size(331, 36);
             this.pnlFormBorder.TabIndex = 102;
             // 
             // btnMinimizar
@@ -72,11 +73,11 @@
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(187, 2);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMinimizar.Location = new System.Drawing.Point(249, 2);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(3);
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 26);
+            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(4);
+            this.btnMinimizar.Size = new System.Drawing.Size(33, 32);
             this.btnMinimizar.TabIndex = 13;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -92,9 +93,10 @@
             this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(221, 1);
+            this.btnFechar.Location = new System.Drawing.Point(295, 1);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 26);
+            this.btnFechar.Size = new System.Drawing.Size(33, 32);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -106,9 +108,10 @@
             this.lblLIGMA.AutoSize = true;
             this.lblLIGMA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLIGMA.ForeColor = System.Drawing.Color.White;
-            this.lblLIGMA.Location = new System.Drawing.Point(30, 5);
+            this.lblLIGMA.Location = new System.Drawing.Point(40, 6);
+            this.lblLIGMA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLIGMA.Name = "lblLIGMA";
-            this.lblLIGMA.Size = new System.Drawing.Size(48, 18);
+            this.lblLIGMA.Size = new System.Drawing.Size(63, 23);
             this.lblLIGMA.TabIndex = 11;
             this.lblLIGMA.Text = "LIGMA";
             // 
@@ -121,9 +124,10 @@
             this.pcbIcone.ErrorImage = global::LIGMA.Properties.Resources.logo;
             this.pcbIcone.Image = global::LIGMA.Properties.Resources._12133tongue_109560;
             this.pcbIcone.InitialImage = global::LIGMA.Properties.Resources.logo;
-            this.pcbIcone.Location = new System.Drawing.Point(3, 4);
+            this.pcbIcone.Location = new System.Drawing.Point(4, 5);
+            this.pcbIcone.Margin = new System.Windows.Forms.Padding(4);
             this.pcbIcone.Name = "pcbIcone";
-            this.pcbIcone.Size = new System.Drawing.Size(21, 22);
+            this.pcbIcone.Size = new System.Drawing.Size(28, 27);
             this.pcbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbIcone.TabIndex = 10;
             this.pcbIcone.TabStop = false;
@@ -136,9 +140,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnCancelar.Location = new System.Drawing.Point(81, 263);
+            this.btnCancelar.Location = new System.Drawing.Point(108, 324);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(77, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(103, 34);
             this.btnCancelar.TabIndex = 118;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -154,9 +159,10 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnEnviar.Location = new System.Drawing.Point(164, 263);
+            this.btnEnviar.Location = new System.Drawing.Point(219, 324);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(67, 28);
+            this.btnEnviar.Size = new System.Drawing.Size(89, 34);
             this.btnEnviar.TabIndex = 117;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
@@ -173,9 +179,10 @@
             this.cmbAulaAvaliacao.Items.AddRange(new object[] {
             "Manhã",
             "Tarde"});
-            this.cmbAulaAvaliacao.Location = new System.Drawing.Point(19, 209);
+            this.cmbAulaAvaliacao.Location = new System.Drawing.Point(25, 257);
+            this.cmbAulaAvaliacao.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAulaAvaliacao.Name = "cmbAulaAvaliacao";
-            this.cmbAulaAvaliacao.Size = new System.Drawing.Size(200, 26);
+            this.cmbAulaAvaliacao.Size = new System.Drawing.Size(265, 30);
             this.cmbAulaAvaliacao.TabIndex = 116;
             this.cmbAulaAvaliacao.Visible = false;
             // 
@@ -184,9 +191,10 @@
             this.lblAulaAvaliacao.AutoSize = true;
             this.lblAulaAvaliacao.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblAulaAvaliacao.ForeColor = System.Drawing.Color.Black;
-            this.lblAulaAvaliacao.Location = new System.Drawing.Point(15, 188);
+            this.lblAulaAvaliacao.Location = new System.Drawing.Point(20, 231);
+            this.lblAulaAvaliacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAulaAvaliacao.Name = "lblAulaAvaliacao";
-            this.lblAulaAvaliacao.Size = new System.Drawing.Size(36, 18);
+            this.lblAulaAvaliacao.Size = new System.Drawing.Size(44, 23);
             this.lblAulaAvaliacao.TabIndex = 115;
             this.lblAulaAvaliacao.Text = "Aula";
             this.lblAulaAvaliacao.Visible = false;
@@ -197,9 +205,10 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(7, 42);
+            this.lblTitulo.Location = new System.Drawing.Point(9, 52);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(224, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(288, 33);
             this.lblTitulo.TabIndex = 119;
             this.lblTitulo.Text = "Solicitação de Aula Extra";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -210,9 +219,11 @@
             this.grpMotivo.Controls.Add(this.rbtFalta);
             this.grpMotivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpMotivo.Font = new System.Drawing.Font("Calibri", 11F);
-            this.grpMotivo.Location = new System.Drawing.Point(18, 73);
+            this.grpMotivo.Location = new System.Drawing.Point(24, 90);
+            this.grpMotivo.Margin = new System.Windows.Forms.Padding(4);
             this.grpMotivo.Name = "grpMotivo";
-            this.grpMotivo.Size = new System.Drawing.Size(200, 111);
+            this.grpMotivo.Padding = new System.Windows.Forms.Padding(4);
+            this.grpMotivo.Size = new System.Drawing.Size(267, 137);
             this.grpMotivo.TabIndex = 120;
             this.grpMotivo.TabStop = false;
             this.grpMotivo.Text = "Motivo";
@@ -222,9 +233,10 @@
             this.rbtProvaPerdida.AutoSize = true;
             this.rbtProvaPerdida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtProvaPerdida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtProvaPerdida.Location = new System.Drawing.Point(21, 63);
+            this.rbtProvaPerdida.Location = new System.Drawing.Point(28, 78);
+            this.rbtProvaPerdida.Margin = new System.Windows.Forms.Padding(4);
             this.rbtProvaPerdida.Name = "rbtProvaPerdida";
-            this.rbtProvaPerdida.Size = new System.Drawing.Size(111, 22);
+            this.rbtProvaPerdida.Size = new System.Drawing.Size(138, 27);
             this.rbtProvaPerdida.TabIndex = 1;
             this.rbtProvaPerdida.TabStop = true;
             this.rbtProvaPerdida.Text = "Prova Perdida";
@@ -235,9 +247,10 @@
             this.rbtFalta.AutoSize = true;
             this.rbtFalta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtFalta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtFalta.Location = new System.Drawing.Point(21, 35);
+            this.rbtFalta.Location = new System.Drawing.Point(28, 43);
+            this.rbtFalta.Margin = new System.Windows.Forms.Padding(4);
             this.rbtFalta.Name = "rbtFalta";
-            this.rbtFalta.Size = new System.Drawing.Size(55, 22);
+            this.rbtFalta.Size = new System.Drawing.Size(66, 27);
             this.rbtFalta.TabIndex = 0;
             this.rbtFalta.TabStop = true;
             this.rbtFalta.Text = "Falta";
@@ -246,9 +259,10 @@
             // 
             // SolicitaçãoAulaExtra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 303);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(331, 373);
             this.Controls.Add(this.grpMotivo);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCancelar);
@@ -257,10 +271,11 @@
             this.Controls.Add(this.lblAulaAvaliacao);
             this.Controls.Add(this.pnlFormBorder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SolicitaçãoAulaExtra";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SolicitaçãoAulaExtra";
             this.Load += new System.EventHandler(this.SolicitaçãoAulaExtra_Load);
             this.pnlFormBorder.ResumeLayout(false);
