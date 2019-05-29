@@ -176,6 +176,7 @@ CREATE TABLE tbAvaliacao(
 	CONSTRAINT PK_Avaliacao PRIMARY KEY,
 	CodProfessor smallint not null
 	CONSTRAINT FK_Avaliacao_Professor FOREIGN KEY REFERENCES tbProfessor(CodProf),
+	TipoAvaliacao varchar(10) not null,
 	DataAvaliacao date not null,
 	CodTurma smallint not null
 	CONSTRAINT FK_Avaliacao_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma),
@@ -519,9 +520,10 @@ create proc spcadAula(
 end
 GO
 
-/*
-exec spcadAula 1, 1, getdate(), null; 
 
+exec spcadAula 1, 1, '2019-05-26 11:45', null; 
+GO
+/*
 insert into tbAula(Sala, CodTurma) values(1,1);
 */
 
@@ -533,9 +535,9 @@ create proc spAulaAluno(
 end
 GO
 
-/*
+
 exec spAulaAluno 1, 1;
-*/
+GO
 
 create view vwListaPresença as
 select Nome [Nome do Aluno], Sala [Número da Sala], Estagio [Estágio], Data_Hora [Data] from tbAluno AL
@@ -547,14 +549,17 @@ GO
 
 create proc spAvaliacao(
 	@CodProfessor smallint,
+	@TipoAvaliacao varchar(10),
 	@DataAvaliacao date,
 	@CodTurma smallint,
 	@Descricao varchar(100)
 )as begin
-	insert into tbAvaliacao(CodProfessor, DataAvaliacao, CodTurma, Descricao) values(@CodProfessor, @DataAvaliacao, @CodTurma, @Descricao);
+	insert into tbAvaliacao(CodProfessor, TipoAvaliacao, DataAvaliacao, CodTurma, Descricao) values(@CodProfessor,@TipoAvaliacao,  @DataAvaliacao, @CodTurma, @Descricao);
 end
 GO
+exec spAvaliacao 1, 'Prova', '2019-12-05', 1, null
 
+GO
 create view vwNotas as
 select Nome [Nome do Aluno], DataAvaliacao [Data da Avaliacao], Nota from tbAluno AL
 	inner join tbDadosComuns DC on DC.CodDados = AL.CodDados
@@ -579,6 +584,13 @@ as
 begin
 	if (select count (*) as CNT from tbLogin where Email = @email and Senha = @senha_usuario) = 1
 		update tbLogin set Ativada = 1 where Email = @email and Senha = @senha_usuario;
+end
+GO
+
+create proc sp_deslogar_usuario
+as
+begin
+	update tbLogin set Ativada = 0 where Ativada = 1;
 end
 GO
 
@@ -619,3 +631,37 @@ create proc sp_VEAdmin( --Verificar Email
 	else select 'false';
 end
 GO
+
+SELECT CONCAT(Estágio, ', Data: ', convert(varchar, Data, 3), ', Sala: ', [Número da Sala]) as [Aula] from vwListaPresença
+GO
+
+alter view vwAulaAluno as
+ select A.CodAula Codigo, CONCAT(T.Estagio, ', Data: ', convert(varchar, Data_Hora, 3), ', Sala: ', Sala) as [Aula], Ativada
+ from tbAula A inner join tbAula_Aluno AA on A.CodAula = AA.CodAula
+			   inner join tbAluno AL on AA.CodAluno = AL.CodAluno
+			   inner join tbTurma T on AL.CodTurma = T.CodTurma
+			   inner join tbLogin L on AL.CodLogin = L.CodLogin;
+GO
+
+alter view vwAvaliacaoAluno as
+ select A.CodAvaliacao Codigo, CONCAT(TipoAvaliacao, ', Data: ', convert(varchar, DataAvaliacao, 3), ' Descrição: ',Descricao) as [Avaliacao], Ativada
+  from tbAvaliacao A inner join tbTurma T on A.CodTurma = T.CodTurma
+			   inner join tbAluno AL on T.CodTurma = AL.CodTurma
+			   inner join tbLogin L on AL.CodLogin = L.CodLogin;
+GO
+
+update tbLogin set Ativada = 1 where Email = 'al@a.com'
+
+select Codigo, Aula from vwAulaAluno where Ativada = 1;
+GO
+create view vwNotifAluno as
+	SELECT Concat('Aluno: ',Nome,'. Turma: ',Estagio,' - ', NomePeriodo )[Aluno], Ativada 
+	 from tbDadosComuns DC 
+	 inner join tbAluno A on A.CodDados = DC.CodDados 
+	 inner join tbLogin L on A.CodLogin = L.CodLogin
+	 inner join tbTurma T on A.CodTurma = T.CodTurma
+	 INNER JOIN tbPeriodo P on P.CodPeriodo = T.CodPeriodo;
+GO
+
+select Aluno from vwNotifAluno	where  Ativada = 1;
+SELECT [Codigo], [Avaliacao] from vwAvaliacaoAluno where Ativada = 1
