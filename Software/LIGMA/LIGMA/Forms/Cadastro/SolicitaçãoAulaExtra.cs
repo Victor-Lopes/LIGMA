@@ -14,9 +14,7 @@ namespace LIGMA.Forms.Cadastro
 {
     public partial class SolicitaçãoAulaExtra : Form
     {
-        SqlConnection con = new SqlConnection(StringConexao.connectionString);
-        SqlDataReader reader;
-        Form aluno = new Aluno();
+     
 
         public SolicitaçãoAulaExtra()
         {
@@ -26,9 +24,9 @@ namespace LIGMA.Forms.Cadastro
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Form aluno = new Aluno();
-            if (cmbAulaAvaliacao.Text != "")
+            if (cmbAulaAvaliacao.SelectedIndex != -1)
             {
-                DialogResult result = MessageBox.Show("O programa será fechado. Deseja mesmo sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Você retornará a Tela Principal. Deseja mesmo cancelar?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
                     aluno.Show();
@@ -44,26 +42,28 @@ namespace LIGMA.Forms.Cadastro
 
         private void rbtFalta_CheckedChanged(object sender, EventArgs e)
         {
-;
-            if (rbtFalta.Checked == true)
+
+            if (rbtFalta.Checked)
             {
                 lblAulaAvaliacao.Text = "Aula Perdida";
 
-                SqlCommand cmd = new SqlCommand("SELECT CodAula as [Codigo],'Aula do dia: ' +  convert(varchar, Data_Hora, 3) as [Aula] from tbAula", con);
-                
+                SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                SqlCommand cmd = new SqlCommand("SELECT [Codigo], [Aula] from vwAulaAluno where Ativada = 1", con);
+                SqlDataReader reader;
                 con.Open();
                 try
                 {
                     reader = cmd.ExecuteReader();
                     DataTable dt = new DataTable();
-                    dt.Columns.Add("Codigo", typeof(int));
-                    dt.Columns.Add("Aula", typeof(string));
-                    dt.Load(reader);
 
-                    cmbAulaAvaliacao.ValueMember = "Codigo";
-                    cmbAulaAvaliacao.DisplayMember = "Aula";
-                    cmbAulaAvaliacao.DataSource = dt;
-                    cmbAulaAvaliacao.SelectedIndex = -1;
+                        dt.Columns.Add("Codigo", typeof(int));
+                        dt.Columns.Add("Aula", typeof(string));
+                        dt.Load(reader);
+
+                        cmbAulaAvaliacao.ValueMember = "Codigo";
+                        cmbAulaAvaliacao.DisplayMember = "Aula";
+                        cmbAulaAvaliacao.DataSource = dt;
+                        cmbAulaAvaliacao.SelectedIndex = -1;
                 }
                 catch (SqlException ex)
                 {
@@ -75,11 +75,14 @@ namespace LIGMA.Forms.Cadastro
                 }
 
             }
-            else
+            
+            else if(rbtProvaPerdida.Checked)
             {
                 lblAulaAvaliacao.Text = "Avaliação Perdida";
 
-                SqlCommand cmd = new SqlCommand("SELECT CodAvaliacao as [Codigo], 'Prova do dia: ' + convert(varchar, DataAvaliacao, 3) as [Avaliacao] from tbAvaliacao", con);
+                SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                SqlCommand cmd = new SqlCommand("SELECT [Codigo], [Avaliacao] from vwAvaliacaoAluno where Ativada = 1", con);
+                SqlDataReader reader;
                 con.Open();
                 try
                 {
@@ -113,46 +116,42 @@ namespace LIGMA.Forms.Cadastro
         private void btnFechar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("O programa será fechado. Deseja mesmo sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes) Application.Exit();
+            if (result == DialogResult.Yes)
+            {
+                SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                SqlCommand cmd = new SqlCommand("sp_deslogar_usuario", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                Application.Exit();
+
+            }
         }
 
         private void SolicitaçãoAulaExtra_Load(object sender, EventArgs e)
         {
             rbtFalta.Checked = true;
+            if (rbtFalta.Checked == true){
+                lblAulaAvaliacao.Text = "Aula";
+                lblAulaAvaliacao.Enabled = true;
+                cmbAulaAvaliacao.Enabled = true;
+                rbtProvaPerdida.Checked = false;
+            }
+            else if(rbtProvaPerdida.Checked == true){
+                lblAulaAvaliacao.Text = "Avaliação";
+                lblAulaAvaliacao.Enabled = true;
+                cmbAulaAvaliacao.Enabled = true;
+                rbtFalta.Checked = false;
+            }
+            else
+            {
+                lblAulaAvaliacao.Enabled = false;
+                cmbAulaAvaliacao.Enabled = false;
+            }
 
-            SqlCommand cmd = new SqlCommand("SELECT A.CodAula as [Codigo], CONCAT(Estágio, ', Data: ', convert(varchar, Data, 3), ', Sala: ', [Número da Sala]) as [Aula] from vwListaPresença", con);
-            try
-            {
-                con.Open();
-            }
-            catch (Exception exc)
-            {
-                throw new Exception(exc.Message);
-            }
-            try
-            {
-                reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Columns.Add("Codigo", typeof(int));
-                dt.Columns.Add("Aula", typeof(string));
-                dt.Load(reader);
-
-                cmbAulaAvaliacao.ValueMember = "Codigo";
-                cmbAulaAvaliacao.DisplayMember = "Aula";
-                cmbAulaAvaliacao.DataSource = dt;
-                cmbAulaAvaliacao.SelectedIndex = -1;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message+"em: "+ex.Source + " "+ex.InnerException);
-                this.Hide();
-                Form aluno = new Aluno();
-                aluno.Show();
-            }
-            finally
-            {
-                con.Close();
-            }
         }
    
 
@@ -180,14 +179,13 @@ namespace LIGMA.Forms.Cadastro
             btnEnviar.BackColor = Color.Transparent;
         }
 
-        private Administração form;
-
         private void btnEnviar_Click(object sender, EventArgs e)
         {
+            Administração form = new Administração();
 
-            SqlCommand cmd = new SqlCommand("SELECT Nome from tbDadosComuns DC" +
-                                            " inner join tbAluno A on A.CodDados = DC.CodDados" +
-                                            "inner join tbLogin L on A.CodLogin = L.CodLogin where  ativada = 1", con);
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
+            SqlDataReader reader;
+            SqlCommand cmd = new SqlCommand("select Aluno from vwNotifAluno	where  Ativada = 1", con);
             try
             {
                 con.Open();
@@ -201,9 +199,15 @@ namespace LIGMA.Forms.Cadastro
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string nome = reader["Nome"].ToString();
-                    string ap = cmbAulaAvaliacao.SelectedValue.ToString();
-                    form.ckdAulasSolicitas.Items.Add("Aluno: " + nome + " - Prova: " + ap);
+                    string txt = reader["Aluno"].ToString();
+                    string aulaav = cmbAulaAvaliacao.SelectedValue.ToString();
+                    if (aulaav == "")
+                    {
+                        MessageBox.Show("Selecione alguma coisa!");
+                    }
+                    else {
+                        form.ckdAulasSolicitas.Items.Add(txt + " - " + aulaav);
+                         }
                 }
                 reader.Close();
 
@@ -216,9 +220,80 @@ namespace LIGMA.Forms.Cadastro
             {
                 con.Close();
             }
-
+            Form aluno = new Aluno();
             this.Hide();
             aluno.Show();
+        }
+
+        private void grpMotivo_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtProvaPerdida_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtFalta.Checked)
+            {
+                lblAulaAvaliacao.Text = "Aula Perdida";
+
+                SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                SqlCommand cmd = new SqlCommand("SELECT [Codigo], [Aula] from vwAulaAluno where Ativada = 1", con);
+                SqlDataReader reader;
+                con.Open();
+                try
+                {
+                    reader = cmd.ExecuteReader();
+                    DataTable dt = new DataTable();
+
+                    dt.Columns.Add("Codigo", typeof(int));
+                    dt.Columns.Add("Aula", typeof(string));
+                    dt.Load(reader);
+
+                    cmbAulaAvaliacao.ValueMember = "Codigo";
+                    cmbAulaAvaliacao.DisplayMember = "Aula";
+                    cmbAulaAvaliacao.DataSource = dt;
+                    cmbAulaAvaliacao.SelectedIndex = -1;
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+            }
+            else if (rbtProvaPerdida.Checked)
+            {
+                lblAulaAvaliacao.Text = "Avaliação Perdida";
+
+                SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                SqlCommand cmd = new SqlCommand("SELECT [Codigo], [Avaliacao] from vwAvaliacaoAluno where Ativada = 1", con);
+                SqlDataReader reader;
+                con.Open();
+                try
+                {
+                    reader = cmd.ExecuteReader();
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add("Codigo", typeof(int));
+                    dt.Columns.Add("Avaliacao", typeof(string));
+                    dt.Load(reader);
+
+                    cmbAulaAvaliacao.ValueMember = "Codigo";
+                    cmbAulaAvaliacao.DisplayMember = "Avaliacao";
+                    cmbAulaAvaliacao.DataSource = dt;
+                    cmbAulaAvaliacao.SelectedIndex = -1;
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
     }
 }

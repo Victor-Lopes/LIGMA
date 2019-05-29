@@ -79,7 +79,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnLogin.Location = new System.Drawing.Point(96, 322);
+            this.btnLogin.Location = new System.Drawing.Point(92, 319);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(68, 29);
             this.btnLogin.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.lnkEsqueceuSenha.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkEsqueceuSenha.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lnkEsqueceuSenha.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.lnkEsqueceuSenha.Location = new System.Drawing.Point(68, 367);
+            this.lnkEsqueceuSenha.Location = new System.Drawing.Point(71, 364);
             this.lnkEsqueceuSenha.Name = "lnkEsqueceuSenha";
             this.lnkEsqueceuSenha.Size = new System.Drawing.Size(118, 18);
             this.lnkEsqueceuSenha.TabIndex = 7;

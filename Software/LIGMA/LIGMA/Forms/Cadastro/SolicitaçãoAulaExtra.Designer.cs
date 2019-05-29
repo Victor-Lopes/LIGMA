@@ -59,7 +59,7 @@
             this.pnlFormBorder.Location = new System.Drawing.Point(0, 0);
             this.pnlFormBorder.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFormBorder.Name = "pnlFormBorder";
-            this.pnlFormBorder.Size = new System.Drawing.Size(331, 36);
+            this.pnlFormBorder.Size = new System.Drawing.Size(463, 36);
             this.pnlFormBorder.TabIndex = 102;
             // 
             // btnMinimizar
@@ -73,7 +73,7 @@
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(249, 2);
+            this.btnMinimizar.Location = new System.Drawing.Point(381, 2);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(4);
@@ -93,7 +93,7 @@
             this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(295, 1);
+            this.btnFechar.Location = new System.Drawing.Point(427, 1);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(33, 32);
@@ -140,7 +140,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnCancelar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnCancelar.Location = new System.Drawing.Point(108, 324);
+            this.btnCancelar.Location = new System.Drawing.Point(93, 348);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 34);
@@ -159,7 +159,7 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Calibri", 11F);
             this.btnEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnEnviar.Location = new System.Drawing.Point(219, 324);
+            this.btnEnviar.Location = new System.Drawing.Point(286, 348);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(89, 34);
@@ -176,28 +176,23 @@
             this.cmbAulaAvaliacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAulaAvaliacao.Font = new System.Drawing.Font("Calibri", 11F);
             this.cmbAulaAvaliacao.FormattingEnabled = true;
-            this.cmbAulaAvaliacao.Items.AddRange(new object[] {
-            "Manhã",
-            "Tarde"});
-            this.cmbAulaAvaliacao.Location = new System.Drawing.Point(25, 257);
+            this.cmbAulaAvaliacao.Location = new System.Drawing.Point(25, 275);
             this.cmbAulaAvaliacao.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAulaAvaliacao.Name = "cmbAulaAvaliacao";
-            this.cmbAulaAvaliacao.Size = new System.Drawing.Size(265, 30);
+            this.cmbAulaAvaliacao.Size = new System.Drawing.Size(414, 30);
             this.cmbAulaAvaliacao.TabIndex = 116;
-            this.cmbAulaAvaliacao.Visible = false;
             // 
             // lblAulaAvaliacao
             // 
             this.lblAulaAvaliacao.AutoSize = true;
             this.lblAulaAvaliacao.Font = new System.Drawing.Font("Calibri", 11F);
             this.lblAulaAvaliacao.ForeColor = System.Drawing.Color.Black;
-            this.lblAulaAvaliacao.Location = new System.Drawing.Point(20, 231);
+            this.lblAulaAvaliacao.Location = new System.Drawing.Point(20, 249);
             this.lblAulaAvaliacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAulaAvaliacao.Name = "lblAulaAvaliacao";
             this.lblAulaAvaliacao.Size = new System.Drawing.Size(44, 23);
             this.lblAulaAvaliacao.TabIndex = 115;
             this.lblAulaAvaliacao.Text = "Aula";
-            this.lblAulaAvaliacao.Visible = false;
             // 
             // lblTitulo
             // 
@@ -205,7 +200,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(9, 52);
+            this.lblTitulo.Location = new System.Drawing.Point(87, 52);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(288, 33);
@@ -219,14 +214,15 @@
             this.grpMotivo.Controls.Add(this.rbtFalta);
             this.grpMotivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpMotivo.Font = new System.Drawing.Font("Calibri", 11F);
-            this.grpMotivo.Location = new System.Drawing.Point(24, 90);
+            this.grpMotivo.Location = new System.Drawing.Point(139, 89);
             this.grpMotivo.Margin = new System.Windows.Forms.Padding(4);
             this.grpMotivo.Name = "grpMotivo";
             this.grpMotivo.Padding = new System.Windows.Forms.Padding(4);
-            this.grpMotivo.Size = new System.Drawing.Size(267, 137);
+            this.grpMotivo.Size = new System.Drawing.Size(187, 137);
             this.grpMotivo.TabIndex = 120;
             this.grpMotivo.TabStop = false;
             this.grpMotivo.Text = "Motivo";
+            this.grpMotivo.Enter += new System.EventHandler(this.grpMotivo_Enter);
             // 
             // rbtProvaPerdida
             // 
@@ -241,6 +237,7 @@
             this.rbtProvaPerdida.TabStop = true;
             this.rbtProvaPerdida.Text = "Prova Perdida";
             this.rbtProvaPerdida.UseVisualStyleBackColor = true;
+            this.rbtProvaPerdida.CheckedChanged += new System.EventHandler(this.rbtProvaPerdida_CheckedChanged);
             // 
             // rbtFalta
             // 
@@ -262,7 +259,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(331, 373);
+            this.ClientSize = new System.Drawing.Size(463, 405);
             this.Controls.Add(this.grpMotivo);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCancelar);
