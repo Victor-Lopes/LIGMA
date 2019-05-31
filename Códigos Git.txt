@@ -11,3 +11,4 @@ Adicionar chave copiada ao nossa conta do Git
 git config --global user.name "John Doe"		Configurar Nome
 git config --global user.email johndoe@example.com 	Configurar Email
 
+https://git-scm.com/book/pt-br/v1/Customizando-o-Git-Configura%C3%A7%C3%A3o-do-Git
