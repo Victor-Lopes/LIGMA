@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LIGMA.Forms.Consulta;
+using LIGMA.Classes;
 
 namespace LIGMA.Forms.Cadastro
 {
@@ -24,7 +25,8 @@ namespace LIGMA.Forms.Cadastro
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
 
         private void lblMaximizar_Click(object sender, EventArgs e)

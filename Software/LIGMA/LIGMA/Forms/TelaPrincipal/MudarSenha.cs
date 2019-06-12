@@ -9,23 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using LIGMA.Classes;
 
 namespace LIGMA.Forms.TelaPrincipal
 {
     public partial class MudarSenha : Form
     {
         Form aluno = new Aluno();
-        SqlConnection con = new SqlConnection(StringConexao.connectionString);
-        SqlDataReader reader;
 
-        public MudarSenha()
-        {
-            InitializeComponent();
-        }
+        public MudarSenha() => InitializeComponent();
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -64,40 +61,41 @@ namespace LIGMA.Forms.TelaPrincipal
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            using (con)
-            {
-                try
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
+            try { 
+                if (txtSenhaNova == txtConfirmar)
                 {
-                    if (txtSenhaNova == txtConfirmar)
+                    SqlCommand scmd = new SqlCommand("sp_logar_usuario", con);
+                    scmd.CommandType = CommandType.StoredProcedure;
+
+                    scmd.Parameters.Add("@senhaatual", SqlDbType.NVarChar).Value = txtAtual.Text;
+                    scmd.Parameters.Add("@senhanova", SqlDbType.NVarChar).Value = txtSenhaNova.Text;
+                    con.Open();
+
+                    int a = scmd.ExecuteNonQuery();
+                    if (a > 0)
                     {
-                        SqlCommand scmd = new SqlCommand("sp_logar_usuario", con);
-                        scmd.CommandType = CommandType.StoredProcedure;
-
-                        scmd.Parameters.Add("@senhaatual", SqlDbType.NVarChar).Value = txtAtual.Text;
-                        scmd.Parameters.Add("@senhanova", SqlDbType.NVarChar).Value = txtSenhaNova.Text;
-                        con.Open();
-
-                        int a = scmd.ExecuteNonQuery();
-                        if (a > 0)
-                        {
-                            this.Hide();
-                            con.Close();
-                        }
+                        this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("As Senhas Não Batem!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Senha Incorreta!", "Falha ao Mudar Senha!", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                     }
                 }
-                catch (SqlException ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("As Senhas Não Batem!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                finally
-                {
-                    con.Close();
-                }
-            }    
-        } 
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }  
     }
 }

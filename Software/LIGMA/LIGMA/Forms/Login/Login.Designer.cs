@@ -100,12 +100,15 @@
             this.lnkEsqueceuSenha.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkEsqueceuSenha.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lnkEsqueceuSenha.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.lnkEsqueceuSenha.Location = new System.Drawing.Point(71, 364);
+            this.lnkEsqueceuSenha.Location = new System.Drawing.Point(0, 367);
+            this.lnkEsqueceuSenha.MaximumSize = new System.Drawing.Size(259, 18);
+            this.lnkEsqueceuSenha.MinimumSize = new System.Drawing.Size(259, 18);
             this.lnkEsqueceuSenha.Name = "lnkEsqueceuSenha";
-            this.lnkEsqueceuSenha.Size = new System.Drawing.Size(118, 18);
+            this.lnkEsqueceuSenha.Size = new System.Drawing.Size(259, 18);
             this.lnkEsqueceuSenha.TabIndex = 7;
             this.lnkEsqueceuSenha.TabStop = true;
             this.lnkEsqueceuSenha.Text = "Esqueceu a Senha";
+            this.lnkEsqueceuSenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lnkEsqueceuSenha.VisitedLinkColor = System.Drawing.Color.MidnightBlue;
             this.lnkEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEsqueceuSenha_LinkClicked);
             this.lnkEsqueceuSenha.MouseEnter += new System.EventHandler(this.lnkEsqueceuSenha_MouseEnter);

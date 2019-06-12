@@ -1,4 +1,5 @@
-﻿using LIGMA.Forms.Cadastro;
+﻿using LIGMA.Classes;
+using LIGMA.Forms.Cadastro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,6 +72,12 @@ namespace LIGMA.Forms.Consulta
             Form nf = new CadastroFuncionario();
             nf.Show();
             this.Hide();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
     }
 }

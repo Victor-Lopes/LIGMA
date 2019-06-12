@@ -1,4 +1,5 @@
-﻿using LIGMA.Forms.Consulta;
+﻿using LIGMA.Classes;
+using LIGMA.Forms.Consulta;
 using LIGMA.Forms.TelaPrincipal;
 using System;
 using System.Collections.Generic;
@@ -56,15 +57,22 @@ namespace LIGMA
             this.Hide();
         }
 
+        private void btnLogout_MouseEnter(object sender, EventArgs e)
+        {
+            btnLogout.BackColor = Color.Red;
+            btnLogout.ForeColor = Color.Transparent;
+        }
+
+        private void btnLogout_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogout.ForeColor = Color.Red;
+            btnLogout.BackColor = Color.Transparent;
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Form login = new frmLogin();
-            DialogResult result = MessageBox.Show("Você voltará para a tela de Login. Deseja Sair?", "LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
-                login.Show();
-                this.Hide();
-            }
+            CodigosIguais deslogar = new CodigosIguais();
+            deslogar.Deslogar(this);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -72,6 +80,12 @@ namespace LIGMA
             Form turma = new ConsultaTurma();
             turma.Show();
             this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
     }
 }

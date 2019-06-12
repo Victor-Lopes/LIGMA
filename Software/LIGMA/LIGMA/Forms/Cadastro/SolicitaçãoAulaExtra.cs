@@ -1,12 +1,8 @@
 ﻿using System;
-using LIGMA.Forms.TelaPrincipal ;
-using System.Collections.Generic;
-using System.ComponentModel;
+using LIGMA.Forms.TelaPrincipal;
+using LIGMA.Classes;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -40,9 +36,8 @@ namespace LIGMA.Forms.Cadastro
             }
         }
 
-        private void rbtFalta_CheckedChanged(object sender, EventArgs e)
+        private void CheckedChanged()
         {
-
             if (rbtFalta.Checked)
             {
                 lblAulaAvaliacao.Text = "Aula Perdida";
@@ -56,14 +51,14 @@ namespace LIGMA.Forms.Cadastro
                     reader = cmd.ExecuteReader();
                     DataTable dt = new DataTable();
 
-                        dt.Columns.Add("Codigo", typeof(int));
-                        dt.Columns.Add("Aula", typeof(string));
-                        dt.Load(reader);
+                    dt.Columns.Add("Codigo", typeof(int));
+                    dt.Columns.Add("Aula", typeof(string));
+                    dt.Load(reader);
 
-                        cmbAulaAvaliacao.ValueMember = "Codigo";
-                        cmbAulaAvaliacao.DisplayMember = "Aula";
-                        cmbAulaAvaliacao.DataSource = dt;
-                        cmbAulaAvaliacao.SelectedIndex = -1;
+                    cmbAulaAvaliacao.ValueMember = "Codigo";
+                    cmbAulaAvaliacao.DisplayMember = "Aula";
+                    cmbAulaAvaliacao.DataSource = dt;
+                    cmbAulaAvaliacao.SelectedIndex = 0;
                 }
                 catch (SqlException ex)
                 {
@@ -75,8 +70,8 @@ namespace LIGMA.Forms.Cadastro
                 }
 
             }
-            
-            else if(rbtProvaPerdida.Checked)
+
+            else if (rbtProvaPerdida.Checked)
             {
                 lblAulaAvaliacao.Text = "Avaliação Perdida";
 
@@ -95,7 +90,7 @@ namespace LIGMA.Forms.Cadastro
                     cmbAulaAvaliacao.ValueMember = "Codigo";
                     cmbAulaAvaliacao.DisplayMember = "Avaliacao";
                     cmbAulaAvaliacao.DataSource = dt;
-                    cmbAulaAvaliacao.SelectedIndex = -1;
+                    cmbAulaAvaliacao.SelectedIndex = 0;
                 }
                 catch (SqlException ex)
                 {
@@ -108,6 +103,11 @@ namespace LIGMA.Forms.Cadastro
             }
         }
 
+        private void rbtFalta_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckedChanged();
+        }
+
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -115,20 +115,8 @@ namespace LIGMA.Forms.Cadastro
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("O programa será fechado. Deseja mesmo sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                SqlCommand cmd = new SqlCommand("sp_deslogar_usuario", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-                Application.Exit();
-
-            }
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
 
         private void SolicitaçãoAulaExtra_Load(object sender, EventArgs e)
@@ -232,68 +220,7 @@ namespace LIGMA.Forms.Cadastro
 
         private void rbtProvaPerdida_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbtFalta.Checked)
-            {
-                lblAulaAvaliacao.Text = "Aula Perdida";
-
-                SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                SqlCommand cmd = new SqlCommand("SELECT [Codigo], [Aula] from vwAulaAluno where Ativada = 1", con);
-                SqlDataReader reader;
-                con.Open();
-                try
-                {
-                    reader = cmd.ExecuteReader();
-                    DataTable dt = new DataTable();
-
-                    dt.Columns.Add("Codigo", typeof(int));
-                    dt.Columns.Add("Aula", typeof(string));
-                    dt.Load(reader);
-
-                    cmbAulaAvaliacao.ValueMember = "Codigo";
-                    cmbAulaAvaliacao.DisplayMember = "Aula";
-                    cmbAulaAvaliacao.DataSource = dt;
-                    cmbAulaAvaliacao.SelectedIndex = -1;
-                }
-                catch (SqlException ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
-
-            }
-            else if (rbtProvaPerdida.Checked)
-            {
-                lblAulaAvaliacao.Text = "Avaliação Perdida";
-
-                SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                SqlCommand cmd = new SqlCommand("SELECT [Codigo], [Avaliacao] from vwAvaliacaoAluno where Ativada = 1", con);
-                SqlDataReader reader;
-                con.Open();
-                try
-                {
-                    reader = cmd.ExecuteReader();
-                    DataTable dt = new DataTable();
-                    dt.Columns.Add("Codigo", typeof(int));
-                    dt.Columns.Add("Avaliacao", typeof(string));
-                    dt.Load(reader);
-
-                    cmbAulaAvaliacao.ValueMember = "Codigo";
-                    cmbAulaAvaliacao.DisplayMember = "Avaliacao";
-                    cmbAulaAvaliacao.DataSource = dt;
-                    cmbAulaAvaliacao.SelectedIndex = -1;
-                }
-                catch (SqlException ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
-            }
+            CheckedChanged();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LIGMA.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace LIGMA.Forms.Cadastro
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
 
         private void lblMaximizar_Click(object sender, EventArgs e)

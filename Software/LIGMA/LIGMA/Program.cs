@@ -20,8 +20,7 @@ namespace LIGMA
             var loginForm = new frmLogin();
             loginForm.Show();
             Application.Run();
-            }
         }
-      
     }
+}
 

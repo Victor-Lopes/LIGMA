@@ -31,11 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aluno));
             this.pnlInfoAluno = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblPresenca = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.lblEstagio = new System.Windows.Forms.Label();
-            this.lblCurso = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbFotoAluno = new System.Windows.Forms.PictureBox();
             this.btnAulaExtra = new System.Windows.Forms.Button();
@@ -62,11 +59,8 @@
             this.pnlInfoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.pnlInfoAluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInfoAluno.Controls.Add(this.btnLogout);
-            this.pnlInfoAluno.Controls.Add(this.lblPeriodo);
             this.pnlInfoAluno.Controls.Add(this.lblPresenca);
             this.pnlInfoAluno.Controls.Add(this.btnEditar);
-            this.pnlInfoAluno.Controls.Add(this.lblEstagio);
-            this.pnlInfoAluno.Controls.Add(this.lblCurso);
             this.pnlInfoAluno.Controls.Add(this.lblNome);
             this.pnlInfoAluno.Controls.Add(this.pcbFotoAluno);
             this.pnlInfoAluno.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -88,33 +82,27 @@
             this.btnLogout.Size = new System.Drawing.Size(179, 28);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "LogOut";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             this.btnLogout.MouseEnter += new System.EventHandler(this.btnLogout_MouseEnter);
             this.btnLogout.MouseLeave += new System.EventHandler(this.btnLogout_MouseLeave);
             // 
-            // lblPeriodo
-            // 
-            this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.BackColor = System.Drawing.Color.Transparent;
-            this.lblPeriodo.ForeColor = System.Drawing.Color.Black;
-            this.lblPeriodo.Location = new System.Drawing.Point(59, 324);
-            this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(57, 18);
-            this.lblPeriodo.TabIndex = 5;
-            this.lblPeriodo.Text = "Periodo";
-            // 
             // lblPresenca
             // 
+            this.lblPresenca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPresenca.AutoSize = true;
             this.lblPresenca.BackColor = System.Drawing.Color.Transparent;
             this.lblPresenca.ForeColor = System.Drawing.Color.Black;
-            this.lblPresenca.Location = new System.Drawing.Point(21, 289);
+            this.lblPresenca.Location = new System.Drawing.Point(-1, 225);
+            this.lblPresenca.MaximumSize = new System.Drawing.Size(179, 22);
+            this.lblPresenca.MinimumSize = new System.Drawing.Size(179, 22);
             this.lblPresenca.Name = "lblPresenca";
-            this.lblPresenca.Size = new System.Drawing.Size(138, 18);
+            this.lblPresenca.Size = new System.Drawing.Size(179, 22);
             this.lblPresenca.TabIndex = 4;
             this.lblPresenca.Text = "Situação de Presença";
+            this.lblPresenca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblPresenca.Click += new System.EventHandler(this.lblPresenca_Click);
             // 
             // btnEditar
@@ -130,44 +118,27 @@
             this.btnEditar.Size = new System.Drawing.Size(179, 22);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Mudar Senha";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             this.btnEditar.MouseEnter += new System.EventHandler(this.btnEditar_MouseEnter);
             this.btnEditar.MouseLeave += new System.EventHandler(this.btnEditar_MouseLeave);
             // 
-            // lblEstagio
-            // 
-            this.lblEstagio.AutoSize = true;
-            this.lblEstagio.BackColor = System.Drawing.Color.Transparent;
-            this.lblEstagio.ForeColor = System.Drawing.Color.Black;
-            this.lblEstagio.Location = new System.Drawing.Point(59, 254);
-            this.lblEstagio.Name = "lblEstagio";
-            this.lblEstagio.Size = new System.Drawing.Size(52, 18);
-            this.lblEstagio.TabIndex = 3;
-            this.lblEstagio.Text = "Estágio";
-            // 
-            // lblCurso
-            // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurso.ForeColor = System.Drawing.Color.Black;
-            this.lblCurso.Location = new System.Drawing.Point(65, 216);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(43, 18);
-            this.lblCurso.TabIndex = 2;
-            this.lblCurso.Text = "Curso";
-            // 
             // lblNome
             // 
+            this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.Color.Transparent;
             this.lblNome.ForeColor = System.Drawing.Color.Black;
-            this.lblNome.Location = new System.Drawing.Point(63, 181);
+            this.lblNome.Location = new System.Drawing.Point(-1, 180);
+            this.lblNome.MaximumSize = new System.Drawing.Size(179, 22);
+            this.lblNome.MinimumSize = new System.Drawing.Size(179, 22);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(46, 18);
+            this.lblNome.Size = new System.Drawing.Size(179, 22);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pcbFotoAluno
             // 
@@ -193,6 +164,8 @@
             this.btnAulaExtra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAulaExtra.UseVisualStyleBackColor = false;
             this.btnAulaExtra.Click += new System.EventHandler(this.btnAulaExtra_Click);
+            this.btnAulaExtra.MouseEnter += new System.EventHandler(this.btnAulaExtra_MouseEnter);
+            this.btnAulaExtra.MouseLeave += new System.EventHandler(this.btnAulaExtra_MouseLeave);
             // 
             // dgvAulas
             // 
@@ -266,8 +239,6 @@
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            this.btnFechar.MouseEnter += new System.EventHandler(this.btnAulaExtra_MouseEnter);
-            this.btnFechar.MouseLeave += new System.EventHandler(this.btnAulaExtra_MouseLeave);
             // 
             // lblLIGMA
             // 
@@ -354,8 +325,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aluno";
             this.Load += new System.EventHandler(this.Aluno_Load);
-            this.MouseEnter += new System.EventHandler(this.btnAulaExtra_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.btnAulaExtra_MouseLeave);
             this.pnlInfoAluno.ResumeLayout(false);
             this.pnlInfoAluno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFotoAluno)).EndInit();
@@ -371,10 +340,7 @@
 
         #endregion
         private System.Windows.Forms.Panel pnlInfoAluno;
-        private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.Label lblPresenca;
-        private System.Windows.Forms.Label lblEstagio;
-        private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbFotoAluno;
         private System.Windows.Forms.Button btnEditar;

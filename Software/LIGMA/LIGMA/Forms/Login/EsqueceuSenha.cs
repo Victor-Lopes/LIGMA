@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LIGMA.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,7 +46,8 @@ namespace LIGMA
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)

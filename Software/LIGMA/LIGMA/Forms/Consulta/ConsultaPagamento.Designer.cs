@@ -95,6 +95,7 @@
             this.btnFechar.Size = new System.Drawing.Size(33, 34);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // lblLIGMA
             // 

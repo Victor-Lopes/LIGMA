@@ -10,15 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LIGMA.Forms.Consulta;
+using LIGMA.Classes;
 
 namespace LIGMA
 {
     public partial class Professor : Form
     {
-        Form edit = new MudarSenha();
-        Form novaAula = new CadastroAula();
-        Form login = new frmLogin();
-
         public Professor()
         {
             InitializeComponent();
@@ -26,7 +23,8 @@ namespace LIGMA
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -41,6 +39,8 @@ namespace LIGMA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            Form edit = new MudarSenha();
+
             this.Hide();
             edit.Show();
         }
@@ -57,6 +57,12 @@ namespace LIGMA
             btnEditar.BackColor = Color.Transparent;
         }
 
+
+        private void btnLancarNota_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnLogout_MouseEnter(object sender, EventArgs e)
         {
             btnLogout.BackColor = Color.Red;
@@ -69,25 +75,10 @@ namespace LIGMA
             btnLogout.BackColor = Color.Transparent;
         }
 
-        private void btnRegistrarAula_Click(object sender, EventArgs e)
-        {
-            novaAula.Show();
-            this.Hide();
-        }
-
-        private void btnLancarNota_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Você voltará para a tela de Login. Deseja Sair?", "LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
-                login.Show();
-                this.Hide();
-            }
+            CodigosIguais deslogar = new CodigosIguais();
+            deslogar.Deslogar(this);
         }
 
         private void btnRegistrarAula_MouseEnter(object sender, EventArgs e)

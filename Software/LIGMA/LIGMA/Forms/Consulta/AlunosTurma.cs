@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LIGMA.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,12 @@ namespace LIGMA.Forms.Consulta
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            CodigosIguais fechar = new CodigosIguais();
+            fechar.Fechar();
         }
     }
 }

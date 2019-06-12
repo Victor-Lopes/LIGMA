@@ -49,6 +49,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppExit.cs" />
+    <Compile Include="Classes\Aluno.cs" />
+    <Compile Include="Classes\Aula.cs" />
+    <Compile Include="Classes\Avaliacao.cs" />
+    <Compile Include="Classes\CodigosIguais.cs" />
+    <Compile Include="Classes\Curso.cs" />
+    <Compile Include="Classes\DadosComuns.cs" />
+    <Compile Include="Classes\Funcionario.cs" />
+    <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\Nota.cs" />
+    <Compile Include="Classes\Periodo.cs" />
+    <Compile Include="Classes\Professor.cs" />
+    <Compile Include="Classes\Turma.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,7 +186,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringConexao.cs" />
+    <Compile Include="Classes\Banco.cs" />
     <EmbeddedResource Include="Forms\Cadastro\CadastroAvaliacao.resx">
       <DependentUpon>CadastroAvaliacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,9 +428,7 @@
   <ItemGroup>
     <None Include="Resources\logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Close_Icon_Dark_icon-icons.com_69143.png" />
   </ItemGroup>

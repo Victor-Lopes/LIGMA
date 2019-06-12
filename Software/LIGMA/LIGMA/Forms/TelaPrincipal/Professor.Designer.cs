@@ -309,7 +309,6 @@
             this.btnRegistrarAula.Text = "Registrar Aula";
             this.btnRegistrarAula.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRegistrarAula.UseVisualStyleBackColor = false;
-            this.btnRegistrarAula.Click += new System.EventHandler(this.btnRegistrarAula_Click);
             this.btnRegistrarAula.MouseEnter += new System.EventHandler(this.btnRegistrarAula_MouseEnter);
             this.btnRegistrarAula.MouseLeave += new System.EventHandler(this.btnRegistrarAula_MouseLeave);
             // 

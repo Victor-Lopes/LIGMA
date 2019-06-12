@@ -1,14 +1,10 @@
 ﻿using System;
 using LIGMA.Forms.TelaPrincipal;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using LIGMA.Classes;
 
 namespace LIGMA
 {
@@ -54,6 +50,7 @@ namespace LIGMA
         {
             if (txtLogin.Text == "Email")
             {
+                txtLogin.ForeColor = Color.Black;
                 txtLogin.Text = "";
             }
         }
@@ -63,8 +60,8 @@ namespace LIGMA
             if (txtLogin.Text == "")
             {
                 txtLogin.Text = "Email";
-                txtLogin.ForeColor = Color.Gray;
             }
+            txtLogin.ForeColor = Color.Gray;
         }
 
         private void txtSenha_Enter(object sender, EventArgs e)
@@ -73,8 +70,8 @@ namespace LIGMA
             if (txtSenha.Text == "Senha")
              {
                  txtSenha.Text = "";
-                 txtSenha.ForeColor = Color.Gray;
-                txtSenha.UseSystemPasswordChar = true;
+                 txtSenha.ForeColor = Color.Black;
+                 txtSenha.UseSystemPasswordChar = true;
             }
         }
 
@@ -83,11 +80,10 @@ namespace LIGMA
             if (txtSenha.Text == "")
             {
                 txtSenha.Text = "Senha";
-                txtSenha.ForeColor = Color.Gray;
-                txtSenha.UseSystemPasswordChar = true;
+                 txtSenha.UseSystemPasswordChar = false;
             }
+            txtSenha.ForeColor = Color.Gray;
         }
-
 
         void LoginSQL()
         {
@@ -196,7 +192,8 @@ namespace LIGMA
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+                CodigosIguais fechar = new CodigosIguais();
+                fechar.Fechar();          
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
