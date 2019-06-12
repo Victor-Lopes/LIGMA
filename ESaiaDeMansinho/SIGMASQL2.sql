@@ -1,4 +1,4 @@
-ÔªøUSE master;
+USE master;
 GO
 
 
@@ -12,7 +12,7 @@ USE dbLIGMA;
 GO
 
 CREATE TABLE tbDadosComuns (
-	CodDados smallint identity(1,1)
+	CodDados int identity(1,1)
 	CONSTRAINT PK_DadosComuns PRIMARY KEY,
 	Nome varchar(75) not null,
 	TelFixo decimal(8),
@@ -26,12 +26,12 @@ CREATE TABLE tbDadosComuns (
 	UF char(2) not null,
 	Logradouro varchar(10) not null,
 	CEP char(8),
-	Numero smallint
+	Numero int
 	);
 GO
 
 CREATE TABLE tbLogin (
-	CodLogin smallint identity(1,1)
+	CodLogin int identity(1,1)
 	CONSTRAINT PK_Login PRIMARY KEY,
 	Senha varchar(20) not null,
 	Email varchar(50) not null
@@ -43,43 +43,43 @@ CREATE TABLE tbLogin (
 GO
 
 CREATE TABLE tbFuncionario (
-	CodFunc smallint identity(1,1)
+	CodFunc int identity(1,1)
 	CONSTRAINT PK_Func PRIMARY KEY,
 	Salario money not null,
 	Cargo varchar(20) not null,
-	CodDados smallint
+	CodDados int
 	CONSTRAINT FK_Func_Dados FOREIGN KEY REFERENCES tbDadosComuns(CodDados),
-	CodLogin smallint not null
+	CodLogin int not null
 	CONSTRAINT FK_Func_Login FOREIGN KEY REFERENCES tbLogin(CodLogin)
 );
 GO
 
 CREATE TABLE tbProfessor (
-	CodProf smallint identity(1,1)
+	CodProf int identity(1,1)
 	CONSTRAINT PK_Prof PRIMARY KEY,
 	Idioma varchar(18) not null,
-	CodFunc smallint not null
+	CodFunc int not null
 	CONSTRAINT FK_Prof_Func FOREIGN KEY REFERENCES tbFuncionario(CodFunc)
 );
 GO
 
 CREATE TABLE tbDiaSemana(
-	CodDiaSemana smallint identity(1,1)
+	CodDiaSemana int identity(1,1)
 	CONSTRAINT PK_DiaSemana PRIMARY KEY,
 	Nome varchar(7) not null
 );
 
 insert into tbDiaSemana values('Segunda'),
-							  ('Ter√ßa'),
+							  ('TerÁa'),
 							  ('Quarta'),
 							  ('Quinta'),
 							  ('Sexta'),
-							  ('S√°bado'),
+							  ('S·bado'),
 							  ('Domingo'); 
 GO
 
 CREATE TABLE tbPeriodo(
-	CodPeriodo smallint identity(1,1)
+	CodPeriodo int identity(1,1)
 	CONSTRAINT PK_Periodo PRIMARY KEY,
 	NomePeriodo varchar(40) not null,
 	HorarioAula time not null 
@@ -87,34 +87,34 @@ CREATE TABLE tbPeriodo(
 GO
 
 CREATE TABLE tbPeriodo_DiaSemana(
-	CodPeriodoDiaSemana smallint identity(1,1)
+	CodPeriodoDiaSemana int identity(1,1)
 	CONSTRAINT PK_PeriodoDiaSemana PRIMARY KEY,
-	CodPeriodo smallint not null
+	CodPeriodo int not null
 	CONSTRAINT FK_PeriodoDiaSemana_Periodo FOREIGN KEY REFERENCES tbPeriodo(CodPeriodo),
-	CodDiaSemana smallint not null
+	CodDiaSemana int not null
 	CONSTRAINT FK_PeriodoDiaSemana_DiaSemana FOREIGN KEY REFERENCES tbDiaSemana(CodDiaSemana)
 );
 GO
 
 CREATE TABLE tbCurso (
-	CodCurso smallint identity(1,1)
+	CodCurso int identity(1,1)
 	CONSTRAINT PK_Curso PRIMARY KEY,
 	Idioma varchar(15) not null
 );
 
-insert into tbCurso values('Ingl√™s' ),
+insert into tbCurso values('InglÍs' ),
 						  ('Espanhol'),
-						  ('Franc√™s'); 
+						  ('FrancÍs'); 
 GO
 
 CREATE TABLE tbTurma(
-	CodTurma smallint identity(1,1)
+	CodTurma int identity(1,1)
 	CONSTRAINT PK_Turma PRIMARY KEY,
-	CodCurso smallint not null
+	CodCurso int not null
 	CONSTRAINT FK_Turma_Curso FOREIGN KEY REFERENCES tbCurso(CodCurso),
-	CodProf smallint not null
+	CodProf int not null
 	CONSTRAINT FK_Aula_Prof FOREIGN KEY REFERENCES tbProfessor(CodProf),
-	CodPeriodo smallint not null
+	CodPeriodo int not null
 	CONSTRAINT FK_Turma_Periodo FOREIGN KEY REFERENCES tbPeriodo(CodPeriodo),
 	Estagio varchar(15) not null,
 	Preco money not null
@@ -122,49 +122,49 @@ CREATE TABLE tbTurma(
 GO
 
 CREATE TABLE tbAula(
-	CodAula smallint identity(1,1)
+	CodAula int identity(1,1)
 	CONSTRAINT PK_Aula PRIMARY KEY,
-	Sala smallint not null,
+	Sala int not null,
 	Data_Hora datetime not null,
-	CodTurma smallint not null
+	CodTurma int not null
 	CONSTRAINT FK_Aula_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma),
 	Descricao varchar(100)
 );
 
 CREATE TABLE tbAluno(
-	CodAluno smallint identity(1,1)	
+	CodAluno int identity(1,1)	
 	CONSTRAINT PK_Aluno PRIMARY KEY,
 	DataMatricula date not null,
 	DataFinal date not null,
-	CodTurma smallint not null
+	CodTurma int not null
 	CONSTRAINT FK_Aluno_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma),
-	CodDados smallint
+	CodDados int
 	CONSTRAINT FK_Aluno_Dados FOREIGN KEY REFERENCES tbDadosComuns(CodDados),
-	CodLogin smallint not null
+	CodLogin int not null
 	CONSTRAINT FK_Aluno_Login FOREIGN KEY REFERENCES tbLogin(CodLogin),
-	SituacaoMensalidade bit not null DEFAULT 0 --1 PAGO, 0 N√ÉO PAGO
+	SituacaoMensalidade bit not null DEFAULT 0 --1 PAGO, 0 N√O PAGO
 );
 GO
 
 --APAGUEI A TABELA MENSALIDADE
 
 CREATE TABLE tbPagamento(
-	CodPagamento smallint identity(1,1)
+	CodPagamento int identity(1,1)
 	CONSTRAINT PK_Pagamento PRIMARY KEY,
 	DiaPagamento date not null,
 	ValorLiquido money not null,
 	Descontos money not null DEFAULT 0.00,
-	B√¥nus money not null DEFAULT 0.00, 
-	StatusPagamento char(1) not null DEFAULT 'N', -- P-Pago, N-N√£o Pago
-	CodProfessor smallint not null
+	BÙnus money not null DEFAULT 0.00, 
+	StatusPagamento char(1) not null DEFAULT 'N', -- P-Pago, N-N„o Pago
+	CodProfessor int not null
 	CONSTRAINT FK_Pagamento_Professor FOREIGN KEY REFERENCES tbProfessor(CodProf)
 );
 GO
 
 CREATE TABLE tbAula_Aluno(
-	CodAula smallint not null
+	CodAula int not null
 	CONSTRAINT FK_AulaAluno_Aula FOREIGN KEY REFERENCES tbAula(CodAula),
-	CodAluno smallint not null
+	CodAluno int not null
 	CONSTRAINT FK_AulaAluno_Aluno FOREIGN KEY REFERENCES tbAluno(CodAluno),
 	CONSTRAINT PK_AulaAluno PRIMARY KEY CLUSTERED(CodAula, CodAluno),
 	Presenca bit --1 presente, 0 ausente
@@ -172,37 +172,39 @@ CREATE TABLE tbAula_Aluno(
 GO
 
 CREATE TABLE tbAvaliacao(
-	CodAvaliacao smallint identity(1,1)
+	CodAvaliacao int identity(1,1)
 	CONSTRAINT PK_Avaliacao PRIMARY KEY,
-	CodProfessor smallint not null
+	CodProfessor int not null
 	CONSTRAINT FK_Avaliacao_Professor FOREIGN KEY REFERENCES tbProfessor(CodProf),
 	TipoAvaliacao varchar(10) not null,
 	DataAvaliacao date not null,
-	CodTurma smallint not null
+	CodTurma int not null
 	CONSTRAINT FK_Avaliacao_Turma FOREIGN KEY REFERENCES tbTurma(CodTurma),
 	Descricao varchar(100) --MUDEI O TAMANHO
 );
 GO
 
 CREATE TABLE tbNota(
-	CodAluno smallint not null
+	CodAluno int not null
 	CONSTRAINT FK_Nota_Aluno FOREIGN KEY REFERENCES tbAluno(CodAluno),
-	CodAvaliacao smallint not null
+	CodAvaliacao int not null
 	CONSTRAINT FK_Nota_Avaliacao FOREIGN KEY REFERENCES tbAvaliacao(CodAvaliacao),
 	Nota decimal(4,2) not null,
 	CONSTRAINT PK_Nota PRIMARY KEY CLUSTERED(CodAluno, CodAvaliacao) 
 );
 GO
 
-use dbLIGMA; 
-go
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------ PROCEDURES ------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
 
 --CADASTRAR FUNCIONARIO
 CREATE PROC spcadFunc (
 	@Email VARCHAR(50), 
 	@Senha varchar(20), 
 	@CEP char(8), 
-	@Numero smallint, 
+	@Numero int, 
 	@Nome varchar(75),
 	@Complemento varchar(30), 
 	@Cidade varchar(25), 
@@ -220,9 +222,9 @@ BEGIN
 	IF @Email IS NULL or @Senha IS NULL or @CEP = 0 or @Numero = 0 or @Nome IS NULL or 
 		@Cidade IS NULL or @UF IS NULL or @Logradouro IS NULL or
 		@RG IS NULL or @CPF = 0 or @DataNasc IS NULL and @Salario IS NULL or @Cargo IS NULL
-		SELECT 'H√° atributos vazios' [ERRO];
-	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j√° registrado!' ERRO;
-	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcion√°rio j√° registrado!' ERRO;
+		SELECT 'H· atributos vazios' [ERRO];
+	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j· registrado!' ERRO;
+	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcion·rio j· registrado!' ERRO;
 	ELSE
 		BEGIN
 			INSERT INTO tbLogin(Email,Senha) VALUES (@Email, @Senha);
@@ -230,8 +232,8 @@ BEGIN
 			INSERT INTO tbDadosComuns(CEP, Numero, Nome, Complemento, Cidade, UF, Logradouro, RG, CPF, DataNasc, TelFixo, TelCelular)
 							  VALUES (@CEP, @Numero, @Nome, @Complemento, @Cidade, @UF, @Logradouro, @RG, @CPF, CONVERT(date, @DataNasc, 103), @TelFixo, @TelCelular);
 
-			DECLARE @CodLogin smallint=(SELECT TOP 1 codLogin FROM tbLogin ORDER BY CodLogin DESC);
-			DECLARE @CodDados smallint=(SELECT TOP 1 CodDados FROM tbDadosComuns ORDER BY CodDados DESC);
+			DECLARE @CodLogin int=(SELECT TOP 1 codLogin FROM tbLogin ORDER BY CodLogin DESC);
+			DECLARE @CodDados int=(SELECT TOP 1 CodDados FROM tbDadosComuns ORDER BY CodDados DESC);
 
 			INSERT INTO tbFuncionario(CodLogin, CodDados, Salario, Cargo)
 							  VALUES (@CodLogin, @CodDados, @Salario, @Cargo);
@@ -245,13 +247,20 @@ delete tbFuncionario; DBCC CHECKIDENT('tbFuncionario', RESEED, 0);
 delete tbLogin; DBCC CHECKIDENT('tbLogin', RESEED, 0);
 delete tbDadosComuns; DBCC CHECKIDENT('tbDadosComuns', RESEED, 0);
 */
-exec spcadFunc  'a@a.com', '1', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
+exec spcadFunc  'a@a.com', '1', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
 GO
 /*
-exec spcadFunc  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo√£o1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
-exec spcadFunc  'Exemplo@oi.com1', '12345678', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
+exec spcadFunc  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo„o1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
+exec spcadFunc  'Exemplo@oi.com1', '12345678', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro', 123456789, 12345678;
 
 */
+
+create proc sp_delete_func(
+ @codfunc int
+)as begin
+	delete from tbFuncionario where CodFunc = @codfunc;
+end
+GO
 
 create view vwFuncionario as 
 	select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Nascimento], RG, CPF, Logradouro, CEP, Numero, Salario, Cargo, Email, Senha, 
@@ -270,7 +279,7 @@ CREATE PROC spcadProf
 	@Email VARCHAR(50), 
 	@Senha varchar(20), 
 	@CEP char(8), 
-	@Numero smallint, 
+	@Numero int, 
 	@Nome varchar(75),
 	@Complemento varchar(30) = '', 
 	@Cidade varchar(25),
@@ -289,9 +298,9 @@ BEGIN
 	IF @Email IS NULL or @Senha IS NULL or @CEP = 0 or @Numero = 0 or @Nome IS NULL or
 		@Cidade IS NULL or @UF IS NULL or @Logradouro IS NULL or
 		@RG IS NULL or @CPF = 0 or @DataNasc IS NULL and @Salario IS NULL or @Cargo IS NULL or @Idioma is null
-		SELECT 'H√° atributos vazios!' [ERRO];
-	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j√° registrado!' ERRO;
-	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcion√°rio j√° registrado!' ERRO;
+		SELECT 'H· atributos vazios!' [ERRO];
+	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j· registrado!' ERRO;
+	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Funcion·rio j· registrado!' ERRO;
 	ELSE
 		BEGIN
 			INSERT INTO tbLogin(Email,Senha) VALUES (@Email, @Senha);
@@ -299,16 +308,16 @@ BEGIN
 			INSERT INTO tbDadosComuns(CEP, Numero, Nome, Complemento, Cidade, UF, Logradouro, RG, CPF, DataNasc, TelFixo, TelCelular)
 			VALUES (@CEP, @Numero, @Nome, @Complemento, @Cidade, @UF, @Logradouro, @RG, @CPF, CONVERT(datetime, @DataNasc, 103), @TelFixo, @TelCelular);
 
-			DECLARE @CodLogin smallint=(SELECT TOP 1 codLogin FROM tbLogin ORDER BY CodLogin DESC);
-			DECLARE @CodDados smallint=(SELECT TOP 1 CodDados FROM tbDadosComuns ORDER BY CodDados DESC);
+			DECLARE @CodLogin int=(SELECT TOP 1 codLogin FROM tbLogin ORDER BY CodLogin DESC);
+			DECLARE @CodDados int=(SELECT TOP 1 CodDados FROM tbDadosComuns ORDER BY CodDados DESC);
 			INSERT INTO tbFuncionario(CodLogin, CodDados, Salario, Cargo)
 			VALUES (@CodLogin, @CodDados, @Salario, @Cargo);
 
-			DECLARE @CodFunc smallint=(SELECT TOP 1 CodFunc FROM tbFuncionario ORDER BY CodFunc DESC);
+			DECLARE @CodFunc int=(SELECT TOP 1 CodFunc FROM tbFuncionario ORDER BY CodFunc DESC);
 			INSERT INTO tbProfessor(Idioma, CodFunc)
 			VALUES (@Idioma, @CodFunc);
 
-			DECLARE @CodProfessor smallint = (SELECT TOP 1 CodProf FROM tbProfessor ORDER BY CodProf DESC)
+			DECLARE @CodProfessor int = (SELECT TOP 1 CodProf FROM tbProfessor ORDER BY CodProf DESC)
 			INSERT INTO tbPagamento(DiaPagamento, ValorLiquido, CodProfessor)
 							 VALUES(GETDATE(), @Salario, @CodProfessor);
 			SELECT 'Dados Cadastrados Com Sucesso!' SUCESSO
@@ -316,18 +325,18 @@ BEGIN
 END
 GO
 
-exec spcadProf  'p@a.com', '1', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678902, '22-12-2002', 670.00, 'Professor','Espanhol', 123456789, 12345678;
+exec spcadProf  'p@a.com', '1', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678902, '22-12-2002', 670.00, 'Professor','Espanhol', 123456789, 12345678;
 /*
-exec spcadProf  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo√£o1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
-exec spcadProf  'Exemplo@oi.com1', '12345678', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
+exec spcadProf  'Exemplo@oi.com', '12345678', '12345678', 12, 'Jo„o1', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
+exec spcadProf  'Exemplo@oi.com1', '12345678', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678901, '22-12-2002', 670.00, 'Faxineiro','Espanhol', 123456789, 12345678;
 */
 GO
 
 create view vwProfessor as 
 	select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Nascimento], RG, CPF, Logradouro, CEP, Numero, Salario, Cargo, Idioma, 
 		CASE StatusPagamento
-		WHEN 'N' THEN 'N√£o Pago'
-		ELSE 'Pago' END AS [Situ√ß√£o do Pagamento], 
+		WHEN 'N' THEN 'N„o Pago'
+		ELSE 'Pago' END AS [SituÁ„o do Pagamento], 
 	Email, Senha,
 	    CASE Ativada
         WHEN 0 THEN 'Desativado'
@@ -342,9 +351,9 @@ GO
 
 --CADASTRAR PERIODO
 create procedure spPeriodo(
-	@CodDiaSemana smallint, 
-	@CodDiaSemana2 smallint,
-	@CodDiaSemana3 smallint,
+	@CodDiaSemana int, 
+	@CodDiaSemana2 int,
+	@CodDiaSemana3 int,
 	@HorarioAula time
 )as
 begin
@@ -352,7 +361,7 @@ begin
 	declare @NomePeriodo varchar(40);
 	declare @Mensagem varchar(40);
 	if @CodDiaSemana is null SELECT @Mensagem = 'Selecione pelo menos um dia da semana!';
-	else if @HorarioAula < '7:00' or @HorarioAula > '19:00' SELECT @Mensagem = 'Hor√°rio Inv√°lido!'
+	else if @HorarioAula < '7:00' or @HorarioAula > '19:00' SELECT @Mensagem = 'Hor·rio Inv·lido!'
 	else
 	begin
 		declare @Dia1 varchar(8) = (SELECT Nome from tbDiaSemana where CodDiaSemana = @CodDiaSemana);
@@ -364,11 +373,11 @@ begin
 		else SELECT @NomePeriodo = @Dia1 +', '+ @Dia2 +', '+ @Dia3 + ' - ' + convert(varchar, @HorarioAula,8);
 
 		if @NomePeriodo is not null and exists(select NomePeriodo from tbPeriodo where NomePeriodo = @NomePeriodo) 
-		SELECT @Mensagem = 'Voc√™ j√° tem um periodo semelhante!';
+		SELECT @Mensagem = 'VocÍ j· tem um periodo semelhante!';
 		else
 		begin
 			insert into tbPeriodo(NomePeriodo, HorarioAula) values (@NomePeriodo, @HorarioAula);
-			declare @CodPeriodo smallint = (select top 1 CodPeriodo from tbPeriodo order by CodPeriodo DESC);
+			declare @CodPeriodo int = (select top 1 CodPeriodo from tbPeriodo order by CodPeriodo DESC);
 			insert into tbPeriodo_DiaSemana(CodPeriodo, CodDiaSemana) values (@CodPeriodo, @CodDiaSemana);
 			if @Dia2 is not null insert into tbPeriodo_DiaSemana(CodPeriodo, CodDiaSemana) values (@CodPeriodo, @CodDiaSemana2);
 			if @Dia3 is not null insert into tbPeriodo_DiaSemana(CodPeriodo, CodDiaSemana) values (@CodPeriodo, @CodDiaSemana3);
@@ -399,16 +408,16 @@ GO
 
 --CADASTRAR TURMA
 create proc spTurma(
-	@CodCurso smallint,
-	@CodProf smallint, 
-	@CodPeriodo smallint,
+	@CodCurso int,
+	@CodProf int, 
+	@CodPeriodo int,
 	@Estagio varchar(15),
 	@Preco money
 )as 
 begin
 	if exists(select * from tbTurma where CodCurso = @CodCurso and CodPeriodo = @CodPeriodo and
 			  CodProf = @CodProf and Estagio = @Estagio)
-	SELECT 'J√° existe essa turma!' ERRO
+	SELECT 'J· existe essa turma!' ERRO
 	else
 	begin
 		insert into tbTurma(CodCurso, CodPeriodo, CodProf, Estagio, Preco)
@@ -419,12 +428,12 @@ end
 GO
 
 
-exec spTurma 1, 1, 1, 'Intermedi√°rio', 156.00;
+exec spTurma 1, 1, 1, 'Intermedi·rio', 156.00;
 GO
 
 
 create view vwTurma as
-select Estagio Est√°gio, Preco Pre√ßo, C.Idioma, NomePeriodo [Per√≠odo], Nome Professor from tbTurma T
+select Estagio Est·gio, Preco PreÁo, C.Idioma, NomePeriodo [PerÌodo], Nome Professor from tbTurma T
 	inner join tbCurso C on C.CodCurso = T.CodCurso 
 	inner join tbPeriodo P on P.CodPeriodo = T.CodPeriodo
 	inner join tbProfessor PR on PR.CodProf = T.CodProf
@@ -436,7 +445,7 @@ CREATE PROC spcadAluno(
 	@Email VARCHAR(50), 
 	@Senha varchar(20), 
 	@CEP char(8), 
-	@Numero smallint, 
+	@Numero int, 
 	@Nome varchar(75),
 	@Complemento varchar(30), 
 	@Cidade varchar(25), 
@@ -449,15 +458,15 @@ CREATE PROC spcadAluno(
 	@DataMatricula varchar(10), 
 	@TelCelular decimal(9) = 0, 
 	@TelFixo decimal(8) = 0,
-	@CodTurma smallint
+	@CodTurma int
 )AS
 BEGIN
 	IF @Email IS NULL or @Senha IS NULL or @CEP = 0 or @Numero = 0 or @Nome IS NULL or 
 		@Cidade IS NULL or @UF IS NULL or @Logradouro IS NULL or
 		@RG IS NULL or @CPF = 0 or @DataNasc IS NULL and @DataFinal IS NULL or @DataMatricula IS NULL
-		SELECT 'H√° atributos vazios' [ERRO];
-	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j√° registrado!' ERRO;
-	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Aluno j√° registrado!' ERRO;
+		SELECT 'H· atributos vazios' [ERRO];
+	ELSE IF exists(select * from tbLogin where Email = @Email) SELECT 'Email j· registrado!' ERRO;
+	ELSE IF exists(select * from tbDadosComuns where CPF = @CPF) SELECT 'Aluno j· registrado!' ERRO;
 	ELSE
 		BEGIN
 			INSERT INTO tbLogin(Email,Senha) VALUES (@Email, @Senha);
@@ -465,8 +474,8 @@ BEGIN
 			INSERT INTO tbDadosComuns(CEP, Numero, Nome, Complemento, Cidade, UF, Logradouro, RG, CPF, DataNasc, TelFixo, TelCelular)
 							  VALUES (@CEP, @Numero, @Nome, @Complemento, @Cidade, @UF, @Logradouro, @RG, @CPF, CONVERT(date, @DataNasc, 103), @TelFixo, @TelCelular);
 
-			DECLARE @CodLogin smallint=(SELECT TOP 1 codLogin FROM tbLogin ORDER BY CodLogin DESC);
-			DECLARE @CodDados smallint=(SELECT TOP 1 CodDados FROM tbDadosComuns ORDER BY CodDados DESC);
+			DECLARE @CodLogin int=(SELECT TOP 1 codLogin FROM tbLogin ORDER BY CodLogin DESC);
+			DECLARE @CodDados int=(SELECT TOP 1 CodDados FROM tbDadosComuns ORDER BY CodDados DESC);
 
 			INSERT INTO tbAluno(CodLogin, CodDados, DataMatricula, DataFinal, CodTurma)
 							  VALUES (@CodLogin, @CodDados, CONVERT(date, @DataMatricula, 103), CONVERT(date, @DataFinal, 103), @CodTurma);
@@ -477,7 +486,7 @@ BEGIN
 END
 GO
 
-exec spcadAluno  'al@a.com', '1', '12345678', 12, 'Jo√£o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678903, '22-12-2002', '22-12-2018', '22-12-2020', 123456789, 12345678, 1; 
+exec spcadAluno  'al@a.com', '1', '12345678', 12, 'Jo„o', null, 'oi', 'sp', 'rua 12', '1234567890', 12345678903, '22-12-2002', '22-12-2018', '22-12-2020', 123456789, 12345678, 1; 
 GO
 /*
 select * from tbAluno; 
@@ -488,10 +497,10 @@ delete tbAluno; DBCC CHECKIDENT('tbAluno', RESEED, 0);
 */ 
 
 create view vwAluno as
-select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Nascimento], RG, CPF, Logradouro, CEP, Numero, DataMatricula [Data de Matricula], DataFinal [Data Final do Contrato], Estagio Est√°gio, NomePeriodo [Per√≠odo], 
+select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Nascimento], RG, CPF, Logradouro, CEP, Numero, DataMatricula [Data de Matricula], DataFinal [Data Final do Contrato], Estagio Est·gio, NomePeriodo [PerÌodo], 
 		CASE SituacaoMensalidade
-		WHEN 0 THEN 'N√£o Pago'
-		ELSE 'Pago' END AS [Situ√ß√£o da Mensalidade], 
+		WHEN 0 THEN 'N„o Pago'
+		ELSE 'Pago' END AS [SituÁ„o da Mensalidade], 
 	Email, Senha,
 	    CASE Ativada
         WHEN 0 THEN 'Desativado'
@@ -503,14 +512,38 @@ select Nome, TelFixo [Telefone Fixo], TelCelular [Celular], DataNasc [Data de Na
 	inner join tbPeriodo P on P.CodPeriodo = T.CodPeriodo;
 GO
 
+create view vwAlunoPrincipal as
+select Nome, Idioma, Estagio, NomePeriodo [Periodo]
+	from tbDadosComuns DC
+	inner join tbAluno A on DC.CodDados = A.CodDados
+	inner join tbLogin L on A.CodLogin = L.CodLogin
+	inner join tbTurma T on T.CodTurma = A.CodTurma
+	inner join tbCurso C on C.CodCurso = T.CodCurso
+	inner join tbPeriodo P on P.CodPeriodo = T.CodPeriodo
+	where Ativada = 1; 
+GO
+
+ create proc spSelectPresenca
+as begin
+	declare @PresencaAluno int = (select count(Presenca) from tbAula_Aluno where Presenca = 1 and CodAluno = (select CodAluno from tbAluno A 
+																											  inner join tbLogin T 
+																											  on A.CodLogin = T.CodLogin
+																											  where Ativada = 1)),
+			@PresencaTotal int = (select count(*) from tbAula);
+			
+			select convert(varchar(4),(@PresencaAluno / @PresencaTotal) * 100) + '%'; 
+end
+GO
+
+
 create proc spcadAula(
-	@Sala smallint,
-	@CodTurma smallint,
+	@Sala int,
+	@CodTurma int,
 	@Data_Hora datetime,
 	@Descricao varchar(100)
 )as begin
 	if exists(select * from tbAula where Sala = @Sala and CodTurma = @CodTurma and Data_Hora = @Data_Hora)
-		SELECT 'Aula j√° Registrada!' ERRO;
+		SELECT 'Aula j· Registrada!' ERRO;
 	else
 	begin
 
@@ -528,8 +561,8 @@ insert into tbAula(Sala, CodTurma) values(1,1);
 */
 
 create proc spAulaAluno(
-	@CodAula smallint,
-	@CodAluno smallint
+	@CodAula int,
+	@CodAluno int
 )as begin
 	insert into tbAula_Aluno(CodAula, CodAluno, Presenca) values(@CodAula, @CodAluno, 1);
 end
@@ -539,8 +572,8 @@ GO
 exec spAulaAluno 1, 1;
 GO
 
-create view vwListaPresen√ßa as
-select Nome [Nome do Aluno], Sala [N√∫mero da Sala], Estagio [Est√°gio], Data_Hora [Data] from tbAluno AL
+create view vwListaPresenÁa as
+select Nome [Nome do Aluno], Sala [N˙mero da Sala], Estagio [Est·gio], Data_Hora [Data] from tbAluno AL
 	inner join tbDadosComuns DC on DC.CodDados = AL.CodDados
 	inner join tbAula_Aluno AA on AL.CodAluno = AA.CodAluno
 	inner join tbAula A on A.CodAula = AA.CodAula
@@ -548,10 +581,10 @@ select Nome [Nome do Aluno], Sala [N√∫mero da Sala], Estagio [Est√°gio], Data_Ho
 GO
 
 create proc spAvaliacao(
-	@CodProfessor smallint,
+	@CodProfessor int,
 	@TipoAvaliacao varchar(10),
 	@DataAvaliacao date,
-	@CodTurma smallint,
+	@CodTurma int,
 	@Descricao varchar(100)
 )as begin
 	insert into tbAvaliacao(CodProfessor, TipoAvaliacao, DataAvaliacao, CodTurma, Descricao) values(@CodProfessor,@TipoAvaliacao,  @DataAvaliacao, @CodTurma, @Descricao);
@@ -568,8 +601,8 @@ select Nome [Nome do Aluno], DataAvaliacao [Data da Avaliacao], Nota from tbAlun
 GO
 
 create proc spNota(
-	@CodAluno smallint,
-	@CodAvaliacao smallint,
+	@CodAluno int,
+	@CodAvaliacao int,
 	@Nota decimal(4,2)
 )as begin
 	insert into tbNota(CodAluno, CodAvaliacao, Nota) values(@CodAluno, @CodAvaliacao, @Nota);
@@ -632,10 +665,10 @@ create proc sp_VEAdmin( --Verificar Email
 end
 GO
 
-SELECT CONCAT(Est√°gio, ', Data: ', convert(varchar, Data, 3), ', Sala: ', [N√∫mero da Sala]) as [Aula] from vwListaPresen√ßa
+SELECT CONCAT(Est·gio, ', Data: ', convert(varchar, Data, 3), ', Sala: ', [N˙mero da Sala]) as [Aula] from vwListaPresenÁa
 GO
 
-alter view vwAulaAluno as
+create view vwAulaAluno as
  select A.CodAula Codigo, CONCAT(T.Estagio, ', Data: ', convert(varchar, Data_Hora, 3), ', Sala: ', Sala) as [Aula], Ativada
  from tbAula A inner join tbAula_Aluno AA on A.CodAula = AA.CodAula
 			   inner join tbAluno AL on AA.CodAluno = AL.CodAluno
@@ -643,8 +676,8 @@ alter view vwAulaAluno as
 			   inner join tbLogin L on AL.CodLogin = L.CodLogin;
 GO
 
-alter view vwAvaliacaoAluno as
- select A.CodAvaliacao Codigo, CONCAT(TipoAvaliacao, ', Data: ', convert(varchar, DataAvaliacao, 3), ' Descri√ß√£o: ',Descricao) as [Avaliacao], Ativada
+create view vwAvaliacaoAluno as
+ select A.CodAvaliacao Codigo, CONCAT(TipoAvaliacao, ', Data: ', convert(varchar, DataAvaliacao, 3), ' DescriÁ„o: ',isnull(Descricao, 'Sem DescriÁ„o')) as [Avaliacao], Ativada
   from tbAvaliacao A inner join tbTurma T on A.CodTurma = T.CodTurma
 			   inner join tbAluno AL on T.CodTurma = AL.CodTurma
 			   inner join tbLogin L on AL.CodLogin = L.CodLogin;
